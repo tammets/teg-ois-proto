@@ -196,28 +196,46 @@
     </div>
 
     <!--Content starts here-->
+
     <div class="mx-auto max-w-7xl p-6 bg-white shadow-lg rounded-lg mt-12">
       <main class="overflow-hidden">
         <div class="px-4 py-2 sm:px-6">
-          <!-- Header layout matching reference -->
-          <div class="sm:flex">
-            <div class="sm:flex-auto">
-              <h3 class="text-lg font-semibold text-gray-900">Avaldus #323</h3>
-              <p class="mt-1 text-sm text-gray-500 mb-6">
-                Huvilise andmed ja avaldus
-              </p>
-            </div>
-    
-            <!-- Button group aligned to right -->
-            <div class="mt-4 sm:mt-0 sm:flex-none">
+
+          <!-- Tabbed view starts here -->
+          <div class="grid grid-cols-1 sm:hidden">
+            <!-- Mobile "Select a tab" dropdown -->
+            <select aria-label="Select a tab" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+              <option>Avaldus</option>
+              <option>Company</option>
+              <option selected>Team Members</option>
+              <option>Billing</option>
+            </select>
+            <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end fill-gray-500" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+              <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+          </div>
+
+          <!-- Desktop tabs + status button on the same line -->
+          <div class="hidden sm:block">
+            <!-- Make this a flex container with space-between -->
+            <div class="border-b border-gray-200 flex items-center justify-between">
+              <!-- Tabs on the left -->
+              <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                <a href="#" class="border-b-2 border-indigo-500 px-1 py-4 text-sm font-medium whitespace-nowrap text-indigo-600" aria-current="page">Avaldus</a>
+                <a href="#" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Pakkumine</a>
+                <a href="#" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Leping</a>
+                <a href="#" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Hinded</a>
+              </nav>
+
+              <!-- Status dropdown on the right (moved from its old position) -->
               <div class="inline-flex rounded-md shadow-xs relative">
-                <!-- Save Changes Button (Static) -->
+                <!-- "Staatus: Esitatud" button -->
                 <button type="button"
                   class="relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-10">
                   Staatus: Esitatud
                 </button>
-            
-                <!-- Options Button (Dropdown Toggle) -->
+
+                <!-- Dropdown toggle -->
                 <div class="relative -ml-px">
                   <button type="button" class="relative inline-flex items-center rounded-r-md bg-white px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-10"
                     id="option-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -228,21 +246,30 @@
                         clip-rule="evenodd" />
                     </svg>
                   </button>
-            
+
                   <!-- Dropdown Menu (Initially Hidden) -->
                   <div id="option-menu-dropdown"
                     class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 hidden opacity-0 scale-95 transition-all duration-150"
                     role="menu" aria-orientation="vertical" aria-labelledby="option-menu-button" tabindex="-1">
                     <div class="py-1" role="none">
                       <a href="application_form.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Muuda</a>
-                      <a href="#" id="reject-button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
-                        Lükka tagasi
-                      </a>
-                      <a href="application_list.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Kinnita</a>
+                      <a href="#" id="reject-button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Lükka tagasi</a>
+                      <a href="application_list.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Kinnita ja saada pakkumine</a>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <!-- Tabbed view ends here -->
+
+          <!-- Header layout matching reference -->
+            <div class="sm:flex mt-6"></div>
+            <div class="sm:flex-auto">
+              <h3 class="text-lg font-semibold text-gray-900">Avaldus #323</h3>
+              <p class="mt-1 text-sm text-gray-500 mb-6">
+              Huvilise andmed ja avaldus
+              </p>
             </div>
           </div>
     
@@ -308,6 +335,13 @@
               <dt class="text-sm font-medium text-gray-900">Enesejuhtimise taseme hinnang</dt>
               <dd class="mt-1 text-sm text-gray-700 sm:col-span-2 sm:mt-0">
                 Pean end iseseisvaks ja motiveeritud õppijaks, kes oskab oma aega planeerida ja seatud eesmärkide nimel järjepidevalt töötada. Olen avatud uutele väljakutsetele ning valmis võtma vastutust oma õpitulemuste ja isikliku arengu eest..
+              </dd>
+            </div>
+
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-900">Kandideerin stipendiumile</dt>
+              <dd class="mt-1 text-sm text-gray-700 sm:col-span-2 sm:mt-0">
+                Jah
               </dd>
             </div>
 

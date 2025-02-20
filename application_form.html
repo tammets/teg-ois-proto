@@ -266,11 +266,41 @@
             
                   </div>
                 </div>
+
+                <!-- Õppevormi valik -->
+
+                <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+                  <div>
+                    <h2 class="text-base/7 font-semibold text-gray-900">Õppevorm</h2>
+                    <p class="mt-1 text-sm/6 text-gray-600">Vali õppevorm.</p>
+                  </div>
+            
+                  <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+                    <div class="sm:col-span-4">
+                      <label for="location" class="block text-sm/6 font-medium text-gray-900">Klass</label>
+                      <div class="mt-2 grid grid-cols-1">
+                        <select id="location" name="location" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                          <option>Klass</option>
+                          <option>Üksikaine (põhikool)</option>
+                          <option>Üksikaine (gümnaasium)</option>
+                        </select>
+                        <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                          <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+            
+                  </div>
+                </div>
+
+                <!-- Õppevormi valiku lõpp -->
+
+                <!-- Valik klass -->
             
                 <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
                   <div>
-                    <h2 class="text-base/7 font-semibold text-gray-900">Õppimine</h2>
-                    <p class="mt-1 text-sm/6 text-gray-600">Tähendab kooli nimekirja tulemist ja mõeldud neile,  kellel õpitee on katkenud või juba tasemeharidus olemas.</p>
+                    <h2 class="text-base/7 font-semibold text-gray-900">Klass</h2>
+                    <p class="mt-1 text-sm/6 text-gray-600">Vali, kui tuled kooli nimekirja. Mõeldud neile,  kellel õpitee on katkenud või juba tasemeharidus olemas.</p>
                   </div>
             
                   <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
@@ -338,14 +368,29 @@
                         <input type="text" name="street-address" id="street-address" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                       </div>
                     </div>
+
+                    <div class="col-span-full flex items-center justify-between">
+                      <label for="person-3" class="font-medium text-sm/6 text-gray-900 select-none">Soovin kandideerida stipendiumile:</label>
+                      <div class="group grid size-4 grid-cols-1">
+                        <input id="person-3" name="person-3" type="checkbox" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100">
+                        <svg class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25" viewBox="0 0 14 14" fill="none">
+                          <path class="opacity-0 group-has-checked:opacity-100" d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path class="opacity-0 group-has-indeterminate:opacity-100" d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </div>
             
                   </div>
                 </div>
+
+                <!-- Valik klass lõpp -->
+
+                <!-- Üksikaine põhikool -->
             
                 <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
                   <div>
                     <h2 class="text-base/7 font-semibold text-gray-900">Üksikaine (põhikool)</h2>
-                    <p class="mt-1 text-sm/6 text-gray-600">On mõeldud õppijale, kes võtab üksikuid kursuseid oma kooli kõrvalt, et nende tulemused üle kanda.</p>
+                    <p class="mt-1 text-sm/6 text-gray-600">Vali, kui soovid võtta üksikuid kursuseid oma kooli kõrvalt, et nende tulemused üle kanda.</p>
                   </div>
             
                   <div class="max-w-2xl space-y-10 md:col-span-2">
@@ -567,10 +612,13 @@
                   </div>
                 </div>
 
+                <!-- Üksikaine põhikool lõpp -->
+                <!-- Üksikaine gümnaasium -->
+
                 <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
                   <div>
                     <h2 class="text-base/7 font-semibold text-gray-900">Üksikaine (gümnaasium)</h2>
-                    <p class="mt-1 text-sm/6 text-gray-600">On mõeldud õppijale, kes võtab üksikuid kursuseid oma kooli kõrvalt, et nende tulemused üle kanda.</p>
+                    <p class="mt-1 text-sm/6 text-gray-600">Vali, kui soovid võtta üksikuid kursuseid oma kooli kõrvalt, et nende tulemused üle kanda.</p>
                   </div>
             
                   <div class="max-w-2xl space-y-10 md:col-span-2">
@@ -869,6 +917,8 @@
                 </div>
 
               </div>
+
+               <!-- Üksikaine gümnaasium lõpp -->
             
               <div class="mt-6 flex items-center justify-end gap-x-6">
                 <button type="button" class="text-sm/6 font-semibold text-gray-900">Tühista</button>
