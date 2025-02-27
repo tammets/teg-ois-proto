@@ -11,40 +11,9 @@
 <div>
   <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
   <div class="relative z-50 lg:hidden" role="dialog" aria-modal="true">
-    <!--
-      Off-canvas menu backdrop, show/hide based on off-canvas menu state.
-
-      Entering: "transition-opacity ease-linear duration-300"
-        From: "opacity-0"
-        To: "opacity-100"
-      Leaving: "transition-opacity ease-linear duration-300"
-        From: "opacity-100"
-        To: "opacity-0"
-    -->
     <div class="fixed inset-0 bg-gray-900/80" aria-hidden="true"></div>
-
     <div class="fixed inset-0 flex">
-      <!--
-        Off-canvas menu, show/hide based on off-canvas menu state.
-
-        Entering: "transition ease-in-out duration-300 transform"
-          From: "-translate-x-full"
-          To: "translate-x-0"
-        Leaving: "transition ease-in-out duration-300 transform"
-          From: "translate-x-0"
-          To: "-translate-x-full"
-      -->
       <div class="relative mr-16 flex w-full max-w-xs flex-1">
-        <!--
-          Close button, show/hide based on off-canvas menu state.
-
-          Entering: "ease-in-out duration-300"
-            From: "opacity-0"
-            To: "opacity-100"
-          Leaving: "ease-in-out duration-300"
-            From: "opacity-100"
-            To: "opacity-0"
-        -->
         <div class="absolute top-0 left-full flex w-16 justify-center pt-5">
           <button type="button" class="-m-2.5 p-2.5">
             <span class="sr-only">Close sidebar</span>
@@ -199,18 +168,18 @@
           <li>
             <ul role="list" class="-mx-2 space-y-1">
               <li>
-                <!-- Töölaud is now inactive -->
-                <a href="dashboard.html" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
-                  <svg class="size-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <!-- Töölaud is now active -->
+                <a href="register.html" class="group flex gap-x-3 rounded-md bg-gray-50 p-2 text-sm/6 font-semibold text-indigo-600">
+                  <svg class="size-6 shrink-0 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                   </svg>
                   Töölaud
                 </a>
               </li>
               <li>
-                <!-- Avaldused is now active -->
-                <a href="#" class="group flex gap-x-3 rounded-md bg-gray-50 p-2 text-sm/6 font-semibold text-indigo-600">
-                  <svg class="size-6 shrink-0 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <!-- Avaldused is now inactive -->
+                <a href="application_list.html" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
+                  <svg class="size-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
                   </svg>
                   Avaldused
@@ -381,468 +350,314 @@
             <!-- Sinu olemasolev sisu --> 
             <div class="sm:flex sm:items-center">
               <div class="sm:flex-auto">
-                <h1 class="text-base font-semibold text-gray-900">Avaldused</h1>
+                <h1 class="text-base font-semibold text-gray-900">Töölaud</h1>
                 <p class="mt-2 text-sm text-gray-700">
-                  Avalduste nimekiri
+                  Kõik Sinu viimased klikid jms
                 </p>
               </div>
               <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
                 <a href="application_form.html" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                  Lisa avaldus
+                  Lisa uus
                 </a>
               </div>
             </div>
         <div class="mt-8 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-              <table class="min-w-full divide-y divide-gray-300">
-                <thead>
-                  <tr>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                      <a href="#" class="group inline-flex">
-                        Nimi
-                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
-                        <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
-                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                      <a href="#" class="group inline-flex">
-                        Kuupäev
-                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
-                        <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
-                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                      <a href="#" class="group inline-flex">
-                        Staatus
-                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
-                        <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
-                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                      <a href="#" class="group inline-flex">
-                        Õppevorm
-                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
-                        <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
-                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </th>
-                    <th scope="col" class="relative py-3.5 pr-4 pl-3 sm:pr-0">
-                      <span class="sr-only">Vaata</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200 bg-white">
-                  <!-- 1 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Mari Maasikas</div>
-        <div class="mt-1 text-gray-500">mari.maasikas@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Kinnitatud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Õppimine</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Mari Maasikas</span></a
-    >
-  </td>
-</tr>
+              
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">Uudised ja sündmused 2024-2025 õppeaastal</h2>
+                <div class="lg:grid lg:grid-cols-12 lg:gap-x-16">
+                  <div class="mt-10 text-center lg:col-start-8 lg:col-end-13 lg:row-start-1 lg:mt-9 xl:col-start-9">
+                    <div class="flex items-center text-gray-900">
+                      <button type="button" class="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500">
+                        <span class="sr-only">Previous month</span>
+                        <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                          <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                      <div class="flex-auto text-sm font-semibold">January</div>
+                      <button type="button" class="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500">
+                        <span class="sr-only">Next month</span>
+                        <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                          <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="mt-6 grid grid-cols-7 text-xs/6 text-gray-500">
+                      <div>M</div>
+                      <div>T</div>
+                      <div>W</div>
+                      <div>T</div>
+                      <div>F</div>
+                      <div>S</div>
+                      <div>S</div>
+                    </div>
+                    <div class="isolate mt-2 grid grid-cols-7 gap-px rounded-lg bg-gray-200 text-sm ring-1 shadow-sm ring-gray-200">
+                      <!--
+                        Always include: "py-1.5 hover:bg-gray-100 focus:z-10"
+                        Is current month, include: "bg-white"
+                        Is not current month, include: "bg-gray-50"
+                        Is selected or is today, include: "font-semibold"
+                        Is selected, include: "text-white"
+                        Is not selected, is not today, and is current month, include: "text-gray-900"
+                        Is not selected, is not today, and is not current month, include: "text-gray-400"
+                        Is today and is not selected, include: "text-indigo-600"
+              
+                        Top left day, include: "rounded-tl-lg"
+                        Top right day, include: "rounded-tr-lg"
+                        Bottom left day, include: "rounded-bl-lg"
+                        Bottom right day, include: "rounded-br-lg"
+                      -->
+                      <button type="button" class="rounded-tl-lg bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <!--
+                          Always include: "mx-auto flex size-7 items-center justify-center rounded-full"
+                          Is selected and is today, include: "bg-indigo-600"
+                          Is selected and is not today, include: "bg-gray-900"
+                        -->
+                        <time datetime="2021-12-27" class="mx-auto flex size-7 items-center justify-center rounded-full">27</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2021-12-28" class="mx-auto flex size-7 items-center justify-center rounded-full">28</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2021-12-29" class="mx-auto flex size-7 items-center justify-center rounded-full">29</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2021-12-30" class="mx-auto flex size-7 items-center justify-center rounded-full">30</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2021-12-31" class="mx-auto flex size-7 items-center justify-center rounded-full">31</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-01" class="mx-auto flex size-7 items-center justify-center rounded-full">1</time>
+                      </button>
+                      <button type="button" class="rounded-tr-lg bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-01" class="mx-auto flex size-7 items-center justify-center rounded-full">2</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-02" class="mx-auto flex size-7 items-center justify-center rounded-full">3</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-04" class="mx-auto flex size-7 items-center justify-center rounded-full">4</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-05" class="mx-auto flex size-7 items-center justify-center rounded-full">5</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-06" class="mx-auto flex size-7 items-center justify-center rounded-full">6</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-07" class="mx-auto flex size-7 items-center justify-center rounded-full">7</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-08" class="mx-auto flex size-7 items-center justify-center rounded-full">8</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-09" class="mx-auto flex size-7 items-center justify-center rounded-full">9</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-10" class="mx-auto flex size-7 items-center justify-center rounded-full">10</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-11" class="mx-auto flex size-7 items-center justify-center rounded-full">11</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 font-semibold text-indigo-600 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-12" class="mx-auto flex size-7 items-center justify-center rounded-full">12</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-13" class="mx-auto flex size-7 items-center justify-center rounded-full">13</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-14" class="mx-auto flex size-7 items-center justify-center rounded-full">14</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-15" class="mx-auto flex size-7 items-center justify-center rounded-full">15</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-16" class="mx-auto flex size-7 items-center justify-center rounded-full">16</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-17" class="mx-auto flex size-7 items-center justify-center rounded-full">17</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-18" class="mx-auto flex size-7 items-center justify-center rounded-full">18</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-19" class="mx-auto flex size-7 items-center justify-center rounded-full">19</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-20" class="mx-auto flex size-7 items-center justify-center rounded-full">20</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-21" class="mx-auto flex size-7 items-center justify-center rounded-full">21</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-22" class="mx-auto flex size-7 items-center justify-center rounded-full bg-gray-900 font-semibold text-white">22</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-23" class="mx-auto flex size-7 items-center justify-center rounded-full">23</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-24" class="mx-auto flex size-7 items-center justify-center rounded-full">24</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-25" class="mx-auto flex size-7 items-center justify-center rounded-full">25</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-26" class="mx-auto flex size-7 items-center justify-center rounded-full">26</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-27" class="mx-auto flex size-7 items-center justify-center rounded-full">27</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-28" class="mx-auto flex size-7 items-center justify-center rounded-full">28</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-29" class="mx-auto flex size-7 items-center justify-center rounded-full">29</time>
+                      </button>
+                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-30" class="mx-auto flex size-7 items-center justify-center rounded-full">30</time>
+                      </button>
+                      <button type="button" class="rounded-bl-lg bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-01-31" class="mx-auto flex size-7 items-center justify-center rounded-full">31</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-02-01" class="mx-auto flex size-7 items-center justify-center rounded-full">1</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-02-02" class="mx-auto flex size-7 items-center justify-center rounded-full">2</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-02-03" class="mx-auto flex size-7 items-center justify-center rounded-full">3</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-02-04" class="mx-auto flex size-7 items-center justify-center rounded-full">4</time>
+                      </button>
+                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-02-05" class="mx-auto flex size-7 items-center justify-center rounded-full">5</time>
+                      </button>
+                      <button type="button" class="rounded-br-lg bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
+                        <time datetime="2022-02-06" class="mx-auto flex size-7 items-center justify-center rounded-full">6</time>
+                      </button>
+                    </div>
+                  </div>
+                  <ol class="mt-4 divide-y divide-gray-100 text-sm/6 lg:col-span-7 xl:col-span-8">
+                    <li class="relative flex gap-x-6 py-6 xl:static">
+                      <div class="flex-auto">
+                        <h3 class="pr-10 font-semibold text-gray-900 xl:pr-0">II tsükli infotund kell 11.00. Veebinari link saadetakse õppijatele meilile</h3>
+                        <dl class="mt-2 flex flex-col text-gray-500 xl:flex-row">
+                          <div class="flex items-start gap-x-3">
+                            <dt class="mt-0.5">
+                              <span class="sr-only">Date</span>
+                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
+                              </svg>
+                            </dt>
+                            <dd><time datetime="2022-01-10T17:00">12. jaanuar 2026 kell 17:00</time></dd>
+                          </div>
+                          <div class="mt-2 flex items-start gap-x-3 xl:mt-0 xl:ml-3.5 xl:border-l xl:border-gray-400/50 xl:pl-3.5">
+                            <dt class="mt-0.5">
+                              <span class="sr-only">Location</span>
+                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
+                              </svg>
+                            </dt>
+                            <dd>Virtuaalne</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </li>
 
-<!-- 2 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Tiit Tamm</div>
-        <div class="mt-1 text-gray-500">tiit.tamm@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-600/20 ring-inset"
-    >
-      Esitatud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Tiit Tamm</span></a
-    >
-  </td>
-</tr>
+                    <li class="relative flex gap-x-6 py-6 xl:static">
+                      <div class="flex-auto">
+                        <h3 class="pr-10 font-semibold text-gray-900 xl:pr-0">Lõpuaktus, kell 12.00.</h3>
+                        <dl class="mt-2 flex flex-col text-gray-500 xl:flex-row">
+                          <div class="flex items-start gap-x-3">
+                            <dt class="mt-0.5">
+                              <span class="sr-only">Date</span>
+                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
+                              </svg>
+                            </dt>
+                            <dd><time datetime="2022-01-10T17:00">12. jaanuar 2026 kell 12:00</time></dd>
+                          </div>
+                          <div class="mt-2 flex items-start gap-x-3 xl:mt-0 xl:ml-3.5 xl:border-l xl:border-gray-400/50 xl:pl-3.5">
+                            <dt class="mt-0.5">
+                              <span class="sr-only">Location</span>
+                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
+                              </svg>
+                            </dt>
+                            <dd>J. Vilmsi 55</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </li>
 
-<!-- 3 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Kati Kase</div>
-        <div class="mt-1 text-gray-500">kati.kase@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-yellow-600/20 ring-inset"
-    >
-      Pakkumine saadetud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Kati Kase</span></a
-    >
-  </td>
-</tr>
+                    <li class="relative flex gap-x-6 py-6 xl:static">
+                      <div class="flex-auto">
+                        <h3 class="pr-10 font-semibold text-gray-900 xl:pr-0">Gümnaasiumi lõputööde kaitsmine I</h3>
+                        <dl class="mt-2 flex flex-col text-gray-500 xl:flex-row">
+                          <div class="flex items-start gap-x-3">
+                            <dt class="mt-0.5">
+                              <span class="sr-only">Date</span>
+                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
+                              </svg>
+                            </dt>
+                            <dd><time datetime="2022-01-10T17:00">12. jaanuar 2026 kell 17:00</time></dd>
+                          </div>
+                          <div class="mt-2 flex items-start gap-x-3 xl:mt-0 xl:ml-3.5 xl:border-l xl:border-gray-400/50 xl:pl-3.5">
+                            <dt class="mt-0.5">
+                              <span class="sr-only">Location</span>
+                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
+                              </svg>
+                            </dt>
+                            <dd>Virtuaalne</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </li>
 
-<!-- 4 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Priit Puu</div>
-        <div class="mt-1 text-gray-500">priit.puu@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <!-- Example of 'Inactive' with red styling -->
-    <span
-      class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset"
-    >
-    Täiendamisel
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Priit Puu</span></a
-    >
-  </td>
-</tr>
+                    <li class="relative flex gap-x-6 py-6 xl:static">
+                      <div class="flex-auto">
+                        <h3 class="pr-10 font-semibold text-gray-900 xl:pr-0">I tsükli lõpp ja II tsükli algus</h3>
+                        <dl class="mt-2 flex flex-col text-gray-500 xl:flex-row">
+                          <div class="flex items-start gap-x-3">
+                            <dt class="mt-0.5">
+                              <span class="sr-only">Date</span>
+                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
+                              </svg>
+                            </dt>
+                            <dd><time datetime="2022-01-10T17:00">12. jaanuar 2026 kell 17:00</time></dd>
+                          </div>
+                          <div class="mt-2 flex items-start gap-x-3 xl:mt-0 xl:ml-3.5 xl:border-l xl:border-gray-400/50 xl:pl-3.5">
+                            <dt class="mt-0.5">
+                              <span class="sr-only">Location</span>
+                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
+                              </svg>
+                            </dt>
+                            <dd>Virtuaalne</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </li>
+              
+                    <!-- More meetings... -->
+                  </ol>
+                </div>
+              </div>
+              
 
-<!-- 5 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1504593811423-6dd665756598?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Liina Lind</div>
-        <div class="mt-1 text-gray-500">liina.lind@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Kinnitatud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Stipendium</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Liina Lind</span></a
-    >
-  </td>
-</tr>
-
-<!-- 6 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Madis Meri</div>
-        <div class="mt-1 text-gray-500">madis.meri@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Kinnitatud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Õppimine</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Madis Meri</span></a
-    >
-  </td>
-</tr>
-
-<!-- 7 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Evelin Eensaar</div>
-        <div class="mt-1 text-gray-500">evelin.eensaar@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset"
-    >
-    Täiendamisel
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Evelin Eensaar</span></a
-    >
-  </td>
-</tr>
-
-<!-- 8 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Andres Aljas</div>
-        <div class="mt-1 text-gray-500">andres.aljas@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Kinnitatud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Andres Aljas</span></a
-    >
-  </td>
-</tr>
-
-<!-- 9 -->
-<tr>
-  <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
-    <div class="flex items-center">
-      <div class="size-11 shrink-0">
-        <img
-          class="size-11 rounded-full"
-          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
-        />
-      </div>
-      <div class="ml-4">
-        <div class="font-medium text-gray-900">Laura Lai</div>
-        <div class="mt-1 text-gray-500">laura.lai@neti.ee</div>
-      </div>
-    </div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Täiendamisel
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Laura Lai</span></a
-    >
-  </td>
-</tr>
-      
-                  <!-- More people... -->
-                   
-                </tbody>
-              </table>
             </div>
           </div>
         </div>
 
-        <!--Pagination-->
-        <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
-          <div class="flex flex-1 justify-between sm:hidden">
-            <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
-            <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
-          </div>
-          <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-            <div>
-              <p class="text-sm text-gray-700">
-                Kuvab
-                <span class="font-medium">1</span>
-                kuni
-                <span class="font-medium">10</span>
-                kokku
-                <span class="font-medium">97</span>
-                vastest
-              </p>
-            </div>
-            <div>
-              <nav class="isolate inline-flex -space-x-px rounded-md shadow-xs" aria-label="Pagination">
-                <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
-                  <span class="sr-only">Eelmine</span>
-                  <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-                <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
-                <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
-                <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
-                <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-gray-300 ring-inset focus:outline-offset-0">...</span>
-                <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
-                <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
-                  <span class="sr-only">Järgmine</span>
-                  <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </nav>
-            </div>
-          </div>
-        </div>
+        
 
       </div>
       
