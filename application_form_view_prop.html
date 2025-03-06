@@ -222,13 +222,11 @@
               <!-- Tabs on the left -->
                 <nav class="-mb-px flex space-x-8" aria-label="Tabs">
                 <a href="application_form_view.html" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Avaldus</a>
+                <a href="application_form_view_grades.html" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Ülekandehinded</a>
                 <a href="application_form_view_prop.html" class="border-b-2 border-indigo-500 px-1 py-4 text-sm font-medium whitespace-nowrap text-indigo-600" aria-current="page">Pakkumine</a>
-                <a href="#" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Leping</a>
-                <a href="#" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Hinded</a>
-                </nav>
-
-              <!-- Status dropdown on the right (moved from its old position) -->
-              <div class="inline-flex rounded-md shadow-xs relative">
+                <a href="application_form_view_contract.html" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Leping</a>
+                </nav>            <!-- Status dropdown on the right (moved from its old position) -->
+                <div class="inline-flex rounded-md shadow-xs relative">
                 <!-- "Staatus: Esitatud" button -->
                 <button type="button"
                   class="relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-10">
@@ -1145,20 +1143,32 @@
                 Palun anna oma otsusest teada hiljemalt <strong>14 päeva</strong> jooksul.
               </p>
             </div>
+
+            <!-- Comment field -->
+          <div class="bg-white p-4 rounded-md mb-6">
+            <h2 class="text-lg font-semibold text-gray-900 mb-2">Kommentaar</h2>
+            <p class="text-sm text-gray-500 mb-4">
+              Lisa kommentaar pakkumise juurde.
+            </p>
+            <textarea
+              name="comment"
+              id="comment"
+              rows="4"
+              class="w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+            </textarea>
           
             <!-- Submit / Confirm button -->
-            <div class="flex justify-end">
+            <div class="flex justify-end mt-6">
               <button
                 type="submit"
                 class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
-                Saada pakkumine
+                Salvesta
               </button>
             </div>
           </div>
 
-
-      </main>
+          <!-- End of main contentaada pakkumine     </main>
       
 
     </div>
