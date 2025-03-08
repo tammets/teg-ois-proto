@@ -277,7 +277,7 @@
                   <input
                     id="oppekava"
                     class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                    placeholder="Gümnaasiumi õppekava"
+                    placeholder="Õppekava title goes here"
                   >
                 </div>
               </div>
@@ -297,7 +297,179 @@
                 </div>
             </div>
 
-            <h2 class="text-base/7 font-semibold text-gray-900 mt-6">Õppeained</h2>
+            <h2 class="text-base/7 font-semibold text-gray-900 mt-6"> Õpepained (Põhikool)</h2>
+
+            <fieldset class="mt-6">
+              <legend class="sr-only">Subjects</legend>
+            
+                <!-- Subject Row 1: Ajalugu -->
+                <div class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer bg-gray-50 p-4 border-b border-gray-200" onclick="toggleCourseFields('ajalugu-pk-fields')">
+                  <div class="min-w-0 flex-1 text-sm/6">
+                  <label class="font-medium text-gray-900">Ajalugu</label>
+                  </div>
+                  <!-- display the course count -->
+                  <div class="flex h-6 shrink-0 items-center">
+                  <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">0</span>
+                  </div>
+                </div>
+                <!-- Hidden Fields for Ajalugu -->
+                <div id="ajalugu-pk-fields" class="hidden mb-4">
+                  <!-- Dropdown for selecting Kursuste arv -->
+                  <div>
+                  <label for="ajalugu-courses" class="block text-sm/6 font-medium text-gray-900 mt-6">Kursuste arv</label>
+                  <div class="mt-2 grid grid-cols-8">
+                    <select id="ajalugu-courses" name="ajalugu-courses" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  </div>
+                  <!-- Two text fields side by side -->
+                  <div class="grid grid-cols-2 gap-4 mt-6">
+                  <div>
+                    <label for="ajalugu-course-name" class="block text-sm/6 font-medium text-gray-900">Kursuse nimi</label>
+                    <div class="mt-2">
+                    <input name="ajalugu-course-name" id="ajalugu-course-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="">
+                    </div>
+                  </div>
+                  <div>
+                    <label for="ajalugu-course-description" class="block text-sm/6 font-medium text-gray-900">Õppesisu</label>
+                    <div class="mt-2">
+                    <textarea name="ajalugu-course-description" id="ajalugu-course-description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder=""></textarea>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+                <!-- Subject Row 2: Eesti keel -->
+                <div class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer bg-gray-50 p-4 border-b border-gray-200" onclick="toggleCourseFields('eestikeel-pk-fields')">
+                  <div class="min-w-0 flex-1 text-sm/6">
+                  <label class="font-medium text-gray-900">Eesti keel</label>
+                  </div>
+                  <div class="flex h-6 shrink-0 items-center">
+                  <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">3</span>
+                  </div>
+                </div>
+                <!-- Hidden Fields for Eesti keel -->
+                <div id="eestikeel-pk-fields" class="hidden mb-4">
+                  <!-- Dropdown for selecting Kursuste arv -->
+                  <div>
+                  <label for="eestikeel-courses" class="block text-sm/6 font-medium text-gray-900 mt-6">Kursuste arv</label>
+                  <div class="mt-2 grid grid-cols-8">
+                    <select id="eestikeel-courses" name="eestikeel-courses" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  </div>
+                  <!-- Two text fields side by side -->
+                  <div class="grid grid-cols-2 gap-4 mt-6">
+                  <div>
+                    <label for="eestikeel-course-name" class="block text-sm/6 font-medium text-gray-900">Kursuse nimi</label>
+                    <div class="mt-2">
+                    <input name="eestikeel-course-name" id="eestikeel-course-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    </div>
+                  </div>
+                  <div>
+                    <label for="ajalugu-course-description" class="block text-sm/6 font-medium text-gray-900">Õppesisu</label>
+                    <div class="mt-2">
+                    <textarea name="ajalugu-course-description" id="ajalugu-course-description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder=""></textarea>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+                <!-- Subject Row 3: Matemaatika -->
+                <div class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer bg-gray-50 p-4 border-b border-gray-200" onclick="toggleCourseFields('matemaatika-pk-fields')">
+                  <div class="min-w-0 flex-1 text-sm/6">
+                  <label class="font-medium text-gray-900">Matemaatika</label>
+                  </div>
+                  <div class="flex h-6 shrink-0 items-center">
+                  <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">2</span>
+                  </div>
+                </div>
+                <!-- Hidden Fields for Matemaatika -->
+                <div id="matemaatika-pk-fields" class="hidden mb-4">
+                  <!-- Dropdown for selecting Kursuste arv -->
+                  <div>
+                  <label for="matemaatika-courses" class="block text-sm/6 font-medium text-gray-900 mt-6">Kursuste arv</label>
+                  <div class="mt-2 grid grid-cols-8">
+                    <select id="matemaatika-courses" name="matemaatika-courses" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  </div>
+                  <!-- Two text fields side by side -->
+                  <div class="grid grid-cols-2 gap-4 mt-6">
+                  <div>
+                    <label for="matemaatika-course-name" class="block text-sm/6 font-medium text-gray-900">Kursuse nimi</label>
+                    <div class="mt-2">
+                    <input name="matemaatika-course-name" id="matemaatika-course-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    </div>
+                  </div>
+                  <div>
+                    <label for="ajalugu-course-description" class="block text-sm/6 font-medium text-gray-900">Õppesisu</label>
+                    <div class="mt-2">
+                    <textarea name="ajalugu-course-description" id="ajalugu-course-description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder=""></textarea>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            
+
+            </fieldset>
+
+            <h2 class="text-base/7 font-semibold text-gray-900 mt-6"> Õpepained (Gümnaasium)</h2>
 
             <fieldset class="mt-6">
               <legend class="sr-only">Subjects</legend>
