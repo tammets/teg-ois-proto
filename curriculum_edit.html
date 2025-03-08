@@ -243,13 +243,10 @@
                   </button>
 
                   <!-- Dropdown Menu (Initially Hidden) -->
-                  <div id="option-menu-dropdown"
-                    class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 hidden opacity-0 scale-95 transition-all duration-150"
-                    role="menu" aria-orientation="vertical" aria-labelledby="option-menu-button" tabindex="-1">
+                  <div id="option-menu-dropdown" class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 hidden opacity-0 scale-95 transition-all duration-150" role="menu" aria-orientation="vertical" aria-labelledby="option-menu-button" tabindex="-1">
                     <div class="py-1" role="none">
                       <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Õppekava</a>
                       <a href="#" id="reject-button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Õppeaine</a>
-                      <a href="#" id="reject-button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Õppeaasta</a>
                     </div>
                   </div>
                 </div>
@@ -261,10 +258,8 @@
           <!-- Header layout matching reference -->
             <div class="sm:flex mt-6"></div>
             <div class="sm:flex-auto">
-              <h3 class="text-lg font-semibold text-gray-900">Õppekava title goes here</h3>
-              <p class="mt-1 text-sm text-gray-500">
-              Kehtiv õppekava, kinnitatud käskkirjaga nr 1234
-              </p>
+              <h3 class="text-lg font-semibold text-gray-900">Muuda õppekava</h3>
+              <p class="mt-1 text-sm text-gray-500">NB! Muudatused õppekavas mõjutavad seotud objekte!</p>
             </div>
             
           </div>
@@ -300,198 +295,181 @@
 
             <h2 class="text-base/7 font-semibold text-gray-900 mt-6">Õppeained</h2>
 
-            <fieldset class="border-t border-b border-gray-200 mt-6">
+            <fieldset class="mt-6">
               <legend class="sr-only">Subjects</legend>
-              <div class="divide-y divide-gray-200">
             
                 <!-- Subject Row 1: Ajalugu -->
-                <div
-                  class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer"
-                  onclick="toggleCourseFields('ajalugu-fields')"
-                >
+                <div class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer bg-gray-50 p-4 border-b border-gray-200" onclick="toggleCourseFields('ajalugu-fields')">
                   <div class="min-w-0 flex-1 text-sm/6">
-                    <label class="font-medium text-gray-900">Ajalugu</label>
+                  <label class="font-medium text-gray-900">Ajalugu</label>
                   </div>
-                  <!-- Instead of a checkbox, display the course count -->
+                  <!-- display the course count -->
                   <div class="flex h-6 shrink-0 items-center">
-                    <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">
-                      0
-                    </span>
+                  <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">0</span>
                   </div>
                 </div>
                 <!-- Hidden Fields for Ajalugu -->
-                <div id="ajalugu-fields" class="hidden ml-8 mb-4">
+                <div id="ajalugu-fields" class="hidden mb-4">
                   <!-- Dropdown for selecting Kursuste arv -->
                   <div>
-                    <label class="block text-sm font-medium text-gray-700 mt-2">Kursuste arv</label>
-                    <select class="mt-1 block w-1/4 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
+                  <label for="ajalugu-courses" class="block text-sm/6 font-medium text-gray-900 mt-6">Kursuste arv</label>
+                  <div class="mt-2 grid grid-cols-8">
+                    <select id="ajalugu-courses" name="ajalugu-courses" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
                     </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
                   </div>
                   <!-- Two text fields side by side -->
-                  <div class="flex gap-4 mt-4">
-                    <div class="w-1/3">
-                      <label class="block text-sm font-medium text-gray-700">Course Name</label>
-                      <input
-                        type="text"
-                        class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
-                        placeholder="Ajalugu I"
-                      />
+                  <div class="grid grid-cols-2 gap-4 mt-6">
+                  <div>
+                    <label for="ajalugu-course-name" class="block text-sm/6 font-medium text-gray-900">Kursuse nimi</label>
+                    <div class="mt-2">
+                    <input name="ajalugu-course-name" id="ajalugu-course-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="">
                     </div>
-                    <div class="w-2/3">
-                      <label class="block text-sm font-medium text-gray-700">Content</label>
-                      <input
-                        type="text"
-                        class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
-                        placeholder="Additional details..."
-                      />
+                  </div>
+                  <div>
+                    <label for="ajalugu-course-description" class="block text-sm/6 font-medium text-gray-900">Õppesisu</label>
+                    <div class="mt-2">
+                    <textarea name="ajalugu-course-description" id="ajalugu-course-description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder=""></textarea>
                     </div>
+                  </div>
                   </div>
                 </div>
-            
+
                 <!-- Subject Row 2: Eesti keel -->
-                <div
-                  class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer"
-                  onclick="toggleCourseFields('eestikeel-fields')"
-                >
+                <div class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer bg-gray-50 p-4 border-b border-gray-200" onclick="toggleCourseFields('eestikeel-fields')">
                   <div class="min-w-0 flex-1 text-sm/6">
-                    <label class="font-medium text-gray-900">Eesti keel</label>
+                  <label class="font-medium text-gray-900">Eesti keel</label>
                   </div>
                   <div class="flex h-6 shrink-0 items-center">
-                    <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">
-                      3
-                    </span>
+                  <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">3</span>
                   </div>
                 </div>
                 <!-- Hidden Fields for Eesti keel -->
-                <div id="eestikeel-fields" class="hidden ml-8 mb-4">
+                <div id="eestikeel-fields" class="hidden mb-4">
                   <!-- Dropdown for selecting Kursuste arv -->
                   <div>
-                    <label class="block text-sm font-medium text-gray-700 mt-2">Kursuste arv</label>
-                    <select class="mt-1 block w-1/4 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
+                  <label for="eestikeel-courses" class="block text-sm/6 font-medium text-gray-900 mt-6">Kursuste arv</label>
+                  <div class="mt-2 grid grid-cols-8">
+                    <select id="eestikeel-courses" name="eestikeel-courses" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
                     </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
                   </div>
                   <!-- Two text fields side by side -->
-                  <div class="flex gap-4 mt-4">
-                    <div class="w-1/3">
-                      <label class="block text-sm font-medium text-gray-700">Course Name</label>
-                      <input
-                        type="text"
-                        class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
-                        placeholder="Eesti keel I"
-                      />
+                  <div class="grid grid-cols-2 gap-4 mt-6">
+                  <div>
+                    <label for="eestikeel-course-name" class="block text-sm/6 font-medium text-gray-900">Kursuse nimi</label>
+                    <div class="mt-2">
+                    <input name="eestikeel-course-name" id="eestikeel-course-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                     </div>
-                    <div class="w-2/3">
-                      <label class="block text-sm font-medium text-gray-700">Content</label>
-                      <input
-                        type="text"
-                        class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
-                        placeholder="Additional details..."
-                      />
+                  </div>
+                  <div>
+                    <label for="ajalugu-course-description" class="block text-sm/6 font-medium text-gray-900">Õppesisu</label>
+                    <div class="mt-2">
+                    <textarea name="ajalugu-course-description" id="ajalugu-course-description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder=""></textarea>
                     </div>
+                  </div>
                   </div>
                 </div>
-            
+
                 <!-- Subject Row 3: Matemaatika -->
-                <div
-                  class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer"
-                  onclick="toggleCourseFields('matemaatika-fields')"
-                >
+                <div class="relative flex gap-3 pt-3.5 pb-4 cursor-pointer bg-gray-50 p-4 border-b border-gray-200" onclick="toggleCourseFields('matemaatika-fields')">
                   <div class="min-w-0 flex-1 text-sm/6">
-                    <label class="font-medium text-gray-900">Matemaatika</label>
+                  <label class="font-medium text-gray-900">Matemaatika</label>
                   </div>
                   <div class="flex h-6 shrink-0 items-center">
-                    <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">
-                      2
-                    </span>
+                  <span class="px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded">2</span>
                   </div>
                 </div>
                 <!-- Hidden Fields for Matemaatika -->
-                <div id="matemaatika-fields" class="hidden ml-8 mb-4">
+                <div id="matemaatika-fields" class="hidden mb-4">
                   <!-- Dropdown for selecting Kursuste arv -->
                   <div>
-                    <label class="block text-sm font-medium text-gray-700 mt-2">Kursuste arv</label>
-                    <select class="mt-1 block w-1/8 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
+                  <label for="matemaatika-courses" class="block text-sm/6 font-medium text-gray-900 mt-6">Kursuste arv</label>
+                  <div class="mt-2 grid grid-cols-8">
+                    <select id="matemaatika-courses" name="matemaatika-courses" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
                     </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
                   </div>
                   <!-- Two text fields side by side -->
-                  <div class="flex gap-4 mt-4">
-                    <div class="w-1/3">
-                      <label class="block text-sm font-medium text-gray-700">Course Name</label>
-                      <input
-                        type="text"
-                        class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
-                        placeholder="Matemaatika I"
-                      />
+                  <div class="grid grid-cols-2 gap-4 mt-6">
+                  <div>
+                    <label for="matemaatika-course-name" class="block text-sm/6 font-medium text-gray-900">Kursuse nimi</label>
+                    <div class="mt-2">
+                    <input name="matemaatika-course-name" id="matemaatika-course-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                     </div>
-                    <div class="w-2/3">
-                      <label class="block text-sm font-medium text-gray-700">Content</label>
-                      <input
-                        type="text"
-                        class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
-                        placeholder="Additional details..."
-                      />
+                  </div>
+                  <div>
+                    <label for="ajalugu-course-description" class="block text-sm/6 font-medium text-gray-900">Õppesisu</label>
+                    <div class="mt-2">
+                    <textarea name="ajalugu-course-description" id="ajalugu-course-description" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder=""></textarea>
                     </div>
+                  </div>
                   </div>
                 </div>
             
-              </div>
+
             </fieldset>
 
             <!-- End edit curriculum -->
             
             <!-- Submit / Confirm button -->
             <div class="flex justify-end mt-6">
-              <a
-              href="application_form_view_grades.html"
-              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              >
-              Salvesta
-              </a>
+              <a href="curriculum.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Salvesta</a>
             </div>
           
       </main>
