@@ -23,7 +23,7 @@
             <ul role="list" class="-mx-2 space-y-1">
                 <li>
                 <!-- Töölaud is now inactive -->
-                <a href="register.html" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
+                <a href="dashboard.html" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
                   <svg class="size-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                   </svg>
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                   <!-- Avaldused is now active -->
-                  <a href="#" class="group flex gap-x-3 rounded-md bg-gray-50 p-2 text-sm/6 font-semibold text-indigo-600">
+                  <a href="application_list_student.html" class="group flex gap-x-3 rounded-md bg-gray-50 p-2 text-sm/6 font-semibold text-indigo-600">
                     <svg class="size-6 shrink-0 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
                     </svg>
@@ -245,7 +245,7 @@
                     </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       <a href="#" class="group inline-flex">
-                        Klass
+                        Õppevorm
                         <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
                         <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
                           <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
@@ -256,7 +256,7 @@
                     </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       <a href="#" class="group inline-flex">
-                        Ained
+                        Pakkumine
                         <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
                         <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
                           <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
@@ -310,8 +310,11 @@
                     <div class="text-gray-900">16.09.2024</div>
                     <div class="mt-1 text-gray-500">23:23</div>
                   </td>
-                  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">12. klass</td>
-                  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Kõik</td>
+                  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+                    <div class="font-medium text-gray-900">10. klass</div>
+                    <div class="mt-1 text-gray-500">4 ainet</div>
+                  </td>
+                  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Pakkumine puudub</td>
                   <td class="px-3 py-5 text-sm whitespace-nowrap">
                     <span
                     class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
@@ -353,13 +356,18 @@
                     <div class="text-gray-900">16.09.2024</div>
                     <div class="mt-1 text-gray-500">23:23</div>
                   </td>
-                  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">10. klass</td>
-                  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">4 ainet</td>
+                  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+                    <div class="font-medium text-gray-900">12. klass</div>
+                    <div class="mt-1 text-gray-500">Kõik ained</div>
+                  </td>
+                  <td class="px-3 py-5 text-sm whitespace-nowrap">
+                    <a href="application_form_view_prop.html" class="text-indigo-600 hover:text-indigo-900">Pakkumine</a>
+                  </td>
                   <td class="px-3 py-5 text-sm whitespace-nowrap">
                     <span
                     class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-600/20 ring-inset"
                     >
-                    Esitatud
+                    Pakkumine saadetud
                     </span>
                   </td>
                   <td class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0">
