@@ -144,6 +144,27 @@
   </div>
 
   <div class="lg:pl-72">
+
+      <!-- Notification: something is waiting for you! -->
+    <div class="rounded-md bg-blue-50 p-4">
+      <div class="flex">
+        <div class="shrink-0">
+          <svg class="size-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="ml-3 flex-1 md:flex md:justify-between">
+          <p class="text-sm text-blue-700">Sulle on koostatud uus hinnapakkumine</p>
+          <p class="mt-3 text-sm md:mt-0 md:ml-6">
+            <a href="application_form_view_prop.html" class="font-medium whitespace-nowrap text-blue-700 hover:text-blue-600">
+              Vaata
+              <span aria-hidden="true"> &rarr;</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-xs sm:gap-x-6 sm:px-6 lg:px-8">
       <button type="button" class="-m-2.5 p-2.5 text-gray-700 lg:hidden">
         <span class="sr-only">Open sidebar</span>
@@ -274,7 +295,7 @@
               </div>
               <!-- end avaldused ja lepingud-->
               
-              <div>
+              <div class="mt-8">
                 <h2 class="text-base font-semibold text-gray-900">Uudised ja sündmused 2024-2025 õppeaastal</h2>
                 <div class="lg:grid lg:grid-cols-12 lg:gap-x-16">
                   <div class="mt-10 text-center lg:col-start-8 lg:col-end-13 lg:row-start-1 lg:mt-9 xl:col-start-9">
