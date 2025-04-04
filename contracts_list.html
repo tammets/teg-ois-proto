@@ -8,7 +8,7 @@
 </head>
 <body class="h-full">
 
-  <!-- removed mobile menu -->
+  <!-- Mobile menu removed -->
 
   <!-- Static sidebar for desktop -->
   <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
@@ -826,7 +826,7 @@
     Kustuta
   </button>
 
-  <button type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
+  <button id="deselect-all" type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
     </svg>
@@ -956,7 +956,7 @@
   }
 
   // When clicking the "Deselect all" button, uncheck all selected checkboxes
-  const deselectBtn = document.querySelector('#action-popup .bg-gray-600');
+  const deselectBtn = document.querySelector('#deselect-all');
   if (deselectBtn) {
     deselectBtn.addEventListener('click', function () {
       document.querySelectorAll('.row-checkbox:checked').forEach(cb => {
