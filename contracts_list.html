@@ -226,6 +226,19 @@
                 <thead>
                   <tr>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                      <input type="checkbox" id="select-all" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+                    </th>
+                    <script>
+                      // toggles all checkboxes when the "select-all" checkbox is changed.
+                      document.getElementById("select-all").addEventListener("change", function() {
+                      const checked = this.checked;
+                      const allCheckboxes = document.querySelectorAll("tbody input[type='checkbox']");
+                      allCheckboxes.forEach(function(checkbox) {
+                        checkbox.checked = checked;
+                      });
+                      });
+                    </script>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       <a href="#" class="group inline-flex">
                         Nimi
                         <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
@@ -281,6 +294,9 @@
                 <tbody class="divide-y divide-gray-200 bg-white">
                   <!-- 1 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
@@ -331,6 +347,9 @@
 
 <!-- 2 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
@@ -385,6 +404,9 @@
 
 <!-- 3 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
@@ -439,6 +461,9 @@
 
 <!-- 4 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
@@ -494,6 +519,9 @@
 
 <!-- 5 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
@@ -548,6 +576,9 @@
 
 <!-- 6 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
@@ -602,6 +633,9 @@
 
 <!-- 7 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
@@ -656,6 +690,9 @@
 
 <!-- 8 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
@@ -710,6 +747,9 @@
 
 <!-- 9 -->
 <tr>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+    <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+  </td>
   <td class="py-5 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
     <div class="flex items-center">
       <div class="size-11 shrink-0">
