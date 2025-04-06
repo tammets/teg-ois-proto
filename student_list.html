@@ -496,7 +496,7 @@
 <!-- 6 -->
 <tr class="border-t border-gray-200">
   <th colspan="8" scope="colgroup" class="bg-gray-50 py-2 pr-3 pl-4 text-left text-sm font-semibold text-gray-900">
-    Õpperühm: G2-1
+    Õpperühm: G1-1
   </th>
 </tr>
 <tr>
@@ -663,12 +663,6 @@
     </svg>    
     Muuda
   </button>
-  <button type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"/>
-    </svg>    
-    Kustuta
-  </button>
   <button id="deselect-all" type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
@@ -731,23 +725,33 @@
 <!-- Modal Markup -->
 <div id="edit-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-black/50">
   <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
-    <h2 class="text-lg font-bold mb-4">Muuda lepingu detaile</h2>
+    <h2 class="text-lg font-bold mb-4">Muuda andmeid</h2>
     <div class="space-y-4 mb-4">
       <div>
-        <label for="bulk-isikukood" class="block text-sm font-medium text-gray-700">Isikukood</label>
-        <input type="text" id="bulk-isikukood" name="bulk-isikukood" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm" placeholder="Sisesta uus isikukood" />
-      </div>
-      <div>
-        <label for="bulk-oppevorm" class="block text-sm font-medium text-gray-700">Õppevorm</label>
-        <select id="bulk-oppevorm" name="bulk-oppevorm" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
-          <option value="">Vali õppevorm</option>
-          <option value="klass">Klass</option>
-          <option value="üksikaine">Üksikaine</option>
+        <label for="bulk-opperyhm" class="block text-sm font-medium text-gray-700">Õpperühm</label>
+        <select id="bulk-opperyhm" name="bulk-opperyhm" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
+          <option value="">Vali õpperühm</option>
+          <option value="P-1">P-1</option>
+          <option value="P-2">P-2</option>
+          <option value="G1-1">G1-1</option>
+          <option value="G2-1">G2-1</option>
+          <option value="G3-1">G3-1</option>
+          <option value="G2-2">G2-2</option>
+          <option value="G3-2">G3-2</option>
         </select>
       </div>
       <div>
-        <label for="bulk-vvva-kk" class="block text-sm font-medium text-gray-700">VV/VA KK</label>
-        <input type="text" id="bulk-vvva-kk" name="bulk-vvva-kk" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm" placeholder="Sisesta uus VV/VA KK" />
+        <label for="bulk-mentor" class="block text-sm font-medium text-gray-700">Mentor</label>
+        <select id="bulk-mentor" name="bulk-mentor" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
+          <option value="">Vali mentor</option>
+          <option value="Terje Karu">Terje Karu</option>
+          <option value="Marika Mets">Marika Mets</option>
+          <option value="Toomas Pomm">Toomas Pomm</option>
+          <option value="Madis Meri">Madis Meri</option>
+          <option value="Evelin Eensaar">Evelin Eensaar</option>
+          <option value="Priit Puu">Priit Puu</option>
+          <option value="Tiit Tamm">Tiit Tamm</option>
+        </select>
       </div>
     </div>
     <div class="flex justify-end space-x-4">
@@ -803,18 +807,6 @@
       cb.addEventListener('change', updateActionPopupVisibility);
     });
     
-    // Delete functionality
-    const deleteBtn = document.querySelector('#action-popup .bg-red-600');
-    if (deleteBtn) {
-      deleteBtn.addEventListener('click', function () {
-        document.querySelectorAll('.row-checkbox:checked').forEach(cb => {
-          const row = cb.closest('tr');
-          if (row) row.remove();
-        });
-        updateActionPopupVisibility();
-      });
-    }
-    
     // Deselect all functionality
     const deselectBtn = document.getElementById('deselect-all');
     if (deselectBtn) {
@@ -848,26 +840,22 @@
       }
     });
     
-    // Bulk update modal "Salvesta"
+    // Bulk update modal "Salvesta" functionality
     const saveModal = document.getElementById("save-modal");
     if (saveModal) {
       saveModal.addEventListener("click", function(event) {
         event.stopPropagation();
-        const newIsikukood = document.getElementById("bulk-isikukood").value;
-        const newOppevorm = document.getElementById("bulk-oppevorm").value;
-        const newVVVA = document.getElementById("bulk-vvva-kk").value;
+        const newOpperyhm = document.getElementById("bulk-opperyhm").value;
+        const newMentor = document.getElementById("bulk-mentor").value;
         document.querySelectorAll(".row-checkbox:checked").forEach(function(cb) {
           const row = cb.closest("tr");
           if (row) {
             const cells = row.querySelectorAll("td");
-            if (cells[2]) {
-              cells[2].innerHTML = `<div class="text-gray-900">${newIsikukood}</div>`;
+            if (cells[3]) {
+              cells[3].textContent = newOpperyhm;
             }
-            if (cells[5]) {
-              cells[5].textContent = newOppevorm;
-            }
-            if (cells[7]) {
-              cells[7].textContent = newVVVA;
+            if (cells[4]) {
+              cells[4].textContent = newMentor;
             }
           }
         });
