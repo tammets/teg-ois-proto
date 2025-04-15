@@ -198,7 +198,7 @@
     <!--Content starts here-->
 
     <div class="mx-auto max-w-7xl p-4 bg-white shadow-lg rounded-lg mt-10">
-      <main class="overflow-hidden">
+      <main class="">
         <div class="px-4 py-2 sm:px-6">
 
           <!-- Tabbed view starts here -->
@@ -268,6 +268,47 @@
               <p class="mt-1 text-sm text-gray-500 mb-6">
               Lepingu detailid
               </p>
+              
+                <div class="relative inline-block text-left">
+                <div>
+                  <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                  Lepingu tüüp
+                  <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                  </button>
+                </div>
+                
+                <div class="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden hidden" id="menu-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                  <div class="py-1" role="none">
+                  <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Baasleping</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Lepingu lisa</a>
+                  </div>
+                </div>
+                </div>
+                
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  const menuButton = document.getElementById('menu-button');
+                  const menuDropdown = document.getElementById('menu-dropdown');
+                
+                  menuButton.addEventListener('click', function(event) {
+                  event.stopPropagation();
+                  const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+                  this.setAttribute('aria-expanded', !expanded);
+                  menuDropdown.classList.toggle('hidden');
+                  });
+                
+                  document.addEventListener('click', function(event) {
+                  if (!menuButton.contains(event.target) && !menuDropdown.contains(event.target)) {
+                    menuDropdown.classList.add('hidden');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                  }
+                  });
+                });
+                </script>
+
               <a href="application_form_contract-generated.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Genereeri leping</a>
             </div>
 
