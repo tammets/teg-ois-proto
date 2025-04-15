@@ -204,11 +204,11 @@
           <!-- Tabbed view starts here -->
           <div class="grid grid-cols-1 sm:hidden">
             <!-- Mobile "Select a tab" dropdown -->
-            <select aria-label="Select a tab" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
-              <option selected>Profiil</option>
-              <option>Õpilasraamat</option>
-              <option>Arenguvestlus</option>
-            </select>
+              <select aria-label="Select a tab" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+                <option>Profiil</option>
+                <option selected>Õpilasraamat</option> <!-- Changed selected -->
+                <option>Arenguvestlus</option>
+              </select>
             <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end fill-gray-500" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
               <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
             </svg>
@@ -216,15 +216,15 @@
 
           <!-- Desktop tabs + status button on the same line -->
           <div class="hidden sm:block">
-            <!-- Make this a flex container with space-between -->
-            <div class="border-b border-gray-200 flex items-center justify-between">
-              <!-- Tabs on the left -->
-                <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-                <a href="profile_view.html" class="border-b-2 border-indigo-500 px-1 py-4 text-sm font-medium whitespace-nowrap text-indigo-600" aria-current="page">Profiil</a>
-                <a href="profile_student_record.html" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Õpilasraamat</a>
-                <a href="application_form_view_prop.html" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Arenguvestlus</a>
-                </nav>
-            </div>
+              <div class="hidden sm:block">
+                <div class="border-b border-gray-200 flex items-center justify-between">
+                  <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                    <a href="profile_view.html" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Profiil</a>
+                    <a href="profile_student_record.html" class="border-b-2 border-indigo-500 px-1 py-4 text-sm font-medium whitespace-nowrap text-indigo-600" aria-current="page">Õpilasraamat</a> <!-- Changed active tab -->
+                    <a href="profile_development_interview.html" class="border-b-2 border-transparent px-1 py-4 text-sm font-medium whitespace-nowrap text-gray-500 hover:border-gray-300 hover:text-gray-700">Arenguvestlus</a>
+                  </nav>
+                </div>
+              </div>
           </div>
           <!-- Tabbed view ends here -->
 
@@ -235,73 +235,92 @@
 
           <!-- Profile Details Data Structure -->
             
-            <ul role="list" class="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8">
-            <li class="overflow-hidden rounded-xl border border-gray-200 lg:col-span-2">
-              <div class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Tuple" class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10">
-              <div class="text-sm/6 font-medium text-gray-900">Juku Juurikas</div>
+          <div class="bg-gray-50">
+            <div class="p-6">
+              <h2 class="text-lg font-bold mb-4">Indira Smith (11)</h2>
+          
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p class="text-sm font-semibold">Õpilane number:</p>
+                  <p class="text-sm">61209070118</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold">Õpilase number:</p>
+                  <p class="text-sm">45573997786</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold">Kodune keel:</p>
+                  <p class="text-sm">eesti keel</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold">Sünnikoht:</p>
+                  <p class="text-sm">Stockholm</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold">Lapseda nimi:</p>
+                  <p class="text-sm">Maria Potts</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold">Ema koda:</p>
+                  <p class="text-sm">Lahkus koolist</p>
+                </div>
               </div>
-              <dl class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6">
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Kasutajanimi</dt>
-                <dd class="text-gray-700">juku</dd>
+          
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Aasta
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Klass
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Õppeaasta
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Eelmine/Järgmine
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Dokumendid
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white hover:bg-gray-50">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">01.09.2020</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">K9-98 (24.08.2020)</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Stockholm Eesti</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pohkõol</td>
+                  </tr>
+                </tbody>
+              </table>
+          
+              <div class="mt-4">
+                <h3 class="text-lg font-semibold">Kool</h3>
+                <ul class="mt-2 list-disc list-inside">
+                  <li>Põhikooli õppe riiklik õppekava, RÕK (PK)</li>
+                  <li>Gümnaasium, RÕK (G)</li>
+                </ul>
               </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">E-post</dt>
-                <dd class="text-gray-700">juku@juurikas.ee</dd>
+          
+              <div class="mt-4">
+                <h3 class="text-lg font-semibold">Tunnistused</h3>
+                <ul class="mt-2 list-disc list-inside">
+                  <li>Tubli õiene eirumaisu mäldikooiks. 10.04.2022</li>
+                  <li>Koolastus arvestuside uabakõndiks geoggraafilmapidudli edukais 9. kohts. 10.10.2022</li>
+                </ul>
               </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Telefon</dt>
-                <dd class="text-gray-700">5454 5454</dd>
+          
+              <div class="mt-4">
+                <h3 class="text-lg font-semibold">Kooliskme lõputustused</h3>
+                <ul class="mt-2 list-disc list-inside">
+                  <li>Kooliskme lõputustus nr 8493876528</li>
+                </ul>
               </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Isikukood</dt>
-                <dd class="text-gray-700">34343434343434</dd>
-              </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Vanus</dt>
-                <dd class="text-gray-700">16</dd>
-              </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Roll</dt>
-                <dd class="text-gray-700">Õpilane</dd>
-              </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Registreerunud</dt>
-                <dd class="text-gray-700"></dd>
-              </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Aktiivne</dt>
-                <dd class="text-gray-700">Jah</dd>
-              </div>
-              </dl>
-            </li>
-            <li class="overflow-hidden rounded-xl border border-gray-200 lg:col-span-1">
-              <div class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
-                <span class="flex-none inline-flex items-center justify-center h-12 w-12 rounded-lg bg-gray-200 ring-1 ring-gray-900/10">
-                <svg class="h-6 w-6 text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM4 20c0-2.21 3.58-4 8-4s8 1.79 8 4v1H4v-1z" />
-                </svg>
-                </span>
-              <div class="text-sm/6 font-medium text-gray-900">Mari Juurikas</div>
-              <p class="text-gray-500 text-sm/6">lapseavanem</p>
-              </div>
-              <dl class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6">
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Isikukood</dt>
-                <dd class="text-gray-700">1234 1234213</dd>
-              </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">Telefon</dt>
-                <dd class="text-gray-700">1234 1234213</dd>
-              </div>
-              <div class="flex justify-between gap-x-4 py-3">
-                <dt class="text-gray-500">E-post</dt>
-                <dd class="text-gray-700">mari@juurikas.ee</dd>
-              </div>
-              </dl>
-            </li>
-            </ul>
+            </div>
+          </div>
 
           <!-- end Details -->
           
