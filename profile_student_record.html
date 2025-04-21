@@ -369,81 +369,57 @@
   </div>
 </div>
 
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     console.log("✅ JavaScript Loaded!");
 
+    // Dropdown menu logic
     const menuButton = document.getElementById("option-menu-button");
     const menuDropdown = document.getElementById("option-menu-dropdown");
 
-    if (!menuButton) {
-      console.error("❌ #option-menu-button NOT found!");
-      return;
+    if (menuButton && menuDropdown) {
+      console.log("✅ Dropdown Button & Menu Found!");
+      menuDropdown.classList.add("hidden");
+      menuDropdown.style.display = "none";
+
+      menuButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        console.log("🔘 Dropdown Button Clicked!");
+        const isHidden = menuDropdown.classList.contains("hidden");
+        menuDropdown.classList.toggle("hidden");
+        menuDropdown.style.display = isHidden ? "block" : "none";
+        menuDropdown.classList.toggle("opacity-0", !isHidden);
+        menuDropdown.classList.toggle("scale-95", !isHidden);
+        menuDropdown.classList.toggle("opacity-100", isHidden);
+        menuDropdown.classList.toggle("scale-100", isHidden);
+        menuButton.setAttribute("aria-expanded", isHidden ? "true" : "false");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!menuDropdown.contains(event.target) && !menuButton.contains(event.target)) {
+          console.log("✅ Clicked Outside Dropdown - Closing!");
+          menuDropdown.classList.add("hidden");
+          menuDropdown.style.display = "none";
+          menuDropdown.classList.remove("opacity-100", "scale-100");
+          menuDropdown.classList.add("opacity-0", "scale-95");
+          menuButton.setAttribute("aria-expanded", "false");
+        }
+      });
     }
 
-    if (!menuDropdown) {
-      console.error("❌ Dropdown menu NOT found!");
-      return;
-    }
-
-    console.log("✅ Dropdown Button & Menu Found!");
-
-    // Ensure menu starts hidden
-    menuDropdown.classList.add("hidden");
-    menuDropdown.style.display = "none";
-
-    menuButton.addEventListener("click", function (event) {
-      event.stopPropagation();
-      console.log("🔘 Dropdown Button Clicked!");
-
-      const isHidden = menuDropdown.classList.contains("hidden");
-
-      if (isHidden) {
-        menuDropdown.classList.remove("hidden");
-        menuDropdown.style.display = "block";
-        menuDropdown.classList.remove("opacity-0", "scale-95");
-        menuDropdown.classList.add("opacity-100", "scale-100");
-      } else {
-        menuDropdown.classList.add("hidden");
-        menuDropdown.style.display = "none";
-        menuDropdown.classList.remove("opacity-100", "scale-100");
-        menuDropdown.classList.add("opacity-0", "scale-95");
-      }
-
-      // Update aria-expanded
-      menuButton.setAttribute("aria-expanded", isHidden ? "true" : "false");
-    });
-
-    // Close when clicking outside
-    document.addEventListener("click", function (event) {
-      if (!menuDropdown.contains(event.target) && !menuButton.contains(event.target)) {
-        console.log("✅ Clicked Outside Dropdown - Closing!");
-        menuDropdown.classList.add("hidden");
-        menuDropdown.style.display = "none";
-        menuDropdown.classList.remove("opacity-100", "scale-100");
-        menuDropdown.classList.add("opacity-0", "scale-95");
-        menuButton.setAttribute("aria-expanded", "false");
-      }
-    });
-  });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+    // Profile dropdown logic
     const profileButton = document.querySelector("#user-menu-button");
     const profileDropdown = document.querySelector("#profile-dropdown");
 
     if (profileButton && profileDropdown) {
       profileButton.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents immediate closing
+        event.stopPropagation();
         profileDropdown.classList.toggle("hidden");
-
-        // Update aria-expanded for accessibility
         const expanded = profileDropdown.classList.contains("hidden") ? "false" : "true";
         profileButton.setAttribute("aria-expanded", expanded);
       });
 
-      // Close dropdown when clicking outside
       document.addEventListener("click", function (event) {
         if (!profileDropdown.contains(event.target) && !profileButton.contains(event.target)) {
           profileDropdown.classList.add("hidden");
@@ -451,11 +427,9 @@
         }
       });
     }
-  });
-</script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+    // Rejection modal logic
+
     const rejectButton = document.querySelector("#reject-button"); // Change ID if necessary
     const modal = document.querySelector("#rejection-modal");
     const cancelButton = document.querySelector("#cancel-button");
@@ -471,6 +445,7 @@
         modal.classList.add("hidden");
       });
     }
+
   });
 </script>
 

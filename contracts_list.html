@@ -261,16 +261,26 @@
                         </span>
                       </a>
                     </th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                      <a href="#" class="group inline-flex">
+                    <th scope="col" class="relative px-3 py-3.5 text-left text-sm font-semibold text-gray-900"> <!-- Added relative positioning -->
+                      <a href="#" id="status-filter-button" class="group inline-flex"> <!-- Added ID -->
                         Staatus
-                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
                         <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
-                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                          </svg>
+                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
                         </span>
                       </a>
+                      <!-- Status Filter Popup -->
+                      <div id="status-filter-popup" class="absolute left-0 mt-2 w-48 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden z-20">
+                        <div class="py-1 px-4" role="none">
+                          
+                          <div id="status-checkboxes" class="space-y-2 mt-4">
+                            <!-- Checkboxes will be populated by JS -->
+                          </div>
+                          <div class="mt-4 mb-2 flex justify-between">
+                            <button id="clear-status-filter" type="button" class="rounded-sm bg-white px-2 py-1 text-xs font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50">Tühjenda</button>
+                            <button id="apply-status-filter" type="button" class="rounded-sm bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Rakenda</button>
+                          </div>
+                        </div>
+                      </div>
                     </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       <a href="#" class="group inline-flex">
@@ -321,7 +331,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset">Kinnitatud</span>
   </td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">10. klass</td>
@@ -374,7 +384,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <span
       class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-600/20 ring-inset"
     >
@@ -431,7 +441,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <span
       class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-yellow-600/20 ring-inset"
     >
@@ -488,7 +498,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <!-- Example of 'Inactive' with red styling -->
     <span
       class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset"
@@ -546,7 +556,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <span
       class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
     >
@@ -603,7 +613,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <span
       class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
     >
@@ -660,7 +670,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <span
       class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset"
     >
@@ -717,7 +727,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <span
       class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
     >
@@ -774,7 +784,7 @@
     <div class="text-gray-900">16.09.2024</div>
     <div class="mt-1 text-gray-500">23:23</div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
+  <td class="status-cell px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <span
       class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
     >
@@ -916,6 +926,7 @@
 <!-- Consolidated Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // --- Existing JS ---
     // Profile dropdown
     const profileButton = document.querySelector("#user-menu-button");
     const profileDropdown = document.querySelector("#profile-dropdown");
@@ -932,7 +943,7 @@
         }
       });
     }
-    
+
     // Select-all functionality
     const selectAll = document.getElementById("select-all");
     if (selectAll) {
@@ -944,7 +955,7 @@
         updateActionPopupVisibility();
       });
     }
-    
+
     // Update popup visibility
     function updateActionPopupVisibility() {
       const anyChecked = Array.from(document.querySelectorAll('.row-checkbox')).some(cb => cb.checked);
@@ -958,7 +969,7 @@
     document.querySelectorAll('.row-checkbox').forEach(cb => {
       cb.addEventListener('change', updateActionPopupVisibility);
     });
-    
+
     // Delete functionality
     const deleteBtn = document.querySelector('#action-popup .bg-red-600');
     if (deleteBtn) {
@@ -968,9 +979,11 @@
           if (row) row.remove();
         });
         updateActionPopupVisibility();
+        // After deleting, also re-evaluate statuses for the filter popup
+        populateStatusFilterPopup();
       });
     }
-    
+
     // Deselect all functionality
     const deselectBtn = document.getElementById('deselect-all');
     if (deselectBtn) {
@@ -981,7 +994,7 @@
         updateActionPopupVisibility();
       });
     }
-    
+
     // Modal toggle
     const editButton = document.getElementById("edit-button");
     const editModal = document.getElementById("edit-modal");
@@ -998,12 +1011,15 @@
         editModal.classList.add("hidden");
       });
     }
-    editModal.addEventListener("click", function(event) {
-      if (event.target === this) {
-        this.classList.add("hidden");
-      }
-    });
-    
+    if (editModal) {
+        editModal.addEventListener("click", function(event) {
+        if (event.target === this) {
+            this.classList.add("hidden");
+        }
+        });
+    }
+
+
     // Bulk update modal "Salvesta"
     const saveModal = document.getElementById("save-modal");
     if (saveModal) {
@@ -1016,20 +1032,128 @@
           const row = cb.closest("tr");
           if (row) {
             const cells = row.querySelectorAll("td");
-            if (cells[2]) {
-              cells[2].innerHTML = `<div class="text-gray-900">${newIsikukood}</div>`;
+            // Update Isikukood (Column 3, index 2)
+            if (cells[2] && newIsikukood.trim() !== '') {
+                const ikDiv = cells[2].querySelector('.text-gray-900');
+                if (ikDiv) ikDiv.textContent = newIsikukood;
             }
-            if (cells[5]) {
-              cells[5].textContent = newOppevorm;
+            // Update Õppevorm (Column 6, index 5)
+            if (cells[5] && newOppevorm.trim() !== '') {
+                cells[5].textContent = newOppevorm;
             }
-            if (cells[7]) {
-              cells[7].textContent = newVVVA;
+            // Update VV/VA KK (Column 8, index 7)
+            if (cells[7] && newVVVA.trim() !== '') {
+                const vvvaDiv = cells[7].querySelector('.text-gray-900');
+                if (vvvaDiv) vvvaDiv.textContent = newVVVA;
             }
           }
         });
         editModal.classList.add("hidden");
+        // Clear modal fields after saving
+        document.getElementById("bulk-isikukood").value = '';
+        document.getElementById("bulk-oppevorm").value = '';
+        document.getElementById("bulk-vvva-kk").value = '';
       });
     }
+
+    // --- NEW Status Filter JS ---
+
+    const statusFilterButton = document.getElementById('status-filter-button');
+    const statusFilterPopup = document.getElementById('status-filter-popup');
+    const statusCheckboxesContainer = document.getElementById('status-checkboxes');
+    const applyStatusFilterButton = document.getElementById('apply-status-filter');
+    const clearStatusFilterButton = document.getElementById('clear-status-filter');
+    const tableBody = document.querySelector('tbody');
+
+    // Function to get unique statuses and populate the popup
+    function populateStatusFilterPopup() {
+        const statusCells = tableBody.querySelectorAll('.status-cell');
+        const uniqueStatuses = new Set();
+        statusCells.forEach(cell => {
+            // Find the span inside the cell and get its text
+            const statusSpan = cell.querySelector('span');
+            if (statusSpan) {
+                uniqueStatuses.add(statusSpan.textContent.trim());
+            }
+        });
+
+        statusCheckboxesContainer.innerHTML = ''; // Clear existing checkboxes
+        uniqueStatuses.forEach(status => {
+            if (!status) return; // Skip empty statuses if any
+
+            const div = document.createElement('div');
+            div.className = 'flex items-center';
+            const checkboxId = `status-${status.replace(/\s+/g, '-')}`; // Create a safe ID
+
+            div.innerHTML = `
+                <input id="${checkboxId}" name="status-filter" type="checkbox" value="${status}" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                <label for="${checkboxId}" class="ml-3 block text-sm font-medium text-gray-700">${status}</label>
+            `;
+            statusCheckboxesContainer.appendChild(div);
+        });
+    }
+
+    // Function to filter table rows based on selected statuses
+    function filterTableByStatus() {
+        const selectedStatuses = Array.from(statusCheckboxesContainer.querySelectorAll('input[name="status-filter"]:checked'))
+                                    .map(cb => cb.value);
+
+        const rows = tableBody.querySelectorAll('tr');
+        rows.forEach(row => {
+            const statusCell = row.querySelector('.status-cell');
+            if (statusCell) {
+                const statusSpan = statusCell.querySelector('span');
+                const rowStatus = statusSpan ? statusSpan.textContent.trim() : '';
+
+                // Show row if no statuses are selected OR if the row's status is in the selected list
+                if (selectedStatuses.length === 0 || selectedStatuses.includes(rowStatus)) {
+                    row.classList.remove('hidden');
+                } else {
+                    row.classList.add('hidden');
+                }
+            }
+        });
+    }
+
+    // Populate popup on load
+    populateStatusFilterPopup();
+
+    // Event listener for the status filter button
+    if (statusFilterButton && statusFilterPopup) {
+        statusFilterButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            statusFilterPopup.classList.toggle('hidden');
+        });
+    }
+
+    // Event listener for applying the filter
+    if (applyStatusFilterButton) {
+        applyStatusFilterButton.addEventListener('click', () => {
+            filterTableByStatus();
+            statusFilterPopup.classList.add('hidden'); // Hide popup after applying
+        });
+    }
+
+     // Event listener for clearing the filter
+     if (clearStatusFilterButton) {
+          clearStatusFilterButton.addEventListener('click', () => {
+              statusCheckboxesContainer.querySelectorAll('input[name="status-filter"]').forEach(cb => cb.checked = false);
+              filterTableByStatus(); // Apply filter which will show all rows
+              // Optionally hide popup after clearing
+              // statusFilterPopup.classList.add('hidden');
+          });
+      }
+
+    // Global click listener to hide popup when clicking outside
+    document.addEventListener('click', (event) => {
+        if (statusFilterPopup && !statusFilterPopup.classList.contains('hidden')) {
+            if (!statusFilterPopup.contains(event.target) && event.target !== statusFilterButton && !statusFilterButton.contains(event.target)) {
+                statusFilterPopup.classList.add('hidden');
+            }
+        }
+    });
+
   });
 </script>
 
