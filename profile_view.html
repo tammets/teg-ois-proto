@@ -284,7 +284,7 @@
                 </svg>
                 </span>
               <div class="text-sm/6 font-medium text-gray-900">Mari Juurikas</div>
-              <p class="text-gray-500 text-sm/6">lapseavanem</p>
+              <p class="text-gray-500 text-sm/6">lapsevanem</p>
               </div>
               <dl class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6">
               <div class="flex justify-between gap-x-4 py-3">
@@ -352,106 +352,83 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    console.log("✅ JavaScript Loaded!");
+    console.log("✅ JavaScript Initializing...");
 
-    const menuButton = document.getElementById("option-menu-button");
-    const menuDropdown = document.getElementById("option-menu-dropdown");
-
-    if (!menuButton) {
-      console.error("❌ #option-menu-button NOT found!");
-      return;
-    }
-
-    if (!menuDropdown) {
-      console.error("❌ Dropdown menu NOT found!");
-      return;
-    }
-
-    console.log("✅ Dropdown Button & Menu Found!");
-
-    // Ensure menu starts hidden
-    menuDropdown.classList.add("hidden");
-    menuDropdown.style.display = "none";
-
-    menuButton.addEventListener("click", function (event) {
-      event.stopPropagation();
-      console.log("🔘 Dropdown Button Clicked!");
-
-      const isHidden = menuDropdown.classList.contains("hidden");
-
-      if (isHidden) {
-        menuDropdown.classList.remove("hidden");
-        menuDropdown.style.display = "block";
-        menuDropdown.classList.remove("opacity-0", "scale-95");
-        menuDropdown.classList.add("opacity-100", "scale-100");
-      } else {
-        menuDropdown.classList.add("hidden");
-        menuDropdown.style.display = "none";
-        menuDropdown.classList.remove("opacity-100", "scale-100");
-        menuDropdown.classList.add("opacity-0", "scale-95");
-      }
-
-      // Update aria-expanded
-      menuButton.setAttribute("aria-expanded", isHidden ? "true" : "false");
-    });
-
-    // Close when clicking outside
-    document.addEventListener("click", function (event) {
-      if (!menuDropdown.contains(event.target) && !menuButton.contains(event.target)) {
-        console.log("✅ Clicked Outside Dropdown - Closing!");
-        menuDropdown.classList.add("hidden");
-        menuDropdown.style.display = "none";
-        menuDropdown.classList.remove("opacity-100", "scale-100");
-        menuDropdown.classList.add("opacity-0", "scale-95");
-        menuButton.setAttribute("aria-expanded", "false");
-      }
-    });
-  });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+    // --- Profile Dropdown Logic ---
     const profileButton = document.querySelector("#user-menu-button");
     const profileDropdown = document.querySelector("#profile-dropdown");
 
     if (profileButton && profileDropdown) {
-      profileButton.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents immediate closing
-        profileDropdown.classList.toggle("hidden");
+      console.log("✅ Profile Dropdown Elements Found. Initializing...");
+      // Ensure dropdown starts hidden
+      profileDropdown.classList.add("hidden");
+      profileButton.setAttribute("aria-expanded", "false");
 
-        // Update aria-expanded for accessibility
-        const expanded = profileDropdown.classList.contains("hidden") ? "false" : "true";
-        profileButton.setAttribute("aria-expanded", expanded);
+      profileButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents immediate closing by document listener
+        const isHidden = profileDropdown.classList.toggle("hidden");
+        profileButton.setAttribute("aria-expanded", !isHidden); // Update aria-expanded
+        console.log("🔘 Profile Dropdown Toggled. Hidden:", isHidden);
       });
 
       // Close dropdown when clicking outside
       document.addEventListener("click", function (event) {
-        if (!profileDropdown.contains(event.target) && !profileButton.contains(event.target)) {
+        // Check if the dropdown is currently visible and the click was outside both button and dropdown
+        if (!profileDropdown.classList.contains("hidden") && !profileDropdown.contains(event.target) && !profileButton.contains(event.target)) {
+          console.log("✅ Clicked Outside Profile Dropdown - Closing!");
           profileDropdown.classList.add("hidden");
           profileButton.setAttribute("aria-expanded", "false");
         }
       });
+    } else {
+      console.warn("⚠️ Profile dropdown elements (#user-menu-button or #profile-dropdown) not found.");
     }
-  });
-</script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const rejectButton = document.querySelector("#reject-button"); // Change ID if necessary
+    // --- Rejection Modal Logic ---
+    const rejectButton = document.querySelector("#reject-button"); // Assuming this ID might be added later
     const modal = document.querySelector("#rejection-modal");
-    const cancelButton = document.querySelector("#cancel-button");
+    const cancelButton = document.querySelector("#cancel-button"); // Inside the modal
 
     if (rejectButton && modal && cancelButton) {
-      rejectButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        modal.classList.remove("hidden");
-      });
+       console.log("✅ Rejection Modal Elements Found. Initializing...");
+       // Ensure modal starts hidden
+       modal.classList.add("hidden");
 
-      cancelButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        modal.classList.add("hidden");
-      });
+       rejectButton.addEventListener("click", function (event) {
+         event.preventDefault(); // Prevent default link behavior if it's an <a> tag
+         modal.classList.remove("hidden");
+         console.log("🔘 Reject Button Clicked - Modal Shown.");
+       });
+
+       cancelButton.addEventListener("click", function (event) {
+         event.preventDefault(); // Prevent default link behavior if it's an <a> tag
+         modal.classList.add("hidden");
+         console.log("🔘 Cancel Button Clicked - Modal Hidden.");
+       });
+
+       // Optional: Close modal if clicking outside the modal content
+       modal.addEventListener('click', function(event) {
+         // Check if the click target is the modal background itself, not its children
+         if (event.target === modal) {
+           modal.classList.add('hidden');
+           console.log("✅ Clicked Outside Modal Content - Closing!");
+         }
+       });
+
+    } else {
+       console.warn("⚠️ Rejection modal elements (#reject-button, #rejection-modal, or #cancel-button) not found. Modal functionality disabled.");
+       // Log which specific elements are missing if needed for debugging
+       if (!rejectButton) console.warn("  - #reject-button missing");
+       if (!modal) console.warn("  - #rejection-modal missing");
+       if (!cancelButton) console.warn("  - #cancel-button missing");
     }
+
+    // --- Removed Option Dropdown Logic ---
+    // The logic for #option-menu-button and #option-menu-dropdown was removed
+    // because these elements were not found in the HTML.
+    console.log("ℹ️ Option dropdown logic removed as elements were not found.");
+
+    console.log("✅ JavaScript Initialization Complete.");
   });
 </script>
 
