@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contracts list</title>
+  <title>Nimekirjad</title>
   <script src="https://unpkg.com/@tailwindcss/browser@4.0.0"></script>
 </head>
 <body class="h-full">
@@ -55,17 +55,36 @@
                 </a>
                 </li>
                 <li>
-                <a href="student_list.html" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
-                  <svg class="size-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-                  </svg>
-                  Nimekirjad
-                </a>
+                  <div>
+                    <!-- Ensure parent menu item is styled as active -->
+                    <button type="button" class="flex w-full items-center gap-x-3 rounded-md bg-gray-50 p-2 text-left text-sm/6 font-semibold text-indigo-600" aria-controls="sub-menu-nimekirjad" aria-expanded="true">
+                      <svg class="size-6 shrink-0 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                      </svg>
+                      Nimekirjad
+                      <!-- Ensure chevron is rotated and styled correctly for expanded state -->
+                      <svg class="ml-auto size-5 shrink-0 rotate-90 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <!-- Remove 'hidden' class to show the submenu -->
+                    <ul class="mt-1 px-2" id="sub-menu-nimekirjad">
+                      <li>
+                        <!-- Add active classes to G1-1 link -->
+                        <a href="#" class="block rounded-md py-2 pr-2 pl-9 text-sm/6 bg-gray-50 text-indigo-600">G1-1</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50">G2-1</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50">G3-1</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
-                <!-- Lepingud is now active, with a badge -->
-                <a href="contracts_list.html" class="group flex gap-x-3 rounded-md bg-gray-50 p-2 text-sm/6 font-semibold text-indigo-600">
-                  <svg class="size-6 shrink-0 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <a href="contracts_list.html" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
+                  <svg class="size-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
                   </svg>
                   Lepingud
@@ -199,25 +218,16 @@
 
     <main class="bg-gray-100 min-h-screen py-10">
       <div class="px-4 sm:px-6 lg:px-8">
-        <!-- Valge "kaart", sarnane profiililehe omale -->
         <div class="mx-auto max-w-7xl">
           <div class="rounded-lg bg-white px-5 py-6 shadow-sm sm:px-6">
     
-            <!-- Sinu olemasolev sisu --> 
             <div class="sm:flex sm:items-center">
               <div class="sm:flex-auto">
-                <h1 class="text-base font-semibold text-gray-900">Lepingud</h1>
+                <h1 class="text-base font-semibold text-gray-900">Õpperühm: G1-1</h1>
                 <p class="mt-2 text-sm text-gray-700">
-                  Lepingute nimekiri
+                  Mentor: Terje Karu
                 </p>
               </div>
-              <!-- Do we need a button here?
-              <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-                <a href="application_form.html" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                  Lisa avaldus
-                </a>
-              </div>
-              -->
             </div>
         <div class="mt-8 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -249,29 +259,6 @@
                         </span>
                       </a>
                     </th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Isikukood</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                      <a href="#" class="group inline-flex">
-                        Kuupäev
-                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
-                        <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
-                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                      <a href="#" class="group inline-flex">
-                        Staatus
-                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
-                        <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
-                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       <a href="#" class="group inline-flex">
                         Õppevorm
@@ -283,8 +270,28 @@
                         </span>
                       </a>
                     </th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Õppemaks</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">VV/VA KK</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                      <a href="#" class="group inline-flex">
+                        Õppenõukogu nr
+                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
+                        <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
+                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </a>
+                    </th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                      <a href="#" class="group inline-flex">
+                        ÕN otsus
+                        <!-- Active: "bg-gray-200 text-gray-900 group-hover:bg-gray-300", Not Active: "invisible text-gray-400 group-hover:visible group-focus:visible" -->
+                        <span class="ml-2 flex-none rounded-sm bg-gray-100 text-gray-900 group-hover:bg-gray-200">
+                          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </a>
+                    </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Kommentaar</th>
                     <th scope="col" class="relative py-3.5 pr-4 pl-3 sm:pr-0">
                       <span class="sr-only">Vaata</span>
@@ -313,35 +320,16 @@
       </div>
     </div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset">Kinnitatud</span>
-  </td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">10. klass</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">42</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">saavutatud</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">595€</div>
-    <div class="mt-1 text-gray-500">Arve: #23423</div>
+    <input type="text" value="" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">-</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <input type="text" value="Soovib arvet kohe" class="w-full border border-gray-300 rounded-md p-2" />
-  </td>
-  <td
-    class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
-  >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
-      >Vaata<span class="sr-only">, Mari Maasikas</span></a
-    >
+  <td class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0">
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900">
+      Vaata<span class="sr-only">, Mari Maasikas</span>
+    </a>
   </td>
 </tr>
 
@@ -366,37 +354,16 @@
       </div>
     </div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-600/20 ring-inset"
-    >
-      Esitatud
-    </span>
-  </td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">1487.5€</div>
-    <div class="mt-1 text-gray-500">Arve: #23423</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">-</div>
-  </td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">15</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">täitmata</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <input type="text" value="" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
   <td
     class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
   >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900"
       >Vaata<span class="sr-only">, Tiit Tamm</span></a
     >
   </td>
@@ -423,44 +390,22 @@
       </div>
     </div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-yellow-600/20 ring-inset"
-    >
-      Sõlmitud
-    </span>
-  </td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">88</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">saavutatud</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">1487.5</div>
-    <div class="mt-1 text-gray-500">Arve: #23423</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">-</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <input type="text" value="Soovib arvet juulis-augustis" class="w-full border border-gray-300 rounded-md p-2" />
+    <input type="text" value="Vales rühmas?" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
   <td
     class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
   >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900"
       >Vaata<span class="sr-only">, Kati Kase</span></a
     >
   </td>
 </tr>
 
 <!-- 4 -->
-<tr>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <input type="checkbox" class="row-checkbox h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
   </td>
@@ -480,38 +425,16 @@
       </div>
     </div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <!-- Example of 'Inactive' with red styling -->
-    <span
-      class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset"
-    >
-    Täiendamisel
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">1487.5€</div>
-    <div class="mt-1 text-gray-500">Arve: #23423</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">-</div>
-  </td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">9. klass</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">23</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">täitmata</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <input type="text" value="" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
   <td
     class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
   >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900"
       >Vaata<span class="sr-only">, Priit Puu</span></a
     >
   </td>
@@ -538,44 +461,22 @@
       </div>
     </div>
   </td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">51</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">saavutatud</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Kinnitatud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">10. klass</td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">0€</div>
-    <div class="mt-1 text-gray-500">Stipendium</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">-</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <input type="text" value="Vist on ok temaga" class="w-full border border-gray-300 rounded-md p-2" />
+    <input type="text" value="Peaks vist mentorit vahetama" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
   <td
     class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
   >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900"
       >Vaata<span class="sr-only">, Liina Lind</span></a
     >
   </td>
 </tr>
 
 <!-- 6 -->
-<tr>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <input type="checkbox" class="row-checkbox h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
   </td>
@@ -595,37 +496,16 @@
       </div>
     </div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Kinnitatud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">10. klass</td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">1487.5€</div>
-    <div class="mt-1 text-gray-500">Arve: #23423</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">-</div>
-  </td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">11. klass</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">76</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">täitmata</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <input type="text" value="" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
   <td
     class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
   >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900"
       >Vaata<span class="sr-only">, Madis Meri</span></a
     >
   </td>
@@ -652,37 +532,16 @@
       </div>
     </div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset"
-    >
-    Täiendamisel
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">1487.5€</div>
-    <div class="mt-1 text-gray-500">Arve: #23423</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">2-7/6</div>
-  </td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">11. klass</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">39</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">saavutatud</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <input type="text" value="" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
   <td
     class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
   >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900"
       >Vaata<span class="sr-only">, Evelin Eensaar</span></a
     >
   </td>
@@ -709,37 +568,16 @@
       </div>
     </div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Kinnitatud
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">1487.5€</div>
-    <div class="mt-1 text-gray-500">Arve: #23423</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">-</div>
-  </td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">11. klass</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">91</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">täitmata</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <input type="text" value="" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
   <td
     class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
   >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900"
       >Vaata<span class="sr-only">, Andres Aljas</span></a
     >
   </td>
@@ -766,37 +604,16 @@
       </div>
     </div>
   </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">38304200222</div>
-    <div class="mt-1 text-gray-500">Vanus: 18</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">16.09.2024</div>
-    <div class="mt-1 text-gray-500">23:23</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <span
-      class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset"
-    >
-      Täiendamisel
-    </span>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">Üksikaine</td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">1487.5€</div>
-    <div class="mt-1 text-gray-500">Arve: #23423</div>
-  </td>
-  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
-    <div class="text-gray-900">2-6/6</div>
-    <div class="mt-1 text-gray-500">-</div>
-  </td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">11. klass</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">64</td>
+  <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500"><span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">saavutatud</span></td>
   <td class="px-3 py-5 text-sm whitespace-nowrap text-gray-500">
     <input type="text" value="" class="w-full border border-gray-300 rounded-md p-2" />
   </td>
   <td
     class="relative py-5 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0"
   >
-    <a href="application_form_view.html" class="text-indigo-600 hover:text-indigo-900"
+    <a href="profile_student_record.html" class="text-indigo-600 hover:text-indigo-900"
       >Vaata<span class="sr-only">, Laura Lai</span></a
     >
   </td>
@@ -818,12 +635,6 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"/>
     </svg>    
     Muuda
-  </button>
-  <button type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"/>
-    </svg>    
-    Kustuta
   </button>
   <button id="deselect-all" type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -887,23 +698,19 @@
 <!-- Modal Markup -->
 <div id="edit-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-black/50">
   <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
-    <h2 class="text-lg font-bold mb-4">Muuda lepingu detaile</h2>
+    <h2 class="text-lg font-bold mb-4">Muuda andmeid</h2>
     <div class="space-y-4 mb-4">
       <div>
-        <label for="bulk-isikukood" class="block text-sm font-medium text-gray-700">Isikukood</label>
-        <input type="text" id="bulk-isikukood" name="bulk-isikukood" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm" placeholder="Sisesta uus isikukood" />
+        <label for="bulk-oppenoukogu-nr" class="block text-sm font-medium text-gray-700">Õppenõukogu nr</label>
+        <input type="number" id="bulk-oppenoukogu-nr" name="bulk-oppenoukogu-nr" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm" placeholder="Sisesta number">
       </div>
       <div>
-        <label for="bulk-oppevorm" class="block text-sm font-medium text-gray-700">Õppevorm</label>
-        <select id="bulk-oppevorm" name="bulk-oppevorm" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
-          <option value="">Vali õppevorm</option>
-          <option value="klass">Klass</option>
-          <option value="üksikaine">Üksikaine</option>
+        <label for="bulk-on-otsus" class="block text-sm font-medium text-gray-700">ÕN otsus</label>
+        <select id="bulk-on-otsus" name="bulk-on-otsus" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm">
+          <option value="">Vali otsus</option>
+          <option value="saavutatud">saavutatud</option>
+          <option value="täitmata">täitmata</option>
         </select>
-      </div>
-      <div>
-        <label for="bulk-vvva-kk" class="block text-sm font-medium text-gray-700">VV/VA KK</label>
-        <input type="text" id="bulk-vvva-kk" name="bulk-vvva-kk" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm" placeholder="Sisesta uus VV/VA KK" />
       </div>
     </div>
     <div class="flex justify-end space-x-4">
@@ -959,18 +766,6 @@
       cb.addEventListener('change', updateActionPopupVisibility);
     });
     
-    // Delete functionality
-    const deleteBtn = document.querySelector('#action-popup .bg-red-600');
-    if (deleteBtn) {
-      deleteBtn.addEventListener('click', function () {
-        document.querySelectorAll('.row-checkbox:checked').forEach(cb => {
-          const row = cb.closest('tr');
-          if (row) row.remove();
-        });
-        updateActionPopupVisibility();
-      });
-    }
-    
     // Deselect all functionality
     const deselectBtn = document.getElementById('deselect-all');
     if (deselectBtn) {
@@ -1004,30 +799,67 @@
       }
     });
     
-    // Bulk update modal "Salvesta"
+    // Bulk update modal "Salvesta" functionality
     const saveModal = document.getElementById("save-modal");
     if (saveModal) {
       saveModal.addEventListener("click", function(event) {
         event.stopPropagation();
-        const newIsikukood = document.getElementById("bulk-isikukood").value;
-        const newOppevorm = document.getElementById("bulk-oppevorm").value;
-        const newVVVA = document.getElementById("bulk-vvva-kk").value;
+        const newOppenoukoguNr = document.getElementById("bulk-oppenoukogu-nr").value;
+        const newOnOtsus = document.getElementById("bulk-on-otsus").value;
+        
         document.querySelectorAll(".row-checkbox:checked").forEach(function(cb) {
           const row = cb.closest("tr");
           if (row) {
             const cells = row.querySelectorAll("td");
-            if (cells[2]) {
-              cells[2].innerHTML = `<div class="text-gray-900">${newIsikukood}</div>`;
+            // Update Õppenõukogu nr (index 3 after removing columns)
+            if (cells[3] && newOppenoukoguNr !== "") { 
+              cells[3].textContent = newOppenoukoguNr;
             }
-            if (cells[5]) {
-              cells[5].textContent = newOppevorm;
-            }
-            if (cells[7]) {
-              cells[7].textContent = newVVVA;
+            // Update ÕN otsus (index 4 after removing columns)
+            if (cells[4] && newOnOtsus !== "") {
+              let badgeHTML = '';
+              if (newOnOtsus === 'saavutatud') {
+                badgeHTML = '<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">saavutatud</span>';
+              } else if (newOnOtsus === 'täitmata') {
+                badgeHTML = '<span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">täitmata</span>';
+              }
+              // Only update if a valid badge was generated
+              if (badgeHTML) {
+                 cells[4].innerHTML = badgeHTML;
+              }
             }
           }
         });
+        
+        // Clear modal inputs after saving
+        document.getElementById("bulk-oppenoukogu-nr").value = '';
+        document.getElementById("bulk-on-otsus").value = '';
+        
         editModal.classList.add("hidden");
+      });
+    }
+
+    // Submenu toggle
+    const nimekirjadButton = document.querySelector('[aria-controls="sub-menu-nimekirjad"]');
+    const nimekirjadSubMenu = document.getElementById('sub-menu-nimekirjad');
+    if (nimekirjadButton && nimekirjadSubMenu) {
+      nimekirjadButton.addEventListener('click', function() {
+        const isExpanded = nimekirjadButton.getAttribute('aria-expanded') === 'true';
+        const currentlyExpanded = !isExpanded; // State after click
+        nimekirjadButton.setAttribute('aria-expanded', currentlyExpanded);
+        nimekirjadSubMenu.classList.toggle('hidden');
+
+        // Toggle chevron icon rotation and color
+        const chevron = nimekirjadButton.querySelector('svg:last-child');
+        if (chevron) {
+          if (currentlyExpanded) {
+            chevron.classList.add('rotate-90', 'text-gray-500');
+            chevron.classList.remove('text-gray-400');
+          } else {
+            chevron.classList.remove('rotate-90', 'text-gray-500');
+            chevron.classList.add('text-gray-400');
+          }
+        }
       });
     }
   });
