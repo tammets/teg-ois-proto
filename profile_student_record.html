@@ -135,8 +135,9 @@
   </div>
 
   <!-- Main content starts here -->
-  <main class="py-10">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl p-4 bg-white shadow-lg rounded-lg mt-10">
+    <main class="overflow-hidden">
+      <div class="px-4 py-2 sm:px-6">
       <!-- Tabbed view -->
       <div class="mb-6">
         <div class="sm:hidden">
@@ -160,77 +161,77 @@
       <!-- End Tabbed view -->
 
       <!-- Student Record Content -->
-      <div class="bg-white shadow overflow-hidden sm:rounded-lg">
-        <div class="px-4 py-5 sm:px-6">
-          <h3 class="text-lg leading-6 font-medium text-gray-900">Õpilasraamat: [Õpilase nimi]</h3>
-          <p class="mt-1 max-w-2xl text-sm text-gray-500">Detailne info õpilase kohta vastavalt määrusele.</p>
-        </div>
-        <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
-          <dl class="sm:divide-y sm:divide-gray-200">
+      <div class="overflow-hidden rounded-xl border border-gray-200 lg:col-span-2">
+        <div class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Tuple" class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10">
+          <div class="text-sm/6 font-medium text-gray-900">Juku Juurikas</div>
+          </div>
+        <div class="">
+          <dl class="divide-y divide-gray-100 text-sm/6">
 
             <!-- § 3: Personal Data -->
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Nimi</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Õpilase nimi]</dd>
+              <dt class="text-sm text-gray-500">Isikukood</dt>
+              <dd class="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">383030202022</dd>
             </div>
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Isikukood / Sünniaeg</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Isikukood või Sünniaeg]</dd>
-            </div>
-            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Sünnikoht</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Sünnikoht]</dd>
+              <dt class="text-sm text-gray-500">Sünnikoht</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Tallinn</dd>
             </div>
 
             <!-- § 3: Parent/Guardian Info -->
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Vanemate nimed</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Vanem 1 nimi], [Vanem 2 nimi]</dd>
+              <dt class="text-sm text-gray-500">Vanemate nimed</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Mari Juurikas, Jüri Juurikas</dd>
             </div>
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Eestkostja nimi (vajadusel)</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Eestkostja nimi]</dd>
+              <dt class="text-sm text-gray-500">Eestkostja nimi (vajadusel)</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">-</dd>
             </div>
 
             <!-- § 4: Previous Education -->
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Info enne kooli asumist</dt>
+              <dt class="text-sm text-gray-500">Info enne kooli asumist</dt>
               <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Kodus / Lasteaed / Ettevalmistusrühm / Teine kool]</dd>
             </div>
 
             <!-- § 1, § 7: School Admission/Transfer -->
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Kooli vastuvõtmine</dt>
+              <dt class="text-sm text-gray-500">Kooli vastuvõtmine</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Kuupäev: [Kuupäev], Käskkiri: [Nr] ([Kuupäev])</dd>
+            </div>
+            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm text-gray-500">Koolist väljaarvamine</dt>
               <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Kuupäev: [Kuupäev], Käskkiri: [Nr] ([Kuupäev])</dd>
             </div>
              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Eelmine kool (vajadusel)</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Eelmise kooli nimi]</dd>
+              <dt class="text-sm text-gray-500">Eelmine kool (vajadusel)</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Tihemetsa Riigigümnaasium</dd>
             </div>
              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Eelmise kooli õpilasraamatu väljavõte</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Märkused väljavõtte kohta, sh aastahinded]</dd>
+              <dt class="text-sm text-gray-500">Eelmise kooli õpilasraamatu väljavõte</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">tihemetsa-juurikas-valjavote.pdf</dd>
             </div>
 
             <!-- Curriculum & Study Form -->
              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Läbitud õppekava</dt>
+              <dt class="text-sm text-gray-500">Läbitud õppekava</dt>
               <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Põhi/Üldkesk / Lihtsustatud / Toimetuleku]</dd>
             </div>
              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Õppevorm</dt>
+              <dt class="text-sm text-gray-500">Õppevorm</dt>
               <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Päevane / Koduõpe / Õhtune / Kaugõpe / Ekstern]</dd>
             </div>
 
             <!-- Health/Special Needs -->
              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Tervislikust seisundist tulenevad erivajadused</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">[Kirjeldus erivajadustest]</dd>
+              <dt class="text-sm text-gray-500">Tervislikust seisundist tulenevad erivajadused</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Ei suuda keskenduda</dd>
             </div>
 
             <!-- § 9: Academic Performance & Conduct -->
             <div class="py-4 sm:py-5 sm:px-6">
-              <dt class="text-lg font-medium text-gray-900 mb-3">Õpitulemused ja Käitumine</dt>
+              <dt class="text-lg font-medium text-gray-900 mb-3">Õpitulemused ja käitumine</dt>
               <dd class="mt-1 text-sm text-gray-900">
                 <!-- This section likely needs a more complex structure, possibly tables per year -->
                 <div class="overflow-x-auto">
@@ -249,13 +250,13 @@
                     <tbody class="bg-white divide-y divide-gray-200">
                       <!-- Example Row - Repeat per subject per year -->
                       <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[2023/2024]</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[10]</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">[Matemaatika]</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[4]</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[Eeskujulik]</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[Hea]</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[Hinne/Märkus]</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2025/2026</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Matemaatika</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">4</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Eeskujulik</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Hea</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">-</td>
                       </tr>
                       <!-- Add more rows for other subjects/years -->
                     </tbody>
@@ -275,10 +276,10 @@
                      <tbody class="bg-white divide-y divide-gray-200">
                        <!-- Example Row -->
                        <tr>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[Põhikooli lõpueksam]</td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">[Eesti keel]</td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[5]</td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[Kuupäev]</td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Põhikooli lõpueksam</td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Eesti keel</td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5</td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10.05.2024</td>
                        </tr>
                        <!-- Add more rows -->
                      </tbody>
@@ -292,7 +293,7 @@
 
             <!-- § 10: Recognition & Reprimands -->
             <div class="py-4 sm:py-5 sm:px-6">
-              <dt class="text-lg font-medium text-gray-900 mb-3">Tunnustused ja Laitused</dt>
+              <dt class="text-lg font-medium text-gray-900 mb-3">Tunnustused ja laitused</dt>
               <dd class="mt-1 text-sm text-gray-900">
                  <h4 class="text-md font-medium text-gray-700 mt-4 mb-2">Tunnustused</h4>
                  <div class="overflow-x-auto">
@@ -307,8 +308,8 @@
                      <tbody class="bg-white divide-y divide-gray-200">
                        <!-- Example Row -->
                        <tr>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">[Kiituskiri]</td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[Väga heade tulemuste eest]</td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Kiituskiri</td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Väga heade tulemuste eest</td>
                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">[Nr] ([Kuupäev])</td>
                        </tr>
                        <!-- Add more rows -->
@@ -339,15 +340,15 @@
 
             <!-- § 11: Progression/Graduation/Leaving -->
             <div class="py-4 sm:py-5 sm:px-6">
-              <dt class="text-lg font-medium text-gray-900 mb-3">Klassi lõpetamine ja Koolist lahkumine</dt>
+              <dt class="text-lg font-medium text-gray-900 mb-3">Klassi lõpetamine / koolist lahkumine</dt>
               <dd class="mt-1 text-sm text-gray-900">
-                 <h4 class="text-md font-medium text-gray-700 mt-4 mb-2">Klassist klassi üleviimine / Klassikursuse kordamine</h4>
+                 <h4 class="text-md font-medium text-gray-700 mt-4 mb-2">Klassist klassi üleviimine / klassikursuse kordamine</h4>
                  <div class="overflow-x-auto">
                    <table class="min-w-full divide-y divide-gray-200">
                      <thead class="bg-gray-50">
                        <tr>
                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Õppeaasta</th>
-                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Otsus</th>
+                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Õppenõukogu otsus</th>
                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kuupäev</th>
                        </tr>
                      </thead>
@@ -385,6 +386,7 @@
 
     </div>
   </main>
+</div>
   <!-- Main content ends here -->
 
 </div>
