@@ -186,7 +186,7 @@
             </div>
 
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Info enne kooli asumist</dt>
+              <dt class="text-sm font-medium text-gray-500">Vali kool</dt>
               <dd class="mt-1 sm:mt-0 sm:col-span-2 mt-2 grid grid-cols-1">
                 <select id="previous_school" name="previous_school" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                   <option value="">Vali kool</option>
@@ -205,6 +205,22 @@
                   <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                 </svg>
               </dd>
+            </div>
+
+            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Eelmise kooli õpilasraamatu väljavõte</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2">
+                 <div class="flex items-center space-x-2">
+                   <span class="text-sm text-gray-600 mr-2">Praegune fail: tihemetsa-juurikas-valjavote.pdf</span> 
+                   <input type="file" name="previous_school_record_file" id="previous_school_record_file" class="block w-full text-sm text-gray-500
+                     file:mr-4 file:py-2 file:px-4
+                     file:rounded-md file:border-0
+                     file:text-sm file:font-semibold
+                     file:bg-indigo-50 file:text-indigo-700
+                     hover:file:bg-indigo-100
+                   ">
+                 </div>
+              </dd> 
             </div>
 
             <!-- § 1, § 7: School Admission/Transfer -->
@@ -237,21 +253,7 @@
               </dd>
             </div>
              
-             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Eelmise kooli õpilasraamatu väljavõte</dt>
-              <dd class="mt-1 sm:mt-0 sm:col-span-2">
-                 <div class="flex items-center space-x-2">
-                   <span class="text-sm text-gray-600 mr-2">Praegune fail: tihemetsa-juurikas-valjavote.pdf</span> 
-                   <input type="file" name="previous_school_record_file" id="previous_school_record_file" class="block w-full text-sm text-gray-500
-                     file:mr-4 file:py-2 file:px-4
-                     file:rounded-md file:border-0
-                     file:text-sm file:font-semibold
-                     file:bg-indigo-50 file:text-indigo-700
-                     hover:file:bg-indigo-100
-                   ">
-                 </div>
-              </dd> 
-            </div>
+          
 
             <!-- Curriculum & Study Form -->
              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -313,20 +315,19 @@
                     <tbody id="academic-performance-tbody" class="bg-white divide-y divide-gray-200">
                       <!-- Example Row - Repeat per subject per year -->
                       <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_year[]" value="2025/2026" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_class[]" value="10" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_subject[]" value="Matemaatika" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_grade[]" value="4" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_conduct[]" value="Eeskujulik" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_diligence[]" value="Hea" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_extra[]" value="-" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_year[]" value="2025/2026" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_class[]" value="10" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_subject[]" value="Matemaatika" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_grade[]" value="4" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_conduct[]" value="Eeskujulik" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_diligence[]" value="Hea" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_extra[]" value="-" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
                       </tr>
                       <!-- Add more rows for other subjects/years -->
-                      <!-- TODO: Add button/mechanism to add new rows dynamically -->
                     </tbody>
                   </table>
                   <div class="mt-2 flex justify-end">
-                    <button id="add-academic-performance-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Lisa uus rida</button>
+                    <button id="add-academic-performance-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none">Lisa uus rida</button>
                   </div>
                 </div>
                 <h4 class="text-md font-medium text-gray-700 mt-4 mb-2">Eksamid</h4>
@@ -343,33 +344,50 @@
                      <tbody id="exams-tbody" class="bg-white divide-y divide-gray-200">
                        <!-- Example Row -->
                        <tr>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_type[]" value="Põhikooli lõpueksam" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_subject[]" value="Eesti keel" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_grade[]" value="5" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="exam_date[]" value="2024-05-10" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_type[]" value="Põhikooli lõpueksam" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_subject[]" value="Eesti keel" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_grade[]" value="5" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="exam_date[]" value="2024-05-10" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
                        </tr>
                        <!-- Add more rows -->
                        <!-- TODO: Add button/mechanism to add new rows dynamically -->
                      </tbody>
                   </table>
                    <div class="mt-2 flex justify-end">
-                    <button id="add-exam-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Lisa uus rida</button>
+                    <button id="add-exam-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none">Lisa uus rida</button>
                   </div>
                  </div>
-                 <h4 class="text-md font-medium text-gray-700 mt-4 mb-2">Lõputunnistuse hinded</h4>
-                 <div id="certificates-container" class="space-y-2">
-                   <div>
-                     <label for="primary_grades" class="block text-sm font-medium text-gray-700">Põhikool:</label>
-                     <textarea id="primary_grades" name="primary_grades" rows="2" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">[Hinded]</textarea>
+                 <h4 class="text-md font-medium text-gray-700 mt-4 mb-4 font-semibold">Lõputunnistuse hinded</h4>
+                 <div id="certificates-container" class="space-y-4">
+                   <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4">
+                     <label for="primary_grades_file" class="block text-sm font-medium text-gray-700 sm:pt-1.5">Põhikooli lõputunnistus:</label>
+                     <div class="mt-1 sm:mt-0 sm:col-span-2">
+                       <input type="file" name="primary_grades_file" id="primary_grades_file" class="block w-full text-sm text-gray-500
+                         file:mr-4 file:py-2 file:px-4
+                         file:rounded-md file:border-0
+                         file:text-sm file:font-semibold
+                         file:bg-indigo-50 file:text-indigo-700
+                         hover:file:bg-indigo-100
+                       ">
+                       <!-- Optional: Display current file if exists -->
+                       <!-- <span class="text-xs text-gray-500">Praegune fail: pohikool_tunnistus.pdf</span> -->
+                     </div>
                    </div>
-                   <div>
-                     <label for="secondary_grades" class="block text-sm font-medium text-gray-700">Gümnaasium:</label>
-                     <textarea id="secondary_grades" name="secondary_grades" rows="2" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">[Hinded]</textarea>
+                   <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4">
+                     <label for="secondary_grades_file" class="block text-sm font-medium text-gray-700 sm:pt-1.5">Gümnaasiumi lõputunnistus:</label>
+                     <div class="mt-1 sm:mt-0 sm:col-span-2">
+                       <input type="file" name="secondary_grades_file" id="secondary_grades_file" class="block w-full text-sm text-gray-500
+                         file:mr-4 file:py-2 file:px-4
+                         file:rounded-md file:border-0
+                         file:text-sm file:font-semibold
+                         file:bg-indigo-50 file:text-indigo-700
+                         hover:file:bg-indigo-100
+                       ">
+                       <!-- Optional: Display current file if exists -->
+                       <!-- <span class="text-xs text-gray-500">Praegune fail: gymnaasium_tunnistus.pdf</span> -->
+                     </div>
                    </div>
-                   <!-- Button for grades might need different logic, adding placeholder -->
-                   <div class="mt-2 flex justify-end">
-                     <button id="add-certificate-grade" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Lisa uus tunnistus/hinne</button>
-                   </div>
+                   <!-- Removed the "Lisa uus tunnistus/hinne" button as it doesn't fit the file upload context -->
                  </div>
               </dd>
             </div>
@@ -386,21 +404,23 @@
                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Liik</th>
                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Põhjus</th>
                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Käskkiri</th>
+                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kuupäev</th>
                        </tr>
                      </thead>
                      <tbody id="recognitions-tbody" class="bg-white divide-y divide-gray-200">
                        <!-- Example Row -->
                        <tr>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_type[]" value="Kiituskiri" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_reason[]" value="Väga heade tulemuste eest" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_decree[]" value="[Nr] ([Kuupäev])" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_type[]" value="Kiituskiri" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_reason[]" value="Väga heade tulemuste eest" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_decree[]" value="21-1" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="exam_date[]" value="2024-05-10" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
                        </tr>
                        <!-- Add more rows -->
                        <!-- TODO: Add button/mechanism to add new rows dynamically -->
                      </tbody>
                    </table>
                    <div class="mt-2 flex justify-end">
-                    <button id="add-recognition-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Lisa uus rida</button>
+                    <button id="add-recognition-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none">Lisa uus rida</button>
                   </div>
                  </div>
                  <h4 class="text-md font-medium text-gray-700 mt-4 mb-2">Laitused</h4>
@@ -410,20 +430,22 @@
                        <tr>
                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Põhjus</th>
                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Käskkiri</th>
+                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kuupäev</th>
                        </tr>
                      </thead>
                      <tbody id="reprimands-tbody" class="bg-white divide-y divide-gray-200">
                        <!-- Example Row -->
                        <tr>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_reason[]" value="[Põhjus]" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_decree[]" value="[Nr] ([Kuupäev])" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_reason[]" value="Suitsetas keset aulat" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_decree[]" value="32-2" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_date[]" value="2024-05-10" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
                        </tr>
                        <!-- Add more rows -->
                        <!-- TODO: Add button/mechanism to add new rows dynamically -->
                      </tbody>
                    </table>
                    <div class="mt-2 flex justify-end">
-                    <button id="add-reprimand-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Lisa uus rida</button>
+                    <button id="add-reprimand-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none">Lisa uus rida</button>
                   </div>
                  </div>
               </dd>
@@ -434,7 +456,7 @@
               <dt class="text-lg font-medium text-gray-900 mb-3">Klassi lõpetamine / koolist lahkumine</dt>
               <dd class="mt-1 text-sm text-gray-900 space-y-4">
                  <div>
-                   <h4 class="text-md font-medium text-gray-700 mb-2">Klassist klassi üleviimine / klassikursuse kordamine</h4>
+                   
                    <div class="overflow-x-auto">
                      <table class="min-w-full divide-y divide-gray-200">
                        <thead class="bg-gray-50">
@@ -447,42 +469,42 @@
                        <tbody id="progression-tbody" class="bg-white divide-y divide-gray-200">
                          <!-- Example Row -->
                          <tr>
-                           <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="progression_year[]" value="[2023/2024]" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                           <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="progression_decision[]" value="[Viia üle 11. klassi / Jätta klassikursust kordama]" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-                           <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="progression_date[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="progression_year[]" value="2023/2024" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="progression_decision[]" value="Viia üle 11. klassi" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="progression_date[]" value="2024-05-10" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
                          </tr>
                          <!-- Add more rows -->
                          <!-- TODO: Add button/mechanism to add new rows dynamically -->
                        </tbody>
                      </table>
                      <div class="mt-2 flex justify-end">
-                       <button id="add-progression-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Lisa uus rida</button>
+                       <button id="add-progression-row" type="button" class="px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-md hover:bg-green-500 focus:outline-none">Lisa uus rida</button>
                      </div>
                    </div>
                  </div>
                  <div>
-                   <h4 class="text-md font-medium text-gray-700 mb-2">Lõputunnistused</h4>
+                   <h4 class="text-md font-medium text-gray-700 mt-4 mb-4 font-semibold">Lõputunnistused</h4>
                    <div class="space-y-2">
                      <div class="flex items-center space-x-2">
                        <label for="primary_cert_nr" class="block text-sm font-medium text-gray-700 w-40">Põhikooli lõputunnistus:</label>
-                       <input type="text" name="primary_cert_nr" id="primary_cert_nr" placeholder="Nr" class="block w-1/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                       <input type="date" name="primary_cert_date" id="primary_cert_date" placeholder="Välja antud" class="block w-1/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                       <input type="text" name="primary_cert_nr" id="primary_cert_nr" placeholder="Nr" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                       <input type="date" name="primary_cert_date" id="primary_cert_date" placeholder="Välja antud" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                      </div>
                      <div class="flex items-center space-x-2">
                        <label for="secondary_cert_nr" class="block text-sm font-medium text-gray-700 w-40">Gümnaasiumi lõputunnistus:</label>
-                       <input type="text" name="secondary_cert_nr" id="secondary_cert_nr" placeholder="Nr" class="block w-1/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                       <input type="date" name="secondary_cert_date" id="secondary_cert_date" placeholder="Välja antud" class="block w-1/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                       <input type="text" name="secondary_cert_nr" id="secondary_cert_nr" placeholder="Nr" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                       <input type="date" name="secondary_cert_date" id="secondary_cert_date" placeholder="Välja antud" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                      </div>
                    </div>
                  </div>
 
                  <div>
-                   <h4 class="text-md font-medium text-gray-700 mb-2">Koolist lahkumine</h4>
+                   <h4 class="text-md font-medium text-gray-700 mt-4 mb-4 font-semibold">Koolist lahkumine</h4>
                    <div class="flex items-center space-x-2">
                      <label for="final_leaving_date" class="block text-sm font-medium text-gray-700 w-20">Kuupäev:</label>
-                     <input type="date" name="final_leaving_date" id="final_leaving_date" class="block w-1/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                     <input type="date" name="final_leaving_date" id="final_leaving_date" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                      <label for="final_leaving_decree" class="block text-sm font-medium text-gray-700 w-20">Käskkiri:</label>
-                     <input type="text" name="final_leaving_decree" id="final_leaving_decree" placeholder="Nr (Kuupäev)" class="block w-1/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                     <input type="text" name="final_leaving_decree" id="final_leaving_decree" placeholder="Käskkirja number" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                    </div>
                  </div>
               </dd>
