@@ -37,7 +37,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
                   </svg>
                   Teated
-                  <span class="ml-auto w-9 min-w-max rounded-full bg-white px-2.5 py-0.5 text-center text-xs/5 font-medium whitespace-nowrap text-gray-600 ring-1 ring-gray-200 ring-inset" aria-hidden="true">9</span>
+                  <span class="ml-auto w-9 min-w-max rounded-full bg-white px-2.5 py-0.5 text-center text-xs/5 font-medium whitespace-nowrap text-gray-600 ring-1 ring-gray-200 ring-inset" aria-hidden="true">3</span>
                 </a>
               </li>
                 <li>
@@ -205,7 +205,7 @@
       </div>
     </div>
 
-    <main class="bg-gray-100 min-h-screen py-10">
+    <main class="bg-gray-100  py-10">
       <div class="px-4 sm:px-6 lg:px-8">
         <!-- Valge "kaart", sarnane profiililehe omale -->
         <div class="mx-auto max-w-7xl">
@@ -214,15 +214,15 @@
             <!-- Sinu olemasolev sisu -->
             <div class="sm:flex sm:items-center">
               <div class="sm:flex-auto">
-                <h1 class="text-base font-semibold text-gray-900">Teated (31)</h1>
+                <h1 class="text-base font-semibold text-gray-900">Teated (3)</h1>
                 <p class="mt-2 text-sm text-gray-700">
                   Sinu postkasti ÕIS-s nimekiri
                 </p>
               </div>
               <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-                <a href="application_form.html" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                <button id="new-message-button" type="button" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                   Uus teade
-                </a>
+                </button>
               </div>
             </div>
         <div class="mt-8 flow-root">
@@ -243,7 +243,7 @@
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       Staatus
                     </th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                    <th scope="col" class="px-3 py-3.5 text-right text-sm font-semibold text-gray-900">
                       Tegevused
                     </th>
                   </tr>
@@ -251,53 +251,50 @@
                 <tbody class="divide-y divide-gray-200 bg-white">
                   <tr>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Koosoleku kutse</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><a href="#" class="message-title-link text-gray-500 hover:text-indigo-600 underline">Koosoleku kutse, midagi veel, et pikem oleks</a></td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       <div>14.05.2025</div>
                       <div>10:00</div>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      <div>Lugemata</div>
-                      <div>sisse</div>
+                      <span class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Lugemata - sisse</span>
                     </td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">Vaata</a>
                       <span class="text-gray-900"> | </span>
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Kustuta</a>
+                      <a href="#" class="text-red-600 hover:text-red-900 delete-message">Kustuta</a>
                     </td>
                   </tr>
                   <tr>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Õppematerjalid</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><a href="#" class="message-title-link text-gray-500 hover:text-indigo-600 underline">Õppematerjalid</a></td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       <div>13.05.2025</div>
                       <div>15:30</div>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      <div>Loetud</div>
-                      <div>sisse</div>
+                      <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Loetud - sisse</span>
                     </td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">Vaata</a>
                       <span class="text-gray-900"> | </span>
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Kustuta</a>
+                      <a href="#" class="text-red-600 hover:text-red-900 delete-message">Kustuta</a>
                     </td>
                   </tr>
                    <tr>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">3</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Tagasiside</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><a href="#" class="message-title-link text-gray-500 hover:text-indigo-600 underline">Tagasiside</a></td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       <div>12.05.2025</div>
                       <div>09:00</div>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      <div>Loetud</div>
-                      <div>välja</div>
+                      <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Loetud - välja</span>
                     </td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">Vaata</a>
                       <span class="text-gray-900"> | </span>
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">Kustuta</a>
+                      <a href="#" class="text-red-600 hover:text-red-900 delete-message">Kustuta</a>
                     </td>
                   </tr>
                 </tbody>
@@ -380,6 +377,291 @@
         }
       });
     }
+  });
+</script>
+
+<!-- Message Detail Modal Structure -->
+<div id="message-detail-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+    <h2 id="message-detail-title" class="text-lg font-semibold mb-4"></h2>
+    <div class="mb-4">
+      <p class="text-sm text-gray-700"><span class="font-medium">Saatja:</span> <span id="message-detail-sender"></span></p>
+      <p class="text-sm text-gray-700"><span class="font-medium">Saaja:</span> <span id="message-detail-recipient"></span></p>
+      <p class="text-sm text-gray-700"><span class="font-medium">Kuupäev:</span> <span id="message-detail-date"></span></p>
+      <p class="text-sm text-gray-700"><span class="font-medium">Kellaaeg:</span> <span id="message-detail-time"></span></p>
+    </div>
+    <div class="mb-4">
+      <p class="text-sm font-medium text-gray-700">Sisu:</p>
+      <p id="message-detail-body" class="text-sm text-gray-700"></p>
+    </div>
+    <div class="flex justify-end">
+      <button id="close-message-detail-modal" type="button" class="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Sulge</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal structure -->
+<div id="new-message-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+    <h2 class="text-lg font-semibold mb-4">Uus teade</h2>
+    <div class="mb-4">
+      <label for="group-select" class="block text-sm font-medium text-gray-700">Vali õpperühm:</label>
+      <select id="group-select" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <option value="G1-1">G1-1</option>
+        <option value="G1-2">G1-2</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <label for="student-select" class="block text-sm font-medium text-gray-700">Määra õpilane:</label>
+      <select id="student-select" multiple class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <!-- Sample students will be added here by JavaScript -->
+      </select>
+    </div>
+    <div class="mb-4">
+      <label for="message-title" class="block text-sm font-medium text-gray-700">Pealkiri:</label>
+      <input type="text" id="message-title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+    </div>
+    <div class="mb-4">
+      <label for="message-content" class="block text-sm font-medium text-gray-700">Sisu:</label>
+      <textarea id="message-content" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+    </div>
+    <div class="flex justify-end">
+      <button id="cancel-message" type="button" class="mr-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Tühista</button>
+      <button id="send-message" type="button" class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Saada</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const profileButton = document.querySelector("#user-menu-button");
+    const profileDropdown = document.querySelector("#profile-dropdown");
+
+    if (profileButton && profileDropdown) {
+      profileButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents immediate closing
+        profileDropdown.classList.toggle("hidden");
+
+        // Update aria-expanded for accessibility
+        const expanded = profileDropdown.classList.contains("hidden") ? "false" : "true";
+        profileButton.setAttribute("aria-expanded", expanded);
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        if (!profileDropdown.contains(event.target) && !profileButton.contains(event.target)) {
+          profileDropdown.classList.add("hidden");
+          profileButton.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    const newMessageButton = document.getElementById("new-message-button");
+    const newMessageModal = document.getElementById("new-message-modal");
+    const cancelButton = document.getElementById("cancel-message");
+    const sendButton = document.getElementById("send-message");
+    const messageTitleInput = document.getElementById("message-title");
+    const messageContentInput = document.getElementById("message-content");
+    const messagesTableBody = document.querySelector("tbody"); // Select the tbody
+    const studentSelect = document.getElementById("student-select");
+
+    // Function to generate random student names
+    function generateSampleStudents() {
+      const firstNames = ["Jaan", "Mari", "Peeter", "Anna", "Martin", "Kati", "Kristjan", "Liisa", "Madis", "Elen"];
+      const lastNames = ["Tamm", "Kask", "Saar", "Mägi", "Sepp", "Kuusk", "Rebane", "Ilves", "Hunt", "Karhu"];
+      const students = [];
+      for (let i = 0; i < 10; i++) { // Generate more students for the dropdown
+        const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+        const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+        students.push(`${randomFirstName} ${randomLastName}`);
+      }
+      return students;
+    }
+
+    // Function to populate the student select dropdown
+    function populateStudentSelect() {
+      const students = generateSampleStudents();
+      studentSelect.innerHTML = ""; // Clear previous options
+      students.forEach(student => {
+        const option = document.createElement("option");
+        option.value = student;
+        option.textContent = student;
+        studentSelect.appendChild(option);
+      });
+    }
+
+    // Open new message modal
+    newMessageButton.addEventListener("click", function () {
+      newMessageModal.classList.remove("hidden");
+      populateStudentSelect(); // Generate and populate students when modal opens
+    });
+
+    // Close new message modal
+    cancelButton.addEventListener("click", function () {
+      newMessageModal.classList.add("hidden");
+      // Clear form fields
+      messageTitleInput.value = "";
+      messageContentInput.value = "";
+      // Deselect all options in the student select
+      Array.from(studentSelect.options).forEach(option => {
+        option.selected = false;
+      });
+    });
+
+    // Close new message modal when clicking outside
+    window.addEventListener("click", function (event) {
+      if (event.target === newMessageModal) {
+        newMessageModal.classList.add("hidden");
+        // Clear form fields
+        messageTitleInput.value = "";
+        messageContentInput.value = "";
+      }
+    });
+
+    // Send message and add row
+    sendButton.addEventListener("click", function () {
+      const title = messageTitleInput.value;
+      const content = messageContentInput.value; // Although content is not displayed in the table, we capture it.
+      const selectedGroup = document.getElementById("group-select").value; // Capture selected group
+
+      if (title.trim() === "") {
+        alert("Pealkiri ei saa olla tühi.");
+        return;
+      }
+
+      // Get current date and time
+      const now = new Date();
+      const date = now.toLocaleDateString('et-EE'); // Estonian format
+      const time = now.toLocaleTimeString('et-EE', { hour: '2-digit', minute: '2-digit' });
+
+      // Determine the next order number
+      const rows = messagesTableBody.querySelectorAll("tr");
+      const nextOrderNumber = rows.length + 1;
+
+      // Create new row
+      const newRow = document.createElement("tr");
+      newRow.innerHTML = `
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${nextOrderNumber}</td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><a href="#" class="message-title-link text-gray-500 hover:text-indigo-600">${title}</a></td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+          <div>${date}</div>
+          <div>${time}</div>
+        </td>
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+          <span class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Lugemata - sisse</span>
+        </td>
+        <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+          <a href="#" class="text-indigo-600 hover:text-indigo-900">Vaata</a>
+          <span class="text-gray-900"> | </span>
+          <a href="#" class="text-red-600 hover:text-red-900 delete-message">Kustuta</a>
+        </td>
+      `;
+
+      // Add new row to table body
+      messagesTableBody.appendChild(newRow);
+
+      // Add event listener to the new delete button
+      newRow.querySelector(".delete-message").addEventListener("click", function(event) {
+        event.preventDefault();
+        newRow.remove();
+        // Re-number rows after deletion (optional, but good for consistency)
+        messagesTableBody.querySelectorAll("tr").forEach((row, index) => {
+          row.querySelector("td:first-child").textContent = index + 1;
+        });
+      });
+
+      // Add event listener to the new message title link
+      newRow.querySelector(".message-title-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        // In a real application, you would fetch the message details here based on the message ID or other identifier.
+        // For this example, we'll use placeholder data.
+        const messageDetails = {
+          title: title,
+          body: content, // Use the captured content
+          date: date,
+          time: time,
+          sender: "Current User", // Placeholder
+          recipient: "Selected Student(s)" // Placeholder
+        };
+        displayMessageDetails(messageDetails);
+      });
+
+
+      // Close modal and clear form
+      newMessageModal.classList.add("hidden");
+      messageTitleInput.value = "";
+      messageContentInput.value = "";
+    });
+
+    // Add event listeners to existing delete buttons
+    messagesTableBody.querySelectorAll(".delete-message").forEach(button => {
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+        button.closest("tr").remove();
+        // Re-number rows after deletion (optional, but good for consistency)
+        messagesTableBody.querySelectorAll("tr").forEach((row, index) => {
+          row.querySelector("td:first-child").textContent = index + 1;
+        });
+      });
+    });
+
+    // Message Detail Modal
+    const messageDetailModal = document.getElementById("message-detail-modal");
+    const closeMessageDetailModalButton = document.getElementById("close-message-detail-modal");
+    const messageDetailTitle = document.getElementById("message-detail-title");
+    const messageDetailBody = document.getElementById("message-detail-body");
+    const messageDetailDate = document.getElementById("message-detail-date");
+    const messageDetailTime = document.getElementById("message-detail-time");
+    const messageDetailSender = document.getElementById("message-detail-sender");
+    const messageDetailRecipient = document.getElementById("message-detail-recipient");
+
+
+    // Function to display message details in the modal
+    function displayMessageDetails(message) {
+      messageDetailTitle.textContent = message.title;
+      messageDetailBody.textContent = message.body;
+      messageDetailDate.textContent = message.date;
+      messageDetailTime.textContent = message.time;
+      messageDetailSender.textContent = message.sender;
+      messageDetailRecipient.textContent = message.recipient;
+      messageDetailModal.classList.remove("hidden");
+    }
+
+    // Close message detail modal
+    closeMessageDetailModalButton.addEventListener("click", function () {
+      messageDetailModal.classList.add("hidden");
+    });
+
+    // Close message detail modal when clicking outside
+    window.addEventListener("click", function (event) {
+      if (event.target === messageDetailModal) {
+        messageDetailModal.classList.add("hidden");
+      }
+    });
+
+    // Add event listeners to existing message title links
+    messagesTableBody.querySelectorAll(".message-title-link").forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        // In a real application, you would fetch the message details here based on the message ID or other identifier.
+        // For this example, we'll use placeholder data.
+        const row = link.closest("tr");
+        const title = link.textContent;
+        const date = row.querySelectorAll("td")[2].querySelector("div:first-child").textContent;
+        const time = row.querySelectorAll("td")[2].querySelector("div:last-child").textContent;
+        const messageDetails = {
+          title: title,
+          body: "See on näidissisu sõnumile. Päris rakenduses tuleks siia sõnumi tegelik sisu.", // Placeholder body
+          date: date,
+          time: time,
+          sender: "Saatja nimi", // Placeholder sender
+          recipient: "Saaja nimi" // Placeholder recipient
+        };
+        displayMessageDetails(messageDetails);
+      });
+    });
+
   });
 </script>
 
