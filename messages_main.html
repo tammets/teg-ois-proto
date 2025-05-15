@@ -285,7 +285,7 @@
                       <a href="#" class="text-red-600 hover:text-red-900 delete-message">Kustuta</a>
                     </td>
                   </tr>
-                  <tr>
+                   <tr>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2</td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><a href="#" class="message-title-link text-gray-500 hover:text-indigo-600 underline">Õppematerjalid</a></td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
@@ -353,11 +353,11 @@
                 </a>
                 <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
                 <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
-                <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
+                <a href="#" class="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
                 <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-gray-300 ring-inset focus:outline-offset-0">...</span>
-                <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
+                <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
                 <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
                 <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
                   <span class="sr-only">Järgmine</span>
@@ -373,6 +373,85 @@
       </div>
 
     </main>
+  </div>
+</div>
+
+<!-- New Message Modal -->
+<div id="new-message-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-gray-500 bg-opacity-75">
+  <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+    <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+      <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+        <div class="sm:flex sm:items-start">
+          <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
+            <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Uus teade</h3>
+            <div class="mt-2">
+              <!-- Recipient Type Selection -->
+              <div class="mb-4">
+                <label for="recipient-type" class="block text-sm font-medium text-gray-700">Saaja tüüp</label>
+                <select id="recipient-type" name="recipient-type" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                  <option value="personal">Personal</option>
+                  <option value="opilased">Õpilased</option>
+                </select>
+              </div>
+
+              <!-- Recipient Options (initially hidden) -->
+              <div id="personal-options" class="mb-4 hidden">
+                <label for="personal-recipient" class="block text-sm font-medium text-gray-700">Saaja</label>
+                <select id="personal-recipient" name="personal-recipient" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                  <option value="all">Kõigile</option>
+                  <option value="individual">Individuaalselt</option>
+                </select>
+                <div id="personal-individual-select" class="mt-2 hidden">
+                  <label for="personal-select" class="block text-sm font-medium text-gray-700">Vali personal</label>
+                  <select id="personal-select" name="personal-select" multiple class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    <!-- Options will be populated by JavaScript -->
+                  </select>
+                </div>
+              </div>
+
+              <div id="opilased-options" class="mb-4 hidden">
+                <label for="opilased-recipient" class="block text-sm font-medium text-gray-700">Saaja</label>
+                <select id="opilased-recipient" name="opilased-recipient" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                  <option value="all">Kõigile</option>
+                  <option value="group">Valitud rühmale</option>
+                  <option value="individual">Individuaalselt</option>
+                </select>
+                <div id="opilased-group-select" class="mt-2 hidden">
+                  <label for="group-select" class="block text-sm font-medium text-gray-700">Vali rühm</label>
+                  <select id="group-select" name="group-select" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    <option value="G1-1">G1-1</option>
+                    <option value="G1-2">G1-2</option>
+                    <option value="G1-3">G1-3</option>
+                  </select>
+                </div>
+                <div id="opilased-individual-select" class="mt-2 hidden">
+                  <label for="student-select" class="block text-sm font-medium text-gray-700">Vali õpilased</label>
+                  <select id="student-select" name="student-select" multiple class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    <!-- Options will be populated by JavaScript -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message Title -->
+              <div class="mb-4">
+                <label for="message-title" class="block text-sm font-medium text-gray-700">Pealkiri</label>
+                <input type="text" id="message-title" name="message-title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+              </div>
+
+              <!-- Message Content -->
+              <div>
+                <label for="message-content" class="block text-sm font-medium text-gray-700">Sisu</label>
+                <textarea id="message-content" name="message-content" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+        <button type="button" class="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto" id="send-message">Saada</button>
+        <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" id="cancel-message">Tühista</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -406,10 +485,31 @@
     const sendButton = document.getElementById("send-message");
     const messageTitleInput = document.getElementById("message-title");
     const messageContentInput = document.getElementById("message-content");
-    const messagesTableBody = document.querySelector("tbody"); // Select the tbody
-    const studentSelect = document.getElementById("student-select");
+    const messagesTableBody = document.querySelector("tbody");
+    const studentSelect = document.getElementById("student-select"); // First and only declaration for studentSelect element
+    const personalSelect = document.getElementById("personal-select"); // Declaration for personalSelect element
 
-    // Function to generate random student names
+    const recipientTypeSelect = document.getElementById("recipient-type");
+    const personalOptionsDiv = document.getElementById("personal-options");
+    const opilasedOptionsDiv = document.getElementById("opilased-options");
+    const personalRecipientSelect = document.getElementById("personal-recipient");
+    const personalIndividualSelectDiv = document.getElementById("personal-individual-select");
+    const opilasedRecipientSelect = document.getElementById("opilased-recipient");
+    const opilasedGroupSelectDiv = document.getElementById("opilased-group-select");
+    const opilasedIndividualSelectDiv = document.getElementById("opilased-individual-select");
+
+    // Message Detail Modal Elements
+    const messageDetailModal = document.getElementById("message-detail-modal"); // Assuming you have this in your HTML, if not, this will be null.
+    const closeMessageDetailModalButton = document.getElementById("close-message-detail-modal"); // Same assumption
+    const messageDetailTitle = document.getElementById("message-detail-title"); // Same
+    const messageDetailBody = document.getElementById("message-detail-body"); // Same
+    const messageDetailDate = document.getElementById("message-detail-date"); // Same
+    const messageDetailTime = document.getElementById("message-detail-time"); // Same
+    const messageDetailSender = document.getElementById("message-detail-sender"); // Same
+    const messageDetailRecipient = document.getElementById("message-detail-recipient"); // Same
+
+
+    // Function to generate random student names (Declared once)
     function generateSampleStudents() {
       const firstNames = ["Jaan", "Mari", "Peeter", "Anna", "Martin", "Kati", "Kristjan", "Liisa", "Madis", "Elen"];
       const lastNames = ["Tamm", "Kask", "Saar", "Mägi", "Sepp", "Kuusk", "Rebane", "Ilves", "Hunt", "Karhu"];
@@ -422,7 +522,7 @@
       return students;
     }
 
-    // Function to populate the student select dropdown
+    // Function to populate the student select dropdown (Declared once)
     function populateStudentSelect() {
       const students = generateSampleStudents();
       studentSelect.innerHTML = ""; // Clear previous options
@@ -434,23 +534,62 @@
       });
     }
 
+    // Function to generate sample personal names (Declared once)
+    function generateSamplePersonal() {
+      const firstNames = ["Kadri", "Jüri", "Eva", "Toomas", "Sirje", "Andres", "Merike", "Priit", "Anne", "Mart"];
+      const lastNames = ["Mets", "Kuus", "Teder", "Vaher", "Pärn", "Kivi", "Lepp", "Kask", "Saar", "Tamm"];
+      const personal = [];
+      for (let i = 0; i < 5; i++) { // Generate some personal names for the dropdown
+        const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+        const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+        personal.push(`${randomFirstName} ${randomLastName}`);
+      }
+      return personal;
+    }
+
+    // Function to populate the personal select dropdown (Declared once)
+    function populatePersonalSelect() {
+      const personal = generateSamplePersonal();
+      personalSelect.innerHTML = ""; // Clear previous options
+      personal.forEach(person => {
+        const option = document.createElement("option");
+        option.value = person;
+        option.textContent = person;
+        personalSelect.appendChild(option);
+      });
+    }
+
+
     // Open new message modal
-    newMessageButton.addEventListener("click", function () {
-      newMessageModal.classList.remove("hidden");
-      populateStudentSelect(); // Generate and populate students when modal opens
-    });
+    if (newMessageButton) {
+        newMessageButton.addEventListener("click", function () {
+        newMessageModal.classList.remove("hidden");
+        // Initial population based on default recipient type
+        if (recipientTypeSelect.value === "personal") {
+            populatePersonalSelect();
+        } else {
+            populateStudentSelect();
+        }
+      });
+    }
 
     // Close new message modal
-    cancelButton.addEventListener("click", function () {
-      newMessageModal.classList.add("hidden");
-      // Clear form fields
-      messageTitleInput.value = "";
-      messageContentInput.value = "";
-      // Deselect all options in the student select
-      Array.from(studentSelect.options).forEach(option => {
-        option.selected = false;
+    if (cancelButton) {
+        cancelButton.addEventListener("click", function () {
+        newMessageModal.classList.add("hidden");
+        // Clear form fields
+        messageTitleInput.value = "";
+        messageContentInput.value = "";
+        // Deselect all options in the select dropdowns
+        Array.from(studentSelect.options).forEach(option => {
+          option.selected = false;
+        });
+        Array.from(personalSelect.options).forEach(option => {
+            option.selected = false;
+          });
       });
-    });
+    }
+
 
     // Close new message modal when clicking outside
     window.addEventListener("click", function (event) {
@@ -463,147 +602,224 @@
     });
 
     // Send message and add row
-    sendButton.addEventListener("click", function () {
-      const title = messageTitleInput.value;
-      const content = messageContentInput.value; // Although content is not displayed in the table, we capture it.
-      const selectedGroup = document.getElementById("group-select").value; // Capture selected group
+    if (sendButton) {
+        sendButton.addEventListener("click", function () {
+        const title = messageTitleInput.value;
+        const content = messageContentInput.value;
 
-      if (title.trim() === "") {
-        alert("Pealkiri ei saa olla tühi.");
-        return;
-      }
+        if (title.trim() === "") {
+          alert("Pealkiri ei saa olla tühi.");
+          return;
+        }
 
-      // Get current date and time
-      const now = new Date();
-      const date = now.toLocaleDateString('et-EE'); // Estonian format
-      const time = now.toLocaleTimeString('et-EE', { hour: '2-digit', minute: '2-digit' });
+        const recipientType = recipientTypeSelect.value;
+        let recipientText = "";
 
-      // Determine the next order number
-      const rows = messagesTableBody.querySelectorAll("tr");
-      const nextOrderNumber = rows.length + 1;
+        if (recipientType === "personal") {
+          const personalRecipientValue = personalRecipientSelect.value;
+          if (personalRecipientValue === "all") {
+            recipientText = "Personal (Kõigile)";
+          } else { // individual
+            const selectedPersonal = Array.from(personalSelect.selectedOptions).map(option => option.text).join(", ");
+            recipientText = `Personal (${selectedPersonal || 'pole valitud'})`;
+          }
+        } else { // opilased
+          const opilasedRecipientValue = opilasedRecipientSelect.value;
+          if (opilasedRecipientValue === "all") {
+            recipientText = "Õpilased (Kõigile)";
+          } else if (opilasedRecipientValue === "group") {
+            const selectedGroup = document.getElementById("group-select").value;
+            recipientText = `Õpilased (Rühm: ${selectedGroup})`;
+          } else { // individual
+            const selectedStudents = Array.from(studentSelect.selectedOptions).map(option => option.text).join(", ");
+            recipientText = `Õpilased (${selectedStudents || 'pole valitud'})`;
+          }
+        }
 
-      // Create new row
-      const newRow = document.createElement("tr");
-      newRow.innerHTML = `
-        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${nextOrderNumber}</td>
-        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><a href="#" class="message-title-link text-gray-500 hover:text-indigo-600">${title}</a></td>
-        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-          <div>${date}</div>
-          <div>${time}</div>
-        </td>
-        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-          <span class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Lugemata - sisse</span>
-        </td>
-        <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-          <a href="#" class="text-indigo-600 hover:text-indigo-900">Vaata</a>
-          <span class="text-gray-900"> | </span>
-          <a href="#" class="text-red-600 hover:text-red-900 delete-message">Kustuta</a>
-        </td>
-      `;
+        const now = new Date();
+        const date = now.toLocaleDateString('et-EE');
+        const time = now.toLocaleTimeString('et-EE', { hour: '2-digit', minute: '2-digit' });
 
-      // Add new row to table body
-      messagesTableBody.appendChild(newRow);
+        const rows = messagesTableBody.querySelectorAll("tr");
+        const nextOrderNumber = rows.length + 1;
 
-      // Add event listener to the new delete button
-      newRow.querySelector(".delete-message").addEventListener("click", function(event) {
-        event.preventDefault();
-        newRow.remove();
-        // Re-number rows after deletion (optional, but good for consistency)
-        messagesTableBody.querySelectorAll("tr").forEach((row, index) => {
-          row.querySelector("td:first-child").textContent = index + 1;
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${nextOrderNumber}</td>
+          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><a href="#" class="message-title-link text-gray-500 hover:text-indigo-600 underline">${title}</a></td>
+          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+            <div>${date}</div>
+            <div>${time}</div>
+          </td>
+          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+            <span class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Lugemata - sisse</span>
+          </td>
+          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">${recipientText}</td>
+          <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+            <a href="#" class="text-indigo-600 hover:text-indigo-900 view-message-link">Vaata</a>
+            <span class="text-gray-900"> | </span>
+            <a href="#" class="text-red-600 hover:text-red-900 delete-message">Kustuta</a>
+          </td>
+        `;
+
+        messagesTableBody.appendChild(newRow);
+
+        newRow.querySelector(".delete-message").addEventListener("click", function(event) {
+          event.preventDefault();
+          newRow.remove();
+          messagesTableBody.querySelectorAll("tr").forEach((row, index) => {
+            row.querySelector("td:first-child").textContent = index + 1;
+          });
         });
+
+        newRow.querySelector(".message-title-link").addEventListener("click", function(event) {
+          event.preventDefault();
+          const messageDetails = {
+            title: title,
+            body: content,
+            date: date,
+            time: time,
+            sender: "Juku Juurikas", // Placeholder, you might want to get this dynamically
+            recipient: recipientText
+          };
+          displayMessageDetails(messageDetails);
+        });
+         newRow.querySelector(".view-message-link").addEventListener("click", function(event) { // if you change title link to a generic view link
+          event.preventDefault();
+           const messageDetails = {
+            title: title,
+            body: content,
+            date: date,
+            time: time,
+            sender: "Juku Juurikas",
+            recipient: recipientText
+          };
+          displayMessageDetails(messageDetails);
+        });
+
+
+        newMessageModal.classList.add("hidden");
+        messageTitleInput.value = "";
+        messageContentInput.value = "";
+        Array.from(studentSelect.options).forEach(option => { option.selected = false; });
+        Array.from(personalSelect.options).forEach(option => { option.selected = false; });
       });
-
-      // Add event listener to the new message title link
-      newRow.querySelector(".message-title-link").addEventListener("click", function(event) {
-        event.preventDefault();
-        // In a real application, you would fetch the message details here based on the message ID or other identifier.
-        // For this example, we'll use placeholder data.
-        const messageDetails = {
-          title: title,
-          body: content, // Use the captured content
-          date: date,
-          time: time,
-          sender: "Current User", // Placeholder
-          recipient: "Selected Student(s)" // Placeholder
-        };
-        displayMessageDetails(messageDetails);
-      });
+    }
 
 
-      // Close modal and clear form
-      newMessageModal.classList.add("hidden");
-      messageTitleInput.value = "";
-      messageContentInput.value = "";
-    });
-
-    // Add event listeners to existing delete buttons
     messagesTableBody.querySelectorAll(".delete-message").forEach(button => {
       button.addEventListener("click", function(event) {
         event.preventDefault();
         button.closest("tr").remove();
-        // Re-number rows after deletion (optional, but good for consistency)
         messagesTableBody.querySelectorAll("tr").forEach((row, index) => {
           row.querySelector("td:first-child").textContent = index + 1;
         });
       });
     });
 
-    // Message Detail Modal
-    const messageDetailModal = document.getElementById("message-detail-modal");
-    const closeMessageDetailModalButton = document.getElementById("close-message-detail-modal");
-    const messageDetailTitle = document.getElementById("message-detail-title");
-    const messageDetailBody = document.getElementById("message-detail-body");
-    const messageDetailDate = document.getElementById("message-detail-date");
-    const messageDetailTime = document.getElementById("message-detail-time");
-    const messageDetailSender = document.getElementById("message-detail-sender");
-    const messageDetailRecipient = document.getElementById("message-detail-recipient");
-
-
     // Function to display message details in the modal
     function displayMessageDetails(message) {
-      messageDetailTitle.textContent = message.title;
-      messageDetailBody.textContent = message.body;
-      messageDetailDate.textContent = message.date;
-      messageDetailTime.textContent = message.time;
-      messageDetailSender.textContent = message.sender;
-      messageDetailRecipient.textContent = message.recipient;
-      messageDetailModal.classList.remove("hidden");
+      if (messageDetailModal) { // Check if modal elements exist
+            messageDetailTitle.textContent = message.title;
+            messageDetailBody.textContent = message.body;
+            messageDetailDate.textContent = message.date;
+            messageDetailTime.textContent = message.time;
+            messageDetailSender.textContent = message.sender;
+            messageDetailRecipient.textContent = message.recipient;
+            messageDetailModal.classList.remove("hidden");
+      } else {
+          // Fallback or detailed alert if modal isn't in HTML
+          alert(`Title: ${message.title}\nDate: ${message.date} ${message.time}\nSender: ${message.sender}\nRecipient: ${message.recipient}\n\nBody: ${message.body}`);
+      }
     }
 
-    // Close message detail modal
-    closeMessageDetailModalButton.addEventListener("click", function () {
-      messageDetailModal.classList.add("hidden");
-    });
+    if (closeMessageDetailModalButton) {
+        closeMessageDetailModalButton.addEventListener("click", function () {
+            messageDetailModal.classList.add("hidden");
+        });
+    }
 
-    // Close message detail modal when clicking outside
     window.addEventListener("click", function (event) {
-      if (event.target === messageDetailModal) {
+      if (messageDetailModal && event.target === messageDetailModal) {
         messageDetailModal.classList.add("hidden");
       }
     });
 
-    // Add event listeners to existing message title links
-    messagesTableBody.querySelectorAll(".message-title-link").forEach(link => {
+    messagesTableBody.querySelectorAll(".message-title-link, .view-message-link").forEach(link => { // Combined query for existing links
       link.addEventListener("click", function(event) {
         event.preventDefault();
-        // In a real application, you would fetch the message details here based on the message ID or other identifier.
-        // For this example, we'll use placeholder data.
         const row = link.closest("tr");
-        const title = link.textContent;
-        const date = row.querySelectorAll("td")[2].querySelector("div:first-child").textContent;
-        const time = row.querySelectorAll("td")[2].querySelector("div:last-child").textContent;
+        const title = row.cells[1].textContent; // Get title from table cell
+        const dateParts = row.cells[2].innerText.split('\n'); // ["14.05.2025", "10:00"]
+        // For existing messages, we don't have the 'content' readily available without fetching it or storing it differently.
+        // Using a placeholder for the body for existing static messages.
         const messageDetails = {
           title: title,
-          body: "See on näidissisu sõnumile. Päris rakenduses tuleks siia sõnumi tegelik sisu.", // Placeholder body
-          date: date,
-          time: time,
-          sender: "Saatja nimi", // Placeholder sender
-          recipient: "Saaja nimi" // Placeholder recipient
+          body: "Selle sõnumi sisu tuleks laadida andmeallikast. See on demo sisu.",
+          date: dateParts[0],
+          time: dateParts[1],
+          sender: "Süsteem", // Placeholder for existing messages
+          recipient: row.cells[4].textContent // Get recipient from table cell
         };
         displayMessageDetails(messageDetails);
       });
     });
+
+    // Show/hide recipient options based on recipient type
+    recipientTypeSelect.addEventListener("change", function () {
+      if (recipientTypeSelect.value === "personal") {
+        personalOptionsDiv.classList.remove("hidden");
+        opilasedOptionsDiv.classList.add("hidden");
+        personalIndividualSelectDiv.classList.add("hidden"); // Reset sub-options
+        populatePersonalSelect();
+        personalRecipientSelect.value = "all"; // Reset to default
+      } else { // opilased
+        personalOptionsDiv.classList.add("hidden");
+        opilasedOptionsDiv.classList.remove("hidden");
+        opilasedGroupSelectDiv.classList.add("hidden"); // Reset sub-options
+        opilasedIndividualSelectDiv.classList.add("hidden"); // Reset sub-options
+        populateStudentSelect();
+        opilasedRecipientSelect.value = "all"; // Reset to default
+      }
+    });
+
+    // Show/hide individual personal select based on personal recipient option
+    personalRecipientSelect.addEventListener("change", function () {
+      if (personalRecipientSelect.value === "individual") {
+        personalIndividualSelectDiv.classList.remove("hidden");
+      } else {
+        personalIndividualSelectDiv.classList.add("hidden");
+      }
+    });
+
+    // Show/hide group or individual opilased select based on opilased recipient option
+    opilasedRecipientSelect.addEventListener("change", function () {
+      if (opilasedRecipientSelect.value === "group") {
+        opilasedGroupSelectDiv.classList.remove("hidden");
+        opilasedIndividualSelectDiv.classList.add("hidden");
+      } else if (opilasedRecipientSelect.value === "individual") {
+        opilasedGroupSelectDiv.classList.add("hidden");
+        opilasedIndividualSelectDiv.classList.remove("hidden");
+      } else { // "all"
+        opilasedGroupSelectDiv.classList.add("hidden");
+        opilasedIndividualSelectDiv.classList.add("hidden");
+      }
+    });
+
+    // Initial setup for recipient options visibility
+    if (recipientTypeSelect.value === "personal") {
+      personalOptionsDiv.classList.remove("hidden");
+      opilasedOptionsDiv.classList.add("hidden");
+      populatePersonalSelect();
+    } else { // opilased (or any other default)
+      personalOptionsDiv.classList.add("hidden");
+      opilasedOptionsDiv.classList.remove("hidden");
+      populateStudentSelect();
+    }
+    // Ensure sub-options are hidden initially based on default selection for "all"
+    personalIndividualSelectDiv.classList.add("hidden");
+    opilasedGroupSelectDiv.classList.add("hidden");
+    opilasedIndividualSelectDiv.classList.add("hidden");
 
   });
 </script>
