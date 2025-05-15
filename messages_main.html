@@ -354,7 +354,7 @@
                 <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
                 <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
                 <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
-                <a href="#" class="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
                 <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-gray-300 ring-inset focus:outline-offset-0">...</span>
                 <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
                 <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
@@ -383,65 +383,93 @@
       <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
         <div class="sm:flex sm:items-start">
           <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
-            <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Uus teade</h3>
+            <h3 class="mb-4 text-base font-semibold leading-6 text-gray-900" id="modal-title">Uus teade</h3>
             <div class="mt-2">
               <!-- Recipient Type Selection -->
-              <div class="mb-4">
-                <label for="recipient-type" class="block text-sm font-medium text-gray-700">Saaja tüüp</label>
-                <select id="recipient-type" name="recipient-type" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+              <label for="recipient-type" class="block text-sm/6 font-medium text-gray-900">Vali sihgrupp</label>
+              <div class="mt-2 mb-4 grid grid-cols-1">
+                <select id="recipient-type" name="recipient-type" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                   <option value="personal">Personal</option>
                   <option value="opilased">Õpilased</option>
                 </select>
+                <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
               </div>
 
               <!-- Recipient Options (initially hidden) -->
-              <div id="personal-options" class="mb-4 hidden">
-                <label for="personal-recipient" class="block text-sm font-medium text-gray-700">Saaja</label>
-                <select id="personal-recipient" name="personal-recipient" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                  <option value="all">Kõigile</option>
-                  <option value="individual">Individuaalselt</option>
-                </select>
-                <div id="personal-individual-select" class="mt-2 hidden">
-                  <label for="personal-select" class="block text-sm font-medium text-gray-700">Vali personal</label>
-                  <select id="personal-select" name="personal-select" multiple class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                    <!-- Options will be populated by JavaScript -->
+              <div id="personal-options" class="mt-2 mb-4 hidden">
+                <label for="personal-recipient" class="block text-sm/6 font-medium text-gray-900">Saaja</label>
+                <div class="mt-2 grid grid-cols-1">
+                  <select id="personal-recipient" name="personal-recipient" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <option value="all">Kõigile</option>
+                    <option value="individual">Individuaalselt</option>
                   </select>
+                  <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div id="personal-individual-select" class="mt-2 hidden">
+                  <label for="personal-select" class="block text-sm/6 font-medium text-gray-900">Vali personal</label>
+                  <div class="mt-2 grid grid-cols-1">
+                    <select id="personal-select" name="personal-select" multiple class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                      <!-- Options will be populated by JavaScript -->
+                    </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
                 </div>
               </div>
 
               <div id="opilased-options" class="mb-4 hidden">
-                <label for="opilased-recipient" class="block text-sm font-medium text-gray-700">Saaja</label>
-                <select id="opilased-recipient" name="opilased-recipient" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                  <option value="all">Kõigile</option>
-                  <option value="group">Valitud rühmale</option>
-                  <option value="individual">Individuaalselt</option>
-                </select>
-                <div id="opilased-group-select" class="mt-2 hidden">
-                  <label for="group-select" class="block text-sm font-medium text-gray-700">Vali rühm</label>
-                  <select id="group-select" name="group-select" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                    <option value="G1-1">G1-1</option>
-                    <option value="G1-2">G1-2</option>
-                    <option value="G1-3">G1-3</option>
+                <label for="opilased-recipient" class="block text-sm/6 font-medium text-gray-900">Saaja</label>
+                <div class="mt-2 grid grid-cols-1">
+                  <select id="opilased-recipient" name="opilased-recipient" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <option value="all">Kõigile</option>
+                    <option value="group">Valitud rühmale</option>
+                    <option value="individual">Individuaalselt</option>
                   </select>
+                  <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div id="opilased-group-select" class="mt-2 hidden">
+                  <label for="group-select" class="block text-sm/6 font-medium text-gray-900">Vali rühm</label>
+                  <div class="mt-2 grid grid-cols-1">
+                    <select id="group-select" name="group-select" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                      <option value="G1-1">G1-1</option>
+                      <option value="G1-2">G1-2</option>
+                      <option value="G1-3">G1-3</option>
+                    </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
                 </div>
                 <div id="opilased-individual-select" class="mt-2 hidden">
-                  <label for="student-select" class="block text-sm font-medium text-gray-700">Vali õpilased</label>
-                  <select id="student-select" name="student-select" multiple class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                    <!-- Options will be populated by JavaScript -->
-                  </select>
+                  <label for="student-select" class="block text-sm/6 font-medium text-gray-900">Vali õpilased</label>
+                  <div class="mt-2 grid grid-cols-1">
+                    <select id="student-select" name="student-select" multiple class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                      <!-- Options will be populated by JavaScript -->
+                    </select>
+                    <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
                 </div>
               </div>
 
               <!-- Message Title -->
               <div class="mb-4">
-                <label for="message-title" class="block text-sm font-medium text-gray-700">Pealkiri</label>
-                <input type="text" id="message-title" name="message-title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                <label for="message-title" class="block text-sm/6 font-medium text-gray-9000">Pealkiri</label>
+                <input type="text" id="message-title" name="message-title" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
               </div>
 
               <!-- Message Content -->
               <div>
-                <label for="message-content" class="block text-sm font-medium text-gray-700">Sisu</label>
-                <textarea id="message-content" name="message-content" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                <label for="message-content" class="block text-sm/6 font-medium text-gray-900">Sisu</label>
+                <textarea id="message-content" name="message-content" rows="4" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
               </div>
             </div>
           </div>
@@ -798,13 +826,47 @@
         opilasedGroupSelectDiv.classList.remove("hidden");
         opilasedIndividualSelectDiv.classList.add("hidden");
       } else if (opilasedRecipientSelect.value === "individual") {
-        opilasedGroupSelectDiv.classList.add("hidden");
-        opilasedIndividualSelectDiv.classList.remove("hidden");
+        // Only show individual select if a group is already selected
+        const selectedGroup = document.getElementById("group-select").value;
+        if (selectedGroup && selectedGroup !== "") {
+          opilasedGroupSelectDiv.classList.remove("hidden"); // Keep group select visible
+          opilasedIndividualSelectDiv.classList.remove("hidden");
+        } else {
+          // If no group is selected, revert to group selection or show a message
+          alert("Palun vali enne rühm.");
+          opilasedRecipientSelect.value = "group"; // Revert selection
+          opilasedGroupSelectDiv.classList.remove("hidden");
+          opilasedIndividualSelectDiv.classList.add("hidden");
+        }
       } else { // "all"
         opilasedGroupSelectDiv.classList.add("hidden");
         opilasedIndividualSelectDiv.classList.add("hidden");
       }
     });
+
+    // Add event listener to group select to enable individual student selection
+    const groupSelect = document.getElementById("group-select");
+    if (groupSelect) {
+      groupSelect.addEventListener("change", function() {
+        // If a group is selected, enable the "Individuaalselt" option in the recipient select
+        const individualOption = opilasedRecipientSelect.querySelector('option[value="individual"]');
+        if (groupSelect.value && groupSelect.value !== "") {
+           if (individualOption) {
+             individualOption.disabled = false;
+           }
+        } else {
+           if (individualOption) {
+             individualOption.disabled = true;
+             // If individual was selected, revert to group
+             if (opilasedRecipientSelect.value === "individual") {
+                opilasedRecipientSelect.value = "group";
+                opilasedIndividualSelectDiv.classList.add("hidden");
+             }
+           }
+        }
+      });
+    }
+
 
     // Initial setup for recipient options visibility
     if (recipientTypeSelect.value === "personal") {
@@ -815,6 +877,11 @@
       personalOptionsDiv.classList.add("hidden");
       opilasedOptionsDiv.classList.remove("hidden");
       populateStudentSelect();
+      // Initially disable the "Individuaalselt" option for students
+      const individualOption = opilasedRecipientSelect.querySelector('option[value="individual"]');
+      if (individualOption) {
+        individualOption.disabled = true;
+      }
     }
     // Ensure sub-options are hidden initially based on default selection for "all"
     personalIndividualSelectDiv.classList.add("hidden");
