@@ -216,7 +216,7 @@
               <div class="sm:flex-auto">
                 <h1 class="text-base font-semibold text-gray-900">Teated (3)</h1>
                 <p class="mt-2 text-sm text-gray-700">
-                  Sinu postkasti ÕIS-s nimekiri
+                  Saabunud ja saadetud teated
                 </p>
               </div>
               <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
@@ -225,11 +225,27 @@
                 </button>
               </div>
             </div>
+            <!-- Search field and buttons -->
+            <div class="mt-6 mb-4 flex items-center gap-x-4">
+              <div class="flex-1 flex rounded-md shadow-sm">
+                <div class="relative flex grow items-stretch focus-within:z-10">
+                  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <input id="search-messages" name="search-messages" class="block w-full rounded-none rounded-l-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Otsi sõnumeid" type="search">
+                </div>
+                <button type="button" class="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-white bg-indigo-600 ring-1 ring-inset ring-indigo-600 hover:bg-indigo-500">
+                  Otsi
+                </button>
+              </div>
+            </div>
         <div class="mt-8 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
               <table class="min-w-full divide-y divide-gray-300">
-                <thead>
+                <thead class="bg-gray-50">
                   <tr>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       #
@@ -242,6 +258,9 @@
                     </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       Staatus
+                    </th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                      Adressaat
                     </th>
                     <th scope="col" class="px-3 py-3.5 text-right text-sm font-semibold text-gray-900">
                       Tegevused
@@ -259,6 +278,7 @@
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       <span class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Lugemata - sisse</span>
                     </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Personal</td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">Vaata</a>
                       <span class="text-gray-900"> | </span>
@@ -275,6 +295,7 @@
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Loetud - sisse</span>
                     </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">G1-1</td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">Vaata</a>
                       <span class="text-gray-900"> | </span>
@@ -291,6 +312,7 @@
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Loetud - välja</span>
                     </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Juku Juurikas</td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">Vaata</a>
                       <span class="text-gray-900"> | </span>
@@ -336,7 +358,7 @@
                 <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-gray-300 ring-inset focus:outline-offset-0">...</span>
                 <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
                 <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
                 <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
                   <span class="sr-only">Järgmine</span>
                   <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
@@ -351,85 +373,6 @@
       </div>
 
     </main>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const profileButton = document.querySelector("#user-menu-button");
-    const profileDropdown = document.querySelector("#profile-dropdown");
-
-    if (profileButton && profileDropdown) {
-      profileButton.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents immediate closing
-        profileDropdown.classList.toggle("hidden");
-
-        // Update aria-expanded for accessibility
-        const expanded = profileDropdown.classList.contains("hidden") ? "false" : "true";
-        profileButton.setAttribute("aria-expanded", expanded);
-      });
-
-      // Close dropdown when clicking outside
-      document.addEventListener("click", function (event) {
-        if (!profileDropdown.contains(event.target) && !profileButton.contains(event.target)) {
-          profileDropdown.classList.add("hidden");
-          profileButton.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-  });
-</script>
-
-<!-- Message Detail Modal Structure -->
-<div id="message-detail-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
-  <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
-    <h2 id="message-detail-title" class="text-lg font-semibold mb-4"></h2>
-    <div class="mb-4">
-      <p class="text-sm text-gray-700"><span class="font-medium">Saatja:</span> <span id="message-detail-sender"></span></p>
-      <p class="text-sm text-gray-700"><span class="font-medium">Saaja:</span> <span id="message-detail-recipient"></span></p>
-      <p class="text-sm text-gray-700"><span class="font-medium">Kuupäev:</span> <span id="message-detail-date"></span></p>
-      <p class="text-sm text-gray-700"><span class="font-medium">Kellaaeg:</span> <span id="message-detail-time"></span></p>
-    </div>
-    <div class="mb-4">
-      <p class="text-sm font-medium text-gray-700">Sisu:</p>
-      <p id="message-detail-body" class="text-sm text-gray-700"></p>
-    </div>
-    <div class="flex justify-end">
-      <button id="close-message-detail-modal" type="button" class="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Sulge</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal structure -->
-<div id="new-message-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
-  <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
-    <h2 class="text-lg font-semibold mb-4">Uus teade</h2>
-    <div class="mb-4">
-      <label for="group-select" class="block text-sm font-medium text-gray-700">Vali õpperühm:</label>
-      <select id="group-select" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-        <option value="G1-1">G1-1</option>
-        <option value="G1-2">G1-2</option>
-      </select>
-    </div>
-    <div class="mb-4">
-      <label for="student-select" class="block text-sm font-medium text-gray-700">Määra õpilane:</label>
-      <select id="student-select" multiple class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-        <!-- Sample students will be added here by JavaScript -->
-      </select>
-    </div>
-    <div class="mb-4">
-      <label for="message-title" class="block text-sm font-medium text-gray-700">Pealkiri:</label>
-      <input type="text" id="message-title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-    </div>
-    <div class="mb-4">
-      <label for="message-content" class="block text-sm font-medium text-gray-700">Sisu:</label>
-      <textarea id="message-content" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
-    </div>
-    <div class="flex justify-end">
-      <button id="cancel-message" type="button" class="mr-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Tühista</button>
-      <button id="send-message" type="button" class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Saada</button>
-    </div>
   </div>
 </div>
 
