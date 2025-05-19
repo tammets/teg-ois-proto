@@ -264,7 +264,21 @@
           <!-- Content header -->
             <div class="sm:flex mt-6"></div>
             <div class="sm:flex-auto">
-              <h3 class="text-lg font-semibold text-gray-900">Leping</h3>
+              <h3 class="text-lg font-semibold text-gray-900 inline-flex items-center">
+                Leping
+                <span id="leping-info-icon" class="ml-2 cursor-pointer relative inline-flex items-center justify-center size-5 rounded-full bg-blue-500 text-white text-xs font-bold">
+                  ?
+                  <div id="leping-info-popup" class="absolute z-10 w-64 px-3 py-2 text-sm font-light text-gray-600 bg-white rounded-md shadow-lg border border-gray-200 hidden" style="top: 100%; left: 0; transform: translateX(0);">
+                    Lepingu kinnitamise etapid:
+                    <ol class="list-decimal pl-5">
+                      <li>Huviline esitab avalduse, mille põhjal koostatakse/saadetakse talle pakkumine</li>
+                      <li>Huviline kontrollib pakkumise üle ning kinnitab pakkumise</li>
+                      <li>Kinnitatud pakkumise baasil geneerib kool lepingu sõltuvalt huvilise poolt valitud õppevormist. Aluseks on alati baasleping (tähtajatu) ning lepingulisa (tähtajaline)</li>
+                      <li>Geneeritud leping saadetakse allkirjastamiseks esimesena huvilisele ja seejärel allkirjastab selle kool</li>
+                    </ol>
+                  </div>
+                </span>
+              </h3>
               <p class="mt-1 text-sm text-gray-500 mb-6">
                 Õppevorm: Päevane - Arve: 1120.00 € - Makseviis: Õppeaasta
               </p>
@@ -478,6 +492,23 @@
       cancelButton.addEventListener("click", function (event) {
         event.preventDefault();
         modal.classList.add("hidden");
+      });
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const infoIcon = document.getElementById("leping-info-icon");
+    const infoPopup = document.getElementById("leping-info-popup");
+
+    if (infoIcon && infoPopup) {
+      infoIcon.addEventListener("mouseover", function () {
+        infoPopup.classList.remove("hidden");
+      });
+
+      infoIcon.addEventListener("mouseout", function () {
+        infoPopup.classList.add("hidden");
       });
     }
   });
