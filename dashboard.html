@@ -216,382 +216,63 @@
       </div>
     </div>
 
-    <main class="bg-gray-100 min-h-screen py-10">
-      <div class="px-4 sm:px-6 lg:px-8">
-        <!-- Valge "kaart", sarnane profiililehe omale -->
-        <div class="mx-auto max-w-7xl">
-          <div class="rounded-lg bg-white px-5 py-6 shadow-sm sm:px-6">
-    
-            <!-- Sinu olemasolev sisu --> 
-            <div class="sm:flex sm:items-center">
-              <div class="sm:flex-auto">
-                <h1 class="text-base font-semibold text-gray-900">Töölaud</h1>
-                <p class="mt-2 text-sm text-gray-700">
-                  Kõik Sinu viimased klikid jms
-                </p>
-              </div>
-              <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-                <a href="application_form.html" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                  Lisa uus
-                </a>
-              </div>
+    <!-- Main content starts here -->
+  <div class="">
+    <main class="overflow-hidden px-4 py-6 sm:px-6 lg:px-8">
+      <div class="px-4 py-2 sm:px-6">
+        <div class="flex items-center justify-between">
+        </div>
+
+      <div class="grid grid-cols-3 gap-4">
+        <!-- Student Record Content -->
+        <div class="overflow-hidden rounded-xl border border-gray-200 col-span-3">
+          <div class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Tuple" class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10">
+            <div>
+              <div class="text-sm/6 font-medium text-gray-900">Juku Juurikas</div>
+              <div class="text-xs text-gray-500">Õpilane</div>
             </div>
-        <div class="mt-8 flow-root">
-          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-
-              <!-- avaldused ja lepingud-->
-              <div>
-                <h2 class="text-base font-semibold text-gray-900">Avaldused ja lepingud</h2>
-
-                <ul role="list" class="divide-y divide-gray-100">
-                  <li class="flex items-center justify-between gap-x-6 py-5">
-                    <div class="min-w-0">
-                      <div class="flex items-start gap-x-3">
-                        <p class="text-sm/6 font-semibold text-gray-900">Avaldus</p>
-                        <p class="mt-0.5 rounded-md bg-green-50 px-1.5 py-0.5 text-xs font-medium whitespace-nowrap text-green-700 ring-1 ring-green-600/20 ring-inset">Esitatud</p>
-                      </div>
-                      <div class="mt-1 flex items-center gap-x-2 text-xs/5 text-gray-500">
-                        <p class="whitespace-nowrap">Viimati muudetud <time datetime="2023-03-17T00:00Z">13.03.2025</time></p>
-                        <svg viewBox="0 0 2 2" class="size-0.5 fill-current">
-                          <circle cx="1" cy="1" r="1" />
-                        </svg>
-                        <p class="truncate">Sina</p>
-                      </div>
-                    </div>
-                    <div class="flex flex-none items-center gap-x-4">
-                      <a href="application_form_view.html" class="hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50 sm:block">Vaata</a>
-                      <div class="relative flex-none">
-                        <button type="button" class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900" id="options-menu-0-button" aria-expanded="false" aria-haspopup="true">
-                          
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="flex items-center justify-between gap-x-6 py-5">
-                    <div class="min-w-0">
-                      <div class="flex items-start gap-x-3">
-                        <p class="text-sm/6 font-semibold text-gray-900">Leping</p>
-                        <p class="mt-0.5 rounded-md bg-red-50 px-1.5 py-0.5 text-xs font-medium whitespace-nowrap text-red-600 ring-1 ring-red-500/10 ring-inset">Allkirjastamise ootel</p>
-                      </div>
-                      <div class="mt-1 flex items-center gap-x-2 text-xs/5 text-gray-500">
-                        <p class="whitespace-nowrap">Viimati muudetud <time datetime="2023-03-17T00:00Z">13.03.2025</time></p>
-                        <svg viewBox="0 0 2 2" class="size-0.5 fill-current">
-                          <circle cx="1" cy="1" r="1" />
-                        </svg>
-                        <p class="truncate">TEG</p>
-                      </div>
-                    </div>
-                    <div class="flex flex-none items-center gap-x-4">
-                      <a href="application_form_contract.html" class="hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50 sm:block">Vaata</a>
-                      <div class="relative flex-none">
-                        <button type="button" class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900" id="options-menu-1-button" aria-expanded="false" aria-haspopup="true">
-                          
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <!-- end avaldused ja lepingud-->
-              
-              <div class="mt-8">
-                <h2 class="text-base font-semibold text-gray-900">Uudised ja sündmused 2024-2025 õppeaastal</h2>
-                <div class="lg:grid lg:grid-cols-12 lg:gap-x-16">
-                  <div class="mt-10 text-center lg:col-start-8 lg:col-end-13 lg:row-start-1 lg:mt-9 xl:col-start-9">
-                    <div class="flex items-center text-gray-900">
-                      <button type="button" class="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500">
-                        <span class="sr-only">Previous month</span>
-                        <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                          <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
-                        </svg>
-                      </button>
-                      <div class="flex-auto text-sm font-semibold">January</div>
-                      <button type="button" class="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500">
-                        <span class="sr-only">Next month</span>
-                        <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                          <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="mt-6 grid grid-cols-7 text-xs/6 text-gray-500">
-                      <div>M</div>
-                      <div>T</div>
-                      <div>W</div>
-                      <div>T</div>
-                      <div>F</div>
-                      <div>S</div>
-                      <div>S</div>
-                    </div>
-                    <div class="isolate mt-2 grid grid-cols-7 gap-px rounded-lg bg-gray-200 text-sm ring-1 shadow-sm ring-gray-200">
-                      <!--
-                        Always include: "py-1.5 hover:bg-gray-100 focus:z-10"
-                        Is current month, include: "bg-white"
-                        Is not current month, include: "bg-gray-50"
-                        Is selected or is today, include: "font-semibold"
-                        Is selected, include: "text-white"
-                        Is not selected, is not today, and is current month, include: "text-gray-900"
-                        Is not selected, is not today, and is not current month, include: "text-gray-400"
-                        Is today and is not selected, include: "text-indigo-600"
-              
-                        Top left day, include: "rounded-tl-lg"
-                        Top right day, include: "rounded-tr-lg"
-                        Bottom left day, include: "rounded-bl-lg"
-                        Bottom right day, include: "rounded-br-lg"
-                      -->
-                      <button type="button" class="rounded-tl-lg bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <!--
-                          Always include: "mx-auto flex size-7 items-center justify-center rounded-full"
-                          Is selected and is today, include: "bg-indigo-600"
-                          Is selected and is not today, include: "bg-gray-900"
-                        -->
-                        <time datetime="2021-12-27" class="mx-auto flex size-7 items-center justify-center rounded-full">27</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2021-12-28" class="mx-auto flex size-7 items-center justify-center rounded-full">28</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2021-12-29" class="mx-auto flex size-7 items-center justify-center rounded-full">29</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2021-12-30" class="mx-auto flex size-7 items-center justify-center rounded-full">30</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2021-12-31" class="mx-auto flex size-7 items-center justify-center rounded-full">31</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-01" class="mx-auto flex size-7 items-center justify-center rounded-full">1</time>
-                      </button>
-                      <button type="button" class="rounded-tr-lg bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-01" class="mx-auto flex size-7 items-center justify-center rounded-full">2</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-02" class="mx-auto flex size-7 items-center justify-center rounded-full">3</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-04" class="mx-auto flex size-7 items-center justify-center rounded-full">4</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-05" class="mx-auto flex size-7 items-center justify-center rounded-full">5</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-06" class="mx-auto flex size-7 items-center justify-center rounded-full">6</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-07" class="mx-auto flex size-7 items-center justify-center rounded-full">7</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-08" class="mx-auto flex size-7 items-center justify-center rounded-full">8</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-09" class="mx-auto flex size-7 items-center justify-center rounded-full">9</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-10" class="mx-auto flex size-7 items-center justify-center rounded-full">10</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-11" class="mx-auto flex size-7 items-center justify-center rounded-full">11</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 font-semibold text-indigo-600 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-12" class="mx-auto flex size-7 items-center justify-center rounded-full">12</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-13" class="mx-auto flex size-7 items-center justify-center rounded-full">13</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-14" class="mx-auto flex size-7 items-center justify-center rounded-full">14</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-15" class="mx-auto flex size-7 items-center justify-center rounded-full">15</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-16" class="mx-auto flex size-7 items-center justify-center rounded-full">16</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-17" class="mx-auto flex size-7 items-center justify-center rounded-full">17</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-18" class="mx-auto flex size-7 items-center justify-center rounded-full">18</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-19" class="mx-auto flex size-7 items-center justify-center rounded-full">19</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-20" class="mx-auto flex size-7 items-center justify-center rounded-full">20</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-21" class="mx-auto flex size-7 items-center justify-center rounded-full">21</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-22" class="mx-auto flex size-7 items-center justify-center rounded-full bg-gray-900 font-semibold text-white">22</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-23" class="mx-auto flex size-7 items-center justify-center rounded-full">23</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-24" class="mx-auto flex size-7 items-center justify-center rounded-full">24</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-25" class="mx-auto flex size-7 items-center justify-center rounded-full">25</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-26" class="mx-auto flex size-7 items-center justify-center rounded-full">26</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-27" class="mx-auto flex size-7 items-center justify-center rounded-full">27</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-28" class="mx-auto flex size-7 items-center justify-center rounded-full">28</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-29" class="mx-auto flex size-7 items-center justify-center rounded-full">29</time>
-                      </button>
-                      <button type="button" class="bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-30" class="mx-auto flex size-7 items-center justify-center rounded-full">30</time>
-                      </button>
-                      <button type="button" class="rounded-bl-lg bg-white py-1.5 text-gray-900 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-01-31" class="mx-auto flex size-7 items-center justify-center rounded-full">31</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-02-01" class="mx-auto flex size-7 items-center justify-center rounded-full">1</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-02-02" class="mx-auto flex size-7 items-center justify-center rounded-full">2</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-02-03" class="mx-auto flex size-7 items-center justify-center rounded-full">3</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-02-04" class="mx-auto flex size-7 items-center justify-center rounded-full">4</time>
-                      </button>
-                      <button type="button" class="bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-02-05" class="mx-auto flex size-7 items-center justify-center rounded-full">5</time>
-                      </button>
-                      <button type="button" class="rounded-br-lg bg-gray-50 py-1.5 text-gray-400 hover:bg-gray-100 focus:z-10">
-                        <time datetime="2022-02-06" class="mx-auto flex size-7 items-center justify-center rounded-full">6</time>
-                      </button>
-                    </div>
-                  </div>
-                  <ol class="mt-4 divide-y divide-gray-100 text-sm/6 lg:col-span-7 xl:col-span-8">
-                    <li class="relative flex gap-x-6 py-6 xl:static">
-                      <div class="flex-auto">
-                        <h3 class="pr-10 font-semibold text-gray-900 xl:pr-0">II tsükli infotund kell 11.00. Veebinari link saadetakse õppijatele meilile</h3>
-                        <dl class="mt-2 flex flex-col text-gray-500 xl:flex-row">
-                          <div class="flex items-start gap-x-3">
-                            <dt class="mt-0.5">
-                              <span class="sr-only">Date</span>
-                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
-                              </svg>
-                            </dt>
-                            <dd><time datetime="2022-01-10T17:00">12. jaanuar 2026 kell 17:00</time></dd>
-                          </div>
-                          <div class="mt-2 flex items-start gap-x-3 xl:mt-0 xl:ml-3.5 xl:border-l xl:border-gray-400/50 xl:pl-3.5">
-                            <dt class="mt-0.5">
-                              <span class="sr-only">Location</span>
-                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
-                              </svg>
-                            </dt>
-                            <dd>Virtuaalne</dd>
-                          </div>
-                        </dl>
-                      </div>
-                    </li>
-
-                    <li class="relative flex gap-x-6 py-6 xl:static">
-                      <div class="flex-auto">
-                        <h3 class="pr-10 font-semibold text-gray-900 xl:pr-0">Lõpuaktus, kell 12.00.</h3>
-                        <dl class="mt-2 flex flex-col text-gray-500 xl:flex-row">
-                          <div class="flex items-start gap-x-3">
-                            <dt class="mt-0.5">
-                              <span class="sr-only">Date</span>
-                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
-                              </svg>
-                            </dt>
-                            <dd><time datetime="2022-01-10T17:00">12. jaanuar 2026 kell 12:00</time></dd>
-                          </div>
-                          <div class="mt-2 flex items-start gap-x-3 xl:mt-0 xl:ml-3.5 xl:border-l xl:border-gray-400/50 xl:pl-3.5">
-                            <dt class="mt-0.5">
-                              <span class="sr-only">Location</span>
-                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
-                              </svg>
-                            </dt>
-                            <dd>J. Vilmsi 55</dd>
-                          </div>
-                        </dl>
-                      </div>
-                    </li>
-
-                    <li class="relative flex gap-x-6 py-6 xl:static">
-                      <div class="flex-auto">
-                        <h3 class="pr-10 font-semibold text-gray-900 xl:pr-0">Gümnaasiumi lõputööde kaitsmine I</h3>
-                        <dl class="mt-2 flex flex-col text-gray-500 xl:flex-row">
-                          <div class="flex items-start gap-x-3">
-                            <dt class="mt-0.5">
-                              <span class="sr-only">Date</span>
-                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
-                              </svg>
-                            </dt>
-                            <dd><time datetime="2022-01-10T17:00">12. jaanuar 2026 kell 17:00</time></dd>
-                          </div>
-                          <div class="mt-2 flex items-start gap-x-3 xl:mt-0 xl:ml-3.5 xl:border-l xl:border-gray-400/50 xl:pl-3.5">
-                            <dt class="mt-0.5">
-                              <span class="sr-only">Location</span>
-                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
-                              </svg>
-                            </dt>
-                            <dd>Virtuaalne</dd>
-                          </div>
-                        </dl>
-                      </div>
-                    </li>
-
-                    <li class="relative flex gap-x-6 py-6 xl:static">
-                      <div class="flex-auto">
-                        <h3 class="pr-10 font-semibold text-gray-900 xl:pr-0">I tsükli lõpp ja II tsükli algus</h3>
-                        <dl class="mt-2 flex flex-col text-gray-500 xl:flex-row">
-                          <div class="flex items-start gap-x-3">
-                            <dt class="mt-0.5">
-                              <span class="sr-only">Date</span>
-                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd" />
-                              </svg>
-                            </dt>
-                            <dd><time datetime="2022-01-10T17:00">12. jaanuar 2026 kell 17:00</time></dd>
-                          </div>
-                          <div class="mt-2 flex items-start gap-x-3 xl:mt-0 xl:ml-3.5 xl:border-l xl:border-gray-400/50 xl:pl-3.5">
-                            <dt class="mt-0.5">
-                              <span class="sr-only">Location</span>
-                              <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
-                              </svg>
-                            </dt>
-                            <dd>Virtuaalne</dd>
-                          </div>
-                        </dl>
-                      </div>
-                    </li>
-              
-                    <!-- More meetings... -->
-                  </ol>
-                </div>
-              </div>
-              
-
+            <span class="ml-auto inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">aktiivne</span>
             </div>
+          <div class="bg-white">
+            <dl class="divide-y divide-gray-100 text-sm/6">
+              <div class="flex items-center justify-between gap-x-4 p-6">
+                <dt class="text-gray-500">Isikukood</dt>
+                <dd class="text-gray-900">12345678901</dd>
+              </div>
+            </dl>
           </div>
         </div>
 
-        
+        <!-- New Card 1 (2/3 width) -->
+        <div class="overflow-hidden rounded-xl border border-gray-200 col-span-3 lg:col-span-2">
+          <div class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
+            <h2 class="text-lg font-semibold text-gray-900">Random Content Card 1</h2>
+          </div>
+          <div class="bg-white p-6">
+            <p class="text-sm text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
 
+        <!-- New Card 2 (1/3 width) -->
+        <div class="overflow-hidden rounded-xl border border-gray-200 col-span-3 lg:col-span-1">
+          <div class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
+            <h2 class="text-lg font-semibold text-gray-900">Sinu mentor</h2>
+          </div>
+          <div class="bg-white p-6">
+            <p class="text-sm text-gray-700">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </div>
       </div>
-      
-    </main>
+
+    </div>
+  </main>
+</div>
+  <!-- Main content ends here -->
   </div>
 </div>
 
