@@ -164,11 +164,34 @@
       </div>
     </div>
 
-    <main class="bg-gray-100 min-h-screen py-10">
-      <div class="px-4 sm:px-6 lg:px-8">
+<!-- Main content starts here -->
+<div class="mx-auto max-w-7xl p-4 bg-white shadow-lg rounded-lg mt-10">
+  <main class="overflow-hidden">
+    <div class="px-4 py-2 sm:px-6">
+    <!-- Tabbed view -->
+    <div class="mb-6">
+      <div class="sm:hidden">
+        <label for="tabs" class="sr-only">Select a tab</label>
+        <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500" onchange="window.location.href=this.value;">
+          <option value="profile_view.html">Progress</option>
+          <option value="profile_student_record.html" selected>Õpilasraamat</option>
+          <option value="profile_development_interview.html">Lepingud</option>
+        </select>
+      </div>
+      <div class="hidden sm:block">
+        <div class="border-b border-gray-200">
+          <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+            <a href="profile_view.html" class="border-indigo-500 text-indigo-600 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">Progress</a>
+            <a href="profile_student_record.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Õpilasraamat</a>
+            <a href="profile_development_interview.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Lepingud</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- End Tabbed view -->
         <!-- Valge "kaart", sarnane profiililehe omale -->
         <div class="mx-auto max-w-7xl">
-          <div class="rounded-lg bg-white px-5 py-6 shadow-sm sm:px-6">
+          <div class="">
     
             <!-- Sinu olemasolev sisu --> 
             <div class="sm:flex sm:items-center">
@@ -394,5 +417,6 @@
   });
 </script>
 
+</div>
 </body>
 </html>

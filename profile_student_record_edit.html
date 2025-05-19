@@ -36,9 +36,11 @@
                 Dokumendid
               </a>
             </li>
-            <li>
-              <a href="#" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
-                <svg class="size-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>                                   
+            <li>                
+              <a href="#" class="group flex gap-x-3 rounded-md bg-gray-50 p-2 text-sm/6 font-semibold text-indigo-600 ">
+                <svg class="size-6 shrink-0 text-indigo-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                </svg>                                   
                 Õpitee
               </a>
             </li>
@@ -143,17 +145,17 @@
         <div class="sm:hidden">
           <label for="tabs" class="sr-only">Select a tab</label>
           <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500" onchange="window.location.href=this.value;">
-            <option value="profile_view.html">Profiil</option>
+            <option value="profile_view.html">Progress</option>
             <option value="profile_student_record.html" selected>Õpilasraamat</option>
-            <option value="profile_development_interview.html">Arenguvestlus</option>
+            <option value="profile_development_interview.html">Lepingud</option>
           </select>
         </div>
         <div class="hidden sm:block">
           <div class="border-b border-gray-200">
             <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-              <a href="profile_view.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Profiil</a>
+              <a href="profile_view.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Progress</a>
               <a href="profile_student_record.html" class="border-indigo-500 text-indigo-600 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">Õpilasraamat</a>
-              <a href="profile_development_interview.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Arenguvestlus</a>
+              <a href="profile_development_interview.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Lepingud</a>
             </nav>
           </div>
         </div>
@@ -169,61 +171,7 @@
         <div class="">
           <dl class="divide-y divide-gray-100 text-sm/6">
 
-            <!-- § 4: Previous Education -->
-            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Info enne kooli asumist</dt>
-              <dd class="mt-1 sm:mt-0 sm:col-span-2 mt-2 grid grid-cols-1">
-                <select id="previous_education" name="previous_education" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                  <option>Kodus</option>
-                  <option>Lasteaed</option>
-                  <option>Ettevalmistusrühm</option>
-                  <option selected>Teine kool</option>
-                </select>
-                <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
-                  <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                </svg>
-              </dd>
-            </div>
-
-            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Vali kool</dt>
-              <dd class="mt-1 sm:mt-0 sm:col-span-2 mt-2 grid grid-cols-1">
-                <select id="previous_school" name="previous_school" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                  <option value="">Vali kool</option>
-                  <option value="Tallinna Reaalkool">Tallinna Reaalkool</option>
-                  <option value="Tartu Ülikooli Gümnaasium">Tartu Ülikooli Gümnaasium</option>
-                  <option value="Miina Härma Gümnaasium">Miina Härma Gümnaasium</option>
-                  <option value="Gustav Adolfi Gümnaasium">Gustav Adolfi Gümnaasium</option>
-                  <option value="Hugo Treffneri Gümnaasium">Hugo Treffneri Gümnaasium</option>
-                  <option value="Tallinna 21. Kool">Tallinna 21. Kool</option>
-                  <option value="Pärnu Sütevaka Humanitaargümnaasium">Pärnu Sütevaka Humanitaargümnaasium</option>
-                  <option value="Viljandi Gümnaasium" selected>Viljandi Gümnaasium</option>
-                </select>
-
-
-                <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
-                  <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                </svg>
-              </dd>
-            </div>
-
-            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Eelmise kooli õpilasraamatu väljavõte</dt>
-              <dd class="mt-1 sm:mt-0 sm:col-span-2">
-                 <div class="flex items-center space-x-2">
-                   <span class="text-sm text-gray-600 mr-2">Praegune fail: tihemetsa-juurikas-valjavote.pdf</span> 
-                   <input type="file" name="previous_school_record_file" id="previous_school_record_file" class="block w-full text-sm text-gray-500
-                     file:mr-4 file:py-2 file:px-4
-                     file:rounded-md file:border-0
-                     file:text-sm file:font-semibold
-                     file:bg-indigo-50 file:text-indigo-700
-                     hover:file:bg-indigo-100
-                   ">
-                 </div>
-              </dd> 
-            </div>
-
-            <!-- § 1, § 7: School Admission/Transfer -->
+            <!-- § 1, § 7: School Admission -->
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt class="text-sm font-medium text-gray-500">Kooli vastuvõtmine</dt>
               <dd class="mt-1 sm:mt-0 sm:col-span-2 space-y-2">
@@ -274,23 +222,11 @@
               <dt class="text-sm font-medium text-gray-500">Õppevorm</dt>
               <dd class="mt-1 sm:mt-0 sm:col-span-2 mt-2 grid grid-cols-1">
                  <select id="study_form" name="study_form" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                  <option selected>Päevane</option>
-                  <option>Koduõpe</option>
-                  <option>Õhtune</option>
-                  <option>Kaugõpe</option>
-                  <option>Ekstern</option>
+                  <option selected>Mittestatsionaarne õpe</option>
                 </select>
                 <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
                   <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                 </svg>
-              </dd>
-            </div>
-
-            <!-- Health/Special Needs -->
-             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Tervislikust seisundist tulenevad erivajadused</dt>
-              <dd class="mt-1 sm:mt-0 sm:col-span-2">
-                <textarea id="special_needs" name="special_needs" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">Ei suuda keskenduda</textarea>
               </dd>
             </div>
 
@@ -438,7 +374,7 @@
                        <tr>
                          <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_reason[]" value="Suitsetas keset aulat" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
                          <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_decree[]" value="32-2" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_date[]" value="2024-05-10" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+                         <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="reprimand_date[]" value="2024-05-10" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
                        </tr>
                        <!-- Add more rows -->
                        <!-- TODO: Add button/mechanism to add new rows dynamically -->
@@ -588,53 +524,55 @@
 
   // Academic Performance Row Template
   const academicPerformanceTemplate = `
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_year[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_class[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_subject[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_grade[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_conduct[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_diligence[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_extra[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_year[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_class[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_subject[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_grade[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_conduct[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_diligence[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="academic_extra[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
   `;
 
   // Exam Row Template
   const examTemplate = `
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_type[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_subject[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_grade[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="exam_date[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_type[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_subject[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="exam_grade[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="exam_date[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
   `;
 
    // Certificate/Grade Field Template (Simplified example - adjust as needed)
    const certificateGradeTemplate = `
      <div>
        <label for="new_cert_type" class="block text-sm font-medium text-gray-700">Tunnistuse tüüp:</label>
-       <input type="text" name="new_cert_type[]" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+       <input type="text" name="new_cert_type[]" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
      </div>
      <div>
        <label for="new_cert_grades" class="block text-sm font-medium text-gray-700">Hinded:</label>
-       <textarea name="new_cert_grades[]" rows="2" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+       <textarea name="new_cert_grades[]" rows="2" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
      </div>
    `;
 
   // Recognition Row Template
   const recognitionTemplate = `
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_type[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_reason[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_decree[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_type[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_reason[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="recognition_decree[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="recognition_date[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
   `;
 
   // Reprimand Row Template
   const reprimandTemplate = `
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_reason[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_decree[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_reason[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="reprimand_decree[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="reprimand_date[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
   `;
 
   // Progression Row Template
   const progressionTemplate = `
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="progression_year[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="progression_decision[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
-    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="progression_date[]" value="" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="progression_year[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="text" name="progression_decision[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm"><input type="date" name="progression_date[]" value="" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></td>
   `;
 
 
