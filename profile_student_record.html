@@ -225,6 +225,18 @@
               <dt class="text-sm font-medium text-gray-500">Õppevorm</dt>
               <dd class="mt-1 sm:mt-0 sm:col-span-2 text-sm text-gray-900">Mittestatsionaarne õpe</dd>
             </div>
+            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Lõputunnistuse hinded</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 space-y-2">
+                 <div class="flex items-center space-x-2">
+                   <span class="block text-sm font-medium text-gray-700 w-30"><a href="#" class="text-blue-500 underline">pohikool_tunnistus.pdf</a></span>
+                 </div>
+                 <div class="flex items-center space-x-2">
+                   <span class="block text-sm font-medium text-gray-700 w-30"><a href="#" class="text-blue-500 underline">gymnaasium_tunnistus.pdf</a></span>
+                 </div>
+              </dd>
+            </div>
+            </div>
 
             <!-- § 9: Academic Performance & Conduct -->
             <div class="py-4 sm:py-5 sm:px-6">
@@ -1224,40 +1236,199 @@
             </div>
             <!-- End of table -->
 
-                <h4 class="text-md font-medium text-gray-700 mt-4 mb-2">Eksamid</h4>
-                 <div class="overflow-x-auto">
-                  <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                      <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Eksami tüüp</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Õppeaine</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hinne</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kuupäev</th>
-                      </tr>
-                    </thead>
-                     <tbody class="bg-white divide-y divide-gray-200">
-                       <!-- Example Row -->
-                       <tr>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Põhikooli lõpueksam</td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Eesti keel</td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">5</td>
-                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">2024-05-10</td>
-                       </tr>
-                       <!-- Add more rows -->
-                     </tbody>
-                  </table>
-                 </div>
-                 <h4 class="text-md font-medium text-gray-700 mt-4 mb-4 font-semibold">Lõputunnistuse hinded</h4>
-                 <div id="certificates-container" class="space-y-4">
-                   <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4">
-                     <span class="block text-sm font-medium text-gray-700 sm:pt-1.5">Põhikooli lõputunnistus:</span>
-                     <div class="mt-1 sm:mt-0 sm:col-span-2 text-sm text-gray-900"><a href="#" class="text-blue-500 underline">pohikool_tunnistus.pdf</a></div>
-                   </div>
-                   <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4">
-                     <span class="block text-sm font-medium text-gray-700 sm:pt-1.5">Gümnaasiumi lõputunnistus:</span>
-                     <div class="mt-1 sm:mt-0 sm:col-span-2 text-sm text-gray-900"><a href="#" class="text-blue-500 underline">gymnaasium_tunnistus.pdf</a></div>
-                   </div>
-                 </div>
+                <dt class="text-lg font-medium text-gray-900 mt-6">Eksamid</dt>
+                 <div class="overflow-x-auto mt-4">
+  <table class="table-fixed w-full border border-gray-300 text-sm text-center">
+    <thead>
+      <tr class="bg-gray-50 h-40">
+        <th class="w-40 border border-gray-300 text-gray-900 font-semibold align-bottom p-2">
+          </th>
+
+        <th class="relative w-8 border border-gray-300">
+            <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Eesti keel
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0  transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Kirjandus
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Ajalugu
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Ühiskonnaõpetus
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Muusika
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Kunstiajalugu
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Inimeseõpetus
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Matemaatika (kitsas)
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Matemaatika (lai)
+          </span>
+        </th>
+        <th class="relative w-8 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Füüsika
+          </span>
+        </th>
+        <th class="relative w-8 h-32 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Keemia
+          </span>
+        </th>
+        <th class="relative w-8 h-32 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Bioloogia
+          </span>
+        </th>
+        <th class="relative w-8 h-32 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Geograafia
+          </span>
+        </th>
+        <th class="relative w-8 h-32 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Inglise keel
+          </span>
+        </th>
+        <th class="relative w-8 h-32 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Saksa keel
+          </span>
+        </th>
+        <th class="relative w-8 h-32 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Uurimistöö
+          </span>
+        </th>
+        <th class="relative w-8 h-32 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Informaatika
+          </span>
+        </th>
+        <th class="relative w-8 h-32 border border-gray-300">
+          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+            Enesejuhtimine
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+      <tr class="bg-white">
+        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Kooliastme hinne</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+      </tr>
+      <tr class="bg-white">
+        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Lõpueksamihinne</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+      </tr>
+      <tr class="bg-white">
+        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Eksterni aineeksami hinne</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+      </tr>
+      <tr class="bg-white">
+        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Riigieksami tulemus</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+        <td class="p-2 border border-gray-300">-</td>
+      </tr>
+      <tr class="bg-white">
+        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Lõputöö pealkiri</td>
+        <td class="p-2 border border-gray-300 text-left" colspan="18">Tehisintellekti kasutamine õppeprotsessis</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+                 
               </dd>
             </div>
 
@@ -1339,29 +1510,7 @@
                      </table>
                    </div>
                  </div>
-                 <div>
-                   <h4 class="text-md font-medium text-gray-700 mt-4 mb-4 font-semibold">Lõputunnistused</h4>
-                   <div class="space-y-2">
-                     <div class="flex items-center space-x-2">
-                       <span class="block text-sm font-medium text-gray-700 w-40">Põhikooli lõputunnistus:</span>
-                       <span class="text-sm text-gray-900">Nr [Number], Välja antud: [Kuupäev]</span>
-                     </div>
-                     <div class="flex items-center space-x-2">
-                       <span class="block text-sm font-medium text-gray-700 w-40">Gümnaasiumi lõputunnistus:</span>
-                       <span class="text-sm text-gray-900">Nr [Number], Välja antud: [Kuupäev]</span>
-                     </div>
-                   </div>
-                 </div>
-
-                 <div>
-                   <h4 class="text-md font-medium text-gray-700 mt-4 mb-4 font-semibold">Koolist lahkumine</h4>
-                   <div class="flex items-center space-x-2">
-                     <span class="block text-sm font-medium text-gray-700 w-20">Kuupäev:</span>
-                     <span class="text-sm text-gray-900">[Kuupäev]</span>
-                     <span class="block text-sm font-medium text-gray-700 w-20">Käskkiri:</span>
-                     <span class="text-sm text-gray-900">[Nr]</span>
-                   </div>
-                 </div>
+                 
               </dd>
             </div>
 
