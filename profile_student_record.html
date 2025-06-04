@@ -188,6 +188,29 @@
               </dd>
             </div>
 
+            <!-- Parent/Guardian Information -->
+            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Lapsevanema/eestkostja andmed</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 space-y-2">
+                 <div class="flex items-center space-x-2">
+                   <span class="block text-sm font-medium text-gray-700 w-30">Nimi:</span>
+                   <span class="text-sm text-gray-900">Mari Juurikas</span>
+                 </div>
+                 <div class="flex items-center space-x-2">
+                   <span class="block text-sm font-medium text-gray-700 w-30">Isikukood:</span>
+                   <span class="text-sm text-gray-900">47001010033</span>
+                 </div>
+                 <div class="flex items-center space-x-2">
+                   <span class="block text-sm font-medium text-gray-700 w-30">Telefoninumber:</span>
+                   <span class="text-sm text-gray-900">+372 555 4321</span>
+                 </div>
+                 <div class="flex items-center space-x-2">
+                   <span class="block text-sm font-medium text-gray-700 w-30">Meiliaadress:</span>
+                   <span class="text-sm text-gray-900">mari.juurikas@example.com</span>
+                 </div>
+              </dd>
+            </div>
+
             <!-- § 1, § 7: School Admission -->
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt class="text-sm font-medium text-gray-500">Kooli vastuvõtmine</dt>
@@ -202,6 +225,7 @@
                  </div>
               </dd>
             </div>
+            
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt class="text-sm font-medium text-gray-500">Koolist väljaarvamine</dt>
               <dd class="mt-1 sm:mt-0 sm:col-span-2 space-y-2">
@@ -218,15 +242,30 @@
 
             <!-- Curriculum & Study Form -->
              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Läbitud õppekava</dt>
-              <dd class="mt-1 sm:mt-0 sm:col-span-2 text-sm text-gray-900">Üldkesk</dd>
+              <dt class="text-sm font-medium text-gray-500">Õppekava</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 text-sm text-gray-900">Põhikooli riiklik õppekava / Gümnaasiumi riiklik õppekava</dd>
             </div>
              <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt class="text-sm font-medium text-gray-500">Õppevorm</dt>
               <dd class="mt-1 sm:mt-0 sm:col-span-2 text-sm text-gray-900">Mittestatsionaarne õpe</dd>
             </div>
+
             <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Lõputunnistuse hinded</dt>
+              <dt class="text-sm font-medium text-gray-500">Eelmine kool</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 space-y-2">
+                 <div class="flex items-center space-x-2">
+                   <span class="block text-sm font-medium text-gray-700 w-30">Kooli nimi:</span>
+                   <span class="text-sm text-gray-900">Tallinna Reaalkool</span>
+                 </div>
+                 <div class="flex items-center space-x-2">
+                   <span class="block text-sm font-medium text-gray-700 w-30">Viimane õppimise kuupäev:</span>
+                   <span class="text-sm text-gray-900">31.08.2023</span>
+                 </div>
+              </dd>
+            </div>
+
+            <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Eelmise kooli dokumendid</dt>
               <dd class="mt-1 sm:mt-0 sm:col-span-2 space-y-2">
                  <div class="flex items-center space-x-2">
                    <span class="block text-sm font-medium text-gray-700 w-30"><a href="#" class="text-blue-500 underline">pohikool_tunnistus.pdf</a></span>
@@ -240,7 +279,7 @@
 
             <!-- § 9: Academic Performance & Conduct -->
             <div class="py-4 sm:py-5 sm:px-6">
-              <dt class="text-lg font-medium text-gray-900 mb-3">Õpitulemused</dt>
+              <dt class="text-lg font-medium text-gray-900 mb-3">Õppeainete kursusehinded</dt>
               <dd class="mt-1 text-sm text-gray-900">
                 <!-- 
                 <div class="overflow-x-auto">
@@ -271,1166 +310,286 @@
                 </div>
                  -->
 
-                <!-- Example table for courses -->
+                 <!-- table 1-->
 
-            <div class="overflow-x-auto">
-              <table class="table-fixed w-full border border-gray-300 text-sm text-center">
-                <thead>
-                  <!-- Force row to have a certain height -->
-                  <tr class="bg-gray-50 h-40">
-                    <!-- 1st column: Klass -->
-                    <th class="w-20 border border-gray-300 text-gray-900 font-semibold align-bottom p-2">
-                      
-                    </th>
-            
-                    <!-- Rotated header for "Eesti keel" -->
-                    <th class="relative w-8 border border-gray-300">
-                        <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Eesti keel
-                      </span>
-                    </th>
-            
-                    <!-- Another rotated header -->
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0  transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Kirjandus
-                      </span>
-                    </th>
+                <div class="overflow-x-auto">
+    <table class="table-fixed w-full border border-gray-300 text-sm text-center">
+        <thead>
+            <tr class="bg-gray-50 h-40">
+                <th class="w-32 md:w-40 border border-gray-300 text-gray-900 font-semibold align-bottom p-2 text-left">Õppeaine</th>
 
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Ajalugu
-                      </span>
-                    </th>
+                <th class="relative w-8 border border-gray-300">
+                    <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+                        9. klass
+                    </span>
+                </th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300">
+                    <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+                        10. klass
+                    </span>
+                </th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300">
+                    <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+                        11. klass
+                    </span>
+                </th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300">
+                    <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+                        12. klass
+                    </span>
+                </th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300">
+                    <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+                        Kursuste arv
+                    </span>
+                </th>
+                <th class="relative w-8 border border-gray-300">
+                    <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
+                        Kursusi kokku
+                    </span>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+            <tr class="bg-white">
+                <td class="p-2 border border-gray-300 font-medium text-gray-900 align-middle text-left">Eesti keel</td>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300 relative group">
+                    <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
+                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Praktiline eesti keel II</div>
+                </td>
+                <td class="p-2 border border-gray-300 relative group">
+                    <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
+                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Keel ja ühiskond</div>
+                </td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300 relative group">
+                     <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
+                     <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Praktiline eesti keel III</div>
+                </td>
+                <td class="p-2 border border-gray-300 relative group">
+                     <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
+                     <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Praktiline eesti keel III</div>
+                </td>
+                <td class="p-2 border border-gray-300"></td> <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300 align-middle">4</td>
+                <td class="p-2 border border-gray-300 align-middle">6</td>
+            </tr>
 
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Ühiskonnaõpetus
-                      </span>
-                    </th>
+            <tr class="bg-white">
+                <td class="p-2 border border-gray-300 font-medium text-gray-900 align-middle text-left">Matemaatika (lai)</td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Avaldised ja arvuhulgad</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Võrrandid ja võrrandsüsteemid</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Võrratused. Trigonomeetria I</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Trigonomeetria II</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Vektor tasandil. Joone võrrand</div></td>
+                <td class="p-2 border border-gray-300 align-middle">5</td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Tõenäosus, statistika</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Funktsioonid. Arvjadad</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Eksponent- ja logaritmifunktsioonid</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Trigonomeetrilised funktsioonid. Funktsiooni piirväärtus ja tuletis</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Integraal. Planimeetria</div></td>
+                <td class="p-2 border border-gray-300 align-middle">5</td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Sirge ja tasand ruumis</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Stereomeetria</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Matemaatika rakendused, reaalsete protsesside uurimine</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Gümnaasiumi matemaatika kordamine. Kohustuslik valikkursus</div></td>
+                <td class="p-2 border border-gray-300 relative group"><span class="cursor-pointer text-red-600 font-semibold">X</span><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 z-10">Gümnaasiumi matemaatika kordamine. Kohustuslik valikkursus</div></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300 align-middle">5</td>
+                <td class="p-2 border border-gray-300 align-middle">15</td>
+            </tr>
 
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Muusika
-                      </span>
-                    </th>
+            <tr class="bg-white">
+                <td class="p-2 border border-gray-300 font-medium text-gray-900 align-middle text-left">Kirjandus</td>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td> 
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300 align-middle">4</td>
+                <td class="p-2 border border-gray-300 align-middle">6</td>
+            </tr>
 
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Kunstiajalugu
-                      </span>
-                    </th>
+            <tr class="bg-white">
+                <td class="p-2 border border-gray-300 font-medium text-gray-900 align-middle text-left">Õppeaine X</td>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td> 
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300 align-middle">4</td>
+                <td class="p-2 border border-gray-300 align-middle">6</td>
+            </tr>
 
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Inimeseõpetus
-                      </span>
-                    </th>
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Matemaatika (kitsas)
-                      </span>
-                    </th>
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Matemaatika (lai)
-                      </span>
-                    </th>
-                    <th class="relative w-8 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Füüsika
-                      </span>
-                    </th>
-                    <th class="relative w-8 h-32 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Keemia
-                      </span>
-                    </th>
-                    <th class="relative w-8 h-32 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Bioloogia
-                      </span>
-                    </th>
-                    <th class="relative w-8 h-32 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Geograafia
-                      </span>
-                    </th>
-                    <th class="relative w-8 h-32 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Inglise keel
-                      </span>
-                    </th>
-                    <th class="relative w-8 h-32 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Saksa keel
-                      </span>
-                    </th>
-                    <th class="relative w-8 h-32 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Uurimistöö
-                      </span>
-                    </th>
-                    <th class="relative w-8 h-32 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Informaatika
-                      </span>
-                    </th>
-                    <th class="relative w-8 h-32 border border-gray-300">
-                      <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-                        Enesejuhtimine
-                      </span>
-                    </th>
-            
-                    <!-- Repeat for each subject... -->
-                  </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900">10. klass</td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Teksti keel ja stiil
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Kirjandusteoste analüüs ja tõlgendamine
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">5</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Üldajalugu
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Ühiskonna areng ja demokraatia
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Uusaegse helikeele kujunemine
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Kunst ja kunstiajalugu
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">5</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Perekonnaõpetus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Põhikooli matemaatika kordamine - kohustuslik valikkursus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Avaldised ja arvuhulgad
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Füüsika meetod. Kinemaatika
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Keemia alused
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Rakud ja organismid
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Maa kui süsteem
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Uurimistöö I
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Arvuti riist- ja tarkvara ning tehisaru
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Enesejuhtimine I
-      </div>
-    </td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Praktiline eesti keel I
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Pärimus ja kirjandus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">5</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Euroopa maade ja Ameerika Ühendriikide ajalugu
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Klassitsism ja romantism. Rahvuslikkuse kujunemine muusikas
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Kunst ja visuaalkultuur 20. ja 21. sajandil
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Arvhulgad. Avaldised. Võrrandid ja võrratused
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Võrrandid ja võrrandsüsteemid
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Dünaamika
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Anorgaanilised ained
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Molekulaarsed protsessid
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Loodusvarade majandamine ja keskkonnaprobleemid
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Uurimistöö II
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Tekstiredaktor MS Word
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-       <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-       <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Enesejuhtimine II
-       </div>
-    </td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Eesti muusikaajalugu
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Trigonomeetria
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-red-600 font-semibold">X</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Võrratused. Trigonomeetria I
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Pärilikkus ja evolutsioon
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">5</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Tabelarvutusprogramm MS Excel
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Vektor tasandil. Joone võrrand
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-red-600 font-semibold">X</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Trigonomeetria II
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-red-600 font-semibold">X</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Google Apps Script
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-   <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-red-600 font-semibold">X</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Vektor tasandil. Joone võrrand
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-gray-50">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900">Kursuste arv:</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">3</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">4</td>
-    <td class="p-2 border border-gray-300">5</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">1</td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900">11. klass</td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Praktiline eesti keel II
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Ajastud, voolud ja žanrid kirjanduses I
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">5</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Eesti ajalugu II (kuni 19. sajandi lõpuni)
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Ühiskonna areng ja demokraatia
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Eesti muusikaajalugu
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Kunst ja kunstiajalugu
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Tõenäosus ja statistika
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Tõenäosus, statistika
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Elektromagnetism
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Orgaaniline keemia
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Inimene ja keskkond
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Rahvastik ja majandus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Arvuti riist- ja tarkvara ning tehisaru </div>
-    </td>
-     <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Enesejuhtimine I </div>
-    </td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Keel ja ühiskond
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Ajastud, voolud ja žanrid kirjanduses II
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Lähiajalugu I (Eesti ja maailm 20. sajandi esimeses poolel)
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Meedia ja mõjutamine
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Funktsioonid I
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Funktsioonid. Arvjadad
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Energia
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Identiteet ja eesti kirjandus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Jadad. Funktsiooni tuletis
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Eksponent- ja logaritmifunktsioonid
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Trigonomeetrilised funktsioonid. Funktsiooni piirväärtus ja tuletis
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-red-600 font-semibold">X</span>
-        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Integraal. Planimeetria
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-gray-50">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900">Kursuste arv:</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">0</td>
-    <td class="p-2 border border-gray-300">3</td>
-    <td class="p-2 border border-gray-300">5</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900">12. klass</td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Praktiline eesti keel III
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Kirjandus ja ühiskond
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Lähiajalugu II - Eesti ja maailm 20. sajandi teisel poolel
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Identiteet ja eesti kirjandus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Tasandilised kujundid. Integraal
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Sirge ja tasand ruumis
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Mikro- ja megamaailma füüsika
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Pärilikkus ja evolutsioon </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        ?
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-        <span class="cursor-pointer text-indigo-600 font-semibold">4</span> <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-            Identiteet ja eesti kirjandus
-        </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">4</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Stereomeetria
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Stereomeetria
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-indigo-600 font-semibold">3</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Gümnaasiumi matemaatika kordamine. Kohustuslik valikkursus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Matemaatika rakendused, reaalsete protsesside uurimine
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Gümnaasiumi matemaatika kordamine. Kohustuslik valikkursus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-white">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group">
-      <span class="cursor-pointer text-red-600 font-semibold">X</span>
-      <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2">
-        Gümnaasiumi matemaatika kordamine. Kohustuslik valikkursus
-      </div>
-    </td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-    <td class="p-2 border border-gray-300 relative group"></td>
-  </tr>
-  <tr class="bg-gray-50">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900">Kursuste arv:</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">0</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">0</td>
-    <td class="p-2 border border-gray-300">0</td>
-    <td class="p-2 border border-gray-300">3</td>
-    <td class="p-2 border border-gray-300">5</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">0</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">0</td>
-  </tr>
-  <tr class="bg-gray-50">
-    <td class="p-2 border border-gray-300 font-medium text-gray-900">Kokku kursusi:</td>
-    <td class="p-2 border border-gray-300">6</td>
-    <td class="p-2 border border-gray-300">6</td>
-    <td class="p-2 border border-gray-300">7</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">3</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">1</td>
-    <td class="p-2 border border-gray-300">10</td>
-    <td class="p-2 border border-gray-300">15</td>
-    <td class="p-2 border border-gray-300">5</td>
-    <td class="p-2 border border-gray-300">3</td>
-    <td class="p-2 border border-gray-300">4</td>
-    <td class="p-2 border border-gray-300">3</td>
-    <td class="p-2 border border-gray-300">6</td>
-    <td class="p-2 border border-gray-300">6</td>
-    <td class="p-2 border border-gray-300">2</td>
-    <td class="p-2 border border-gray-300">4</td>
-    <td class="p-2 border border-gray-300">2</td>
-  </tr>
-</tbody>
-              </table>
-            </div>
+            <tr class="bg-white">
+                <td class="p-2 border border-gray-300 font-medium text-gray-900 align-middle text-left">Õppeaine W</td>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td> 
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300 align-middle">4</td>
+                <td class="p-2 border border-gray-300 align-middle">6</td>
+            </tr>
+
+            <tr class="bg-white">
+                <td class="p-2 border border-gray-300 font-medium text-gray-900 align-middle text-left">Õppeaine Y</td>
+                <th class="relative w-8 border border-gray-300"></th>
+                <th class="relative w-8 border border-gray-300"></th>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td> 
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300"></td>
+                <td class="p-2 border border-gray-300 align-middle">4</td>
+                <td class="p-2 border border-gray-300 align-middle">6</td>
+            </tr>
+
+            </tbody>
+    </table>
+</div>
             <!-- End of table -->
 
-                <dt class="text-lg font-medium text-gray-900 mt-6">Eksamid</dt>
-                 <div class="overflow-x-auto mt-4">
-  <table class="table-fixed w-full border border-gray-300 text-sm text-center">
-    <thead>
-      <tr class="bg-gray-50 h-40">
-        <th class="w-40 border border-gray-300 text-gray-900 font-semibold align-bottom p-2">
-          </th>
-
-        <th class="relative w-8 border border-gray-300">
-            <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Eesti keel
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0  transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Kirjandus
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Ajalugu
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Ühiskonnaõpetus
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Muusika
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Kunstiajalugu
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Inimeseõpetus
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Matemaatika (kitsas)
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Matemaatika (lai)
-          </span>
-        </th>
-        <th class="relative w-8 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Füüsika
-          </span>
-        </th>
-        <th class="relative w-8 h-32 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Keemia
-          </span>
-        </th>
-        <th class="relative w-8 h-32 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Bioloogia
-          </span>
-        </th>
-        <th class="relative w-8 h-32 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Geograafia
-          </span>
-        </th>
-        <th class="relative w-8 h-32 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Inglise keel
-          </span>
-        </th>
-        <th class="relative w-8 h-32 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Saksa keel
-          </span>
-        </th>
-        <th class="relative w-8 h-32 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Uurimistöö
-          </span>
-        </th>
-        <th class="relative w-8 h-32 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Informaatika
-          </span>
-        </th>
-        <th class="relative w-8 h-32 border border-gray-300">
-          <span class="absolute bottom-0 transform -translate-x-1 -rotate-90 whitespace-nowrap text-xs font-semibold text-gray-900 leading-none origin-left">
-            Enesejuhtimine
-          </span>
-        </th>
-      </tr>
-    </thead>
-    <tbody class="bg-white divide-y divide-gray-200">
-      <tr class="bg-white">
-        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Kooliastme hinne</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-      </tr>
-      <tr class="bg-white">
-        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Lõpueksamihinne</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-      </tr>
-      <tr class="bg-white">
-        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Eksterni aineeksami hinne</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-      </tr>
-      <tr class="bg-white">
-        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Riigieksami tulemus</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-        <td class="p-2 border border-gray-300">-</td>
-      </tr>
-      <tr class="bg-white">
-        <td class="p-2 border border-gray-300 font-medium text-gray-900 text-left">Lõputöö pealkiri</td>
-        <td class="p-2 border border-gray-300 text-left" colspan="18">Tehisintellekti kasutamine õppeprotsessis</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-                 
+            <div class="overflow-x-auto mt-4">
+              <dt class="text-lg font-medium text-gray-900 mb-3">Lõputunnistuse hinded, eksamite tulemused</dt>
+              <dd class="mt-1 text-sm text-gray-900 space-y-4">
+                 <div>
+                   <div class="overflow-x-auto">
+                     <table class="min-w-full divide-y divide-gray-200">
+                       <thead class="bg-gray-50">
+                         <tr>
+                           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tüüp</th>
+                           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aine</th>
+                           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hinne</th>
+                         </tr>
+                       </thead>
+                       <tbody class="bg-white divide-y divide-gray-200">
+                         <!-- Example Row -->
+                         <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Põhikooli lõpueksam</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Matemaatika</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">3</td>
+                         </tr>
+                         <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Gümnaasiumi lõpueksam</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Matemaatika</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">3</td>
+                         </tr>
+                         <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Eksterni aineeksami hinne</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Eesti keel</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">5</td>
+                         </tr>
+                         <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Riigieksami tulemus</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Eesti keel</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">4</td>
+                         </tr>
+                         <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Lõputöö pealkiri</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Tehisintellekti kasutamine õppeprotsessis</td>
+                         </tr>
+                         <!-- Add more rows -->
+                       </tbody>
+                     </table>
+                   </div>
+                   <div class="flex justify-end mt-4">
+                     <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Lisa uus rida</a>
+                   </div>
+                 </div>
               </dd>
             </div>
+
+            
 
             <!-- § 10: Recognition & Reprimands -->
             <div class="py-4 sm:py-5 sm:px-6">
@@ -1485,7 +644,7 @@
 
             <!-- § 11: Progression/Graduation/Leaving -->
             <div class="py-4 sm:py-5 sm:px-6">
-              <dt class="text-lg font-medium text-gray-900 mb-3">Klassi lõpetamine / koolist lahkumine</dt>
+              <dt class="text-lg font-medium text-gray-900 mb-3">Õppenõukogu otsused</dt>
               <dd class="mt-1 text-sm text-gray-900 space-y-4">
                  <div>
 
@@ -1494,7 +653,7 @@
                        <thead class="bg-gray-50">
                          <tr>
                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Õppeaasta</th>
-                           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Õppenõukogu otsus</th>
+                           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Otsused</th>
                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kuupäev</th>
                          </tr>
                        </thead>
@@ -1502,7 +661,7 @@
                          <!-- Example Row -->
                          <tr>
                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">2023/2024</td>
-                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Viia üle 11. klassi</td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Täitis lepingu / Ei täitnud lepingut / Lõpetas kooliastme</td>
                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">2024-05-10</td>
                          </tr>
                          <!-- Add more rows -->
