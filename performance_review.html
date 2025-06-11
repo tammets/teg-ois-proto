@@ -174,17 +174,17 @@
         <label for="tabs" class="sr-only">Select a tab</label>
         <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500" onchange="window.location.href=this.value;">
           <option value="profile_view.html">Progress</option>
-          <option value="profile_student_record.html" selected>Õpilasraamat</option>
-          <option value="performance_review.html">Arenguvestlus</option>
+          <option value="profile_student_record.html">Õpilasraamat</option>
+          <option value="profile_development_interview.html" selected>Arenguvestlus</option>
           <option value="profile_development_interview.html">Lepingud</option>
         </select>
       </div>
       <div class="hidden sm:block">
         <div class="border-b border-gray-200">
           <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-            <a href="profile_view.html" class="border-indigo-500 text-indigo-600 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">Progress</a>
+            <a href="profile_view.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Progress</a>
             <a href="profile_student_record.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Õpilasraamat</a>
-            <a href="performance_review.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Arenguvestlus</a>
+            <a href="profile_development_interview.html" class="border-indigo-500 text-indigo-600 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">Arenguvestlus</a>
             <a href="profile_development_interview.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Lepingud</a>
           </nav>
         </div>
@@ -198,189 +198,43 @@
             <!-- Sinu olemasolev sisu --> 
             <div class="sm:flex sm:items-center">
               <div class="sm:flex-auto">
-                
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-                  <div>
-                    <h1 class="text-base font-semibold text-gray-900">Progress</h1>
-                    <p class="mt-2 text-sm text-gray-700">
-                      Jälgi oma edenemist ja kursuste sooritamist
-                    </p>
-                  </div>
-                  <div class="w-full md:w-auto">
-                    <div class="inline-flex h-10 items-center justify-center rounded-md bg-gray-200 p-1 text-gray-900 w-full md:w-auto">
-                      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-gray-950 data-[state=active]:shadow-sm bg-white" data-state="active">Rühma nimi 1</button>
-                      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-gray-950 data-[state=active]:shadow-sm">Rühma nimi 2</button>
-                      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-gray-950 data-[state=active]:shadow-sm">Rühma nimi 3</button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Dashboard Stats -->
-      <div class="grid gap-6 grid-cols-1 mb-8">
-        <!-- Overall Progress Card -->
-        <div class="rounded-lg border border-gray-300 bg-white">
-          <div class="flex flex-col space-y-1.5 p-6 pb-2">
-            <h3 class="text-sm font-medium text-muted-foreground">Üldine edenemine</h3>
-          </div>
-          <div class="p-6 pt-0">
-            <div class="flex items-center justify-between">
-              <div class="text-2xl font-bold">60%</div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-muted-foreground"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
-            </div>
-            <div class="relative h-2 w-full overflow-hidden rounded-full bg-gray-200 mt-2">
-              <div class="h-full w-full flex-1 bg-blue-600 transition-all" style="transform: translateX(-40%)"></div>
-            </div>
-            <p class="text-xs text-muted-foreground mt-2">
-              9 kursust 15-st sooritatud
-            </p>
-          </div>
-        </div>
-      </div>
-
+      
       <!-- Course Progress Table -->
-      <div class="mt-8">
-        <h2 class="text-base font-semibold text-gray-900 mb-4">Kursuste edenemine</h2>
-        <div class="rounded-md border border-gray-200">
-          <table class="w-full caption-bottom text-sm">
-            <thead class="[&_tr]:border-b">
-              <tr class="border-b border-gray-200">
-                <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground w-[300px]">Õppeaine / kursus</th>
-                <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground">Staatus</th>
-                <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground">Hinne</th>
-                <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground">Edenemine</th>
-              </tr>
-            </thead>
-            <tbody class="[&_tr:last-child]:border-0">
-              <!-- Mathematics -->
-              <tr class="border-b border-gray-200 transition-colors hover:bg-muted/50">
-                <td class="p-4 align-middle font-medium">
-                  <button class="p-0 hover:bg-transparent">
-                    <span class="mr-2">+</span>
-                    Matemaatika
-                  </button>
-                </td>
-                <td class="p-4 align-middle">
-                  <div class="flex space-x-2">
-                    <span class="inline-flex items-center rounded-full border border-blue-300 px-2.5 py-0.5 text-xs font-semibold bg-blue-100 text-blue-800 hover:bg-blue-200">
-                      4 kursust
-                    </span>
-                  </div>
-                </td>
-                <td class="p-4 align-middle">-</td>
-                <td class="p-4 align-middle">
-                  <div class="flex items-center gap-2">
-                    <div class="relative h-2 w-[100px] overflow-hidden rounded-full bg-gray-200">
-                      <div class="h-full w-full flex-1 bg-blue-600 transition-all" style="transform: translateX(-25%)"></div>
-                    </div>
-                    <span class="text-xs text-muted-foreground">75%</span>
-                  </div>
-                </td>
-              </tr>
+      <div class="mt-2">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold text-gray-900">Arenguvestluse sissekanded</h2>
+          <button type="button" id="add-entry" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Lisa sissekanne
+          </button>
+        </div>
+        
+        <div id="entries-container" class="space-y-4">
+          <!-- New entry form (hidden by default) -->
+          <div id="new-entry-form" class="hidden bg-gray-50 p-4 rounded-lg">
+            <div class="grid grid-cols-1 gap-4">
+              <div>
+                <label for="entry-text" class="block text-sm/6 font-medium text-gray-900 mb-2">Sissekanne</label>
+                <textarea id="entry-text" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
+              </div>
+              <div>
+                <label for="entry-date" class="block text-sm font-medium text-gray-700 mb-2">Kuupäev</label>
+                <input type="date" id="entry-date" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              </div>
+              <div class="flex justify-end space-x-3">
+                <button type="button" id="cancel-entry" class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Tühista
+                </button>
+                <button type="button" id="save-entry" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Salvesta
+                </button>
+              </div>
+            </div>
+          </div>
 
-              <!-- Computer Science -->
-              <tr class="border-b border-gray-200 hover:bg-muted/50">
-                <td class="p-4 align-middle font-medium">
-                  <button class="p-0 hover:bg-transparent">
-                    <span class="mr-2">−</span>
-                    Informaatika
-                  </button>
-                </td>
-                <td class="p-4 align-middle">
-                  <div class="flex space-x-2">
-                    <span class="inline-flex items-center rounded-full border border-blue-300 px-2.5 py-0.5 text-xs font-semibold bg-blue-100 text-blue-800 hover:bg-blue-200">
-                      2 kursust
-                    </span>
-                  </div>
-                </td>
-                <td class="p-4 align-middle">-</td>
-                <td class="p-4 align-middle">
-                  <div class="flex items-center gap-2">
-                    <div class="relative h-2 w-[100px] overflow-hidden rounded-full bg-gray-200">
-                      <div class="h-full w-full flex-1 bg-blue-600 transition-all" style="transform: translateX(-33%)"></div>
-                    </div>
-                    <span class="text-xs text-muted-foreground">67%</span>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Expanded CS Courses -->
-              <tr class="bg-green-50/50 hover:bg-muted/50">
-                <td class="p-4 align-middle pl-10 font-normal">Veebiprogrammeerimine</td>
-                <td class="p-4 align-middle">
-                  <span class="inline-flex items-center rounded-full border border-green-300 px-2.5 py-0.5 text-xs font-semibold bg-green-100 text-green-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-500"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span class="ml-1 capitalize">Sooritatud</span>
-                  </span>
-                </td>
-                <td class="p-4 align-middle">
-                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">5</span>
-                </td>
-                <td class="p-4 align-middle">
-                  <div class="relative h-2 w-[100px] overflow-hidden rounded-full bg-gray-200">
-                    <div class="h-full w-full flex-1 bg-blue-600 transition-all" style="transform: translateX(0%)"></div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="bg-green-50/50 hover:bg-muted/50">
-                <td class="p-4 align-middle pl-10 font-normal">Privaatsus</td>
-                <td class="p-4 align-middle">
-                  <span class="inline-flex items-center rounded-full border border-green-300 px-2.5 py-0.5 text-xs font-semibold bg-green-100 text-green-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-500"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span class="ml-1 capitalize">Sooritatud</span>
-                  </span>
-                </td>
-                <td class="p-4 align-middle">
-                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">A</span>
-                </td>
-                <td class="p-4 align-middle">
-                  <div class="relative h-2 w-[100px] overflow-hidden rounded-full bg-gray-200">
-                    <div class="h-full w-full flex-1 bg-blue-600 transition-all" style="transform: translateX(0%)"></div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="bg-red-50/50 hover:bg-muted/50">
-                <td class="p-4 align-middle pl-10 font-normal">Infootsing</td>
-                <td class="p-4 align-middle">
-                  <span class="inline-flex items-center rounded-full border border-red-300 px-2.5 py-0.5 text-xs font-semibold bg-red-100 text-red-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-red-500"><circle cx="12" cy="12" r="10"></circle><line x1="15" x2="9" y1="9" y2="15"></line><line x1="9" x2="15" y1="9" y2="15"></line></svg>
-                    <span class="ml-1 capitalize">Sooritamata</span>
-                  </span>
-                </td>
-                <td class="p-4 align-middle"></td>
-                <td class="p-4 align-middle">
-                  <div class="relative h-2 w-[100px] overflow-hidden rounded-full bg-gray-200">
-                    <div class="h-full w-full flex-1 bg-blue-600 transition-all" style="transform: translateX(-100%)"></div>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Physics -->
-              <tr class="border-b transition-colors hover:bg-muted/50">
-                <td class="p-4 align-middle font-medium">
-                  <button class="p-0 hover:bg-transparent">
-                    <span class="mr-2">+</span>
-                    Füüsika
-                  </button>
-                </td>
-                <td class="p-4 align-middle">
-                  <div class="flex space-x-2">
-                    <span class="inline-flex items-center rounded-full border border-blue-300 px-2.5 py-0.5 text-xs font-semibold bg-blue-100 text-blue-800 hover:bg-blue-200">
-                      2 kursust
-                    </span>
-                  </div>
-                </td>
-                <td class="p-4 align-middle">-</td>
-                <td class="p-4 align-middle">
-                  <div class="flex items-center gap-2">
-                    <div class="relative h-2 w-[100px] overflow-hidden rounded-full bg-gray-200">
-                      <div class="h-full w-full flex-1 bg-blue-600 transition-all" style="transform: translateX(-50%)"></div>
-                    </div>
-                    <span class="text-xs text-muted-foreground">50%</span>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- List of entries -->
+          <div id="entries-list" class="space-y-4">
+            <!-- Entries will be added here dynamically -->
+          </div>
         </div>
       </div>
     </div>
@@ -415,6 +269,54 @@
         }
       });
     }
+
+    // New entry functionality
+    const addEntryButton = document.getElementById('add-entry');
+    const newEntryForm = document.getElementById('new-entry-form');
+    const cancelEntryButton = document.getElementById('cancel-entry');
+    const saveEntryButton = document.getElementById('save-entry');
+    const entriesList = document.getElementById('entries-list');
+
+    // Show new entry form
+    addEntryButton.addEventListener('click', () => {
+      newEntryForm.classList.remove('hidden');
+      document.getElementById('entry-date').valueAsDate = new Date();
+    });
+
+    // Hide new entry form
+    cancelEntryButton.addEventListener('click', () => {
+      newEntryForm.classList.add('hidden');
+      document.getElementById('entry-text').value = '';
+      document.getElementById('entry-date').value = '';
+    });
+
+    // Save new entry
+    saveEntryButton.addEventListener('click', () => {
+      const text = document.getElementById('entry-text').value;
+      const date = document.getElementById('entry-date').value;
+      
+      if (text && date) {
+        // Create new entry element
+        const entryElement = document.createElement('div');
+        entryElement.className = 'bg-white shadow rounded-lg p-4';
+        entryElement.innerHTML = `
+          <div class="flex justify-between items-start">
+            <div class="flex-1">
+              <p class="text-sm text-gray-900">${text}</p>
+              <p class="mt-1 text-sm text-gray-500">${new Date(date).toLocaleDateString('et-EE')}</p>
+            </div>
+          </div>
+        `;
+
+        // Add to the top of the list
+        entriesList.insertBefore(entryElement, entriesList.firstChild);
+
+        // Clear and hide form
+        document.getElementById('entry-text').value = '';
+        document.getElementById('entry-date').value = '';
+        newEntryForm.classList.add('hidden');
+      }
+    });
   });
 </script>
 
