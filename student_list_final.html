@@ -551,27 +551,35 @@
     <h2 class="text-lg font-bold mb-4">Muuda andmeid</h2>
     <div class="space-y-4 mb-4">
       <div>
-        <label for="bulk-opperyhm-mentor" class="block text-sm font-medium text-gray-700">Õpperühm / Mentor</label> <!-- Changed label back -->
-        <select id="bulk-opperyhm-mentor" name="bulk-opperyhm-mentor" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm"> <!-- Changed id and name back -->
-          <option value="">Vali õpperühm / mentor...</option>
-          <option value="G1-1 - Terje Karu">G1-1 - Terje Karu</option>
-          <option value="P-1 - Marika Mets">P-1 - Marika Mets</option>
-          <option value="G2-1 - Toomas Pomm">G2-1 - Toomas Pomm</option>
-          <!-- Add more options based on unique group/mentor pairs in the table -->
-        </select>
+        <label for="bulk-opperyhm-mentor" class="block text-sm/6 font-medium text-gray-900">Õpperühm / Mentor</label>
+        <div class="mt-2 grid grid-cols-1">
+          <select id="bulk-opperyhm-mentor" name="bulk-opperyhm-mentor" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+            <option value="">Vali õpperühm / mentor...</option>
+            <option value="G1-1 - Terje Karu">G1-1 - Terje Karu</option>
+            <option value="P-1 - Marika Mets">P-1 - Marika Mets</option>
+            <option value="G2-1 - Toomas Pomm">G2-1 - Toomas Pomm</option>
+          </select>
+          <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+            <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        </div>
       </div>
       <div>
-        <label for="bulk-vv-kk" class="block text-sm font-medium text-gray-700">VV KK</label>
-        <input type="text" id="bulk-vv-kk" name="bulk-vv-kk" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm" placeholder="Nt: 4/6">
+        <label for="bulk-vv-kk" class="block text-sm/6 font-medium text-gray-900">VV KK</label>
+        <div class="mt-2">
+          <input type="text" name="bulk-vv-kk" id="bulk-vv-kk" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="Nt: 4/6">
+        </div>
       </div>
       <div>
-        <label for="bulk-va-kk" class="block text-sm font-medium text-gray-700">VA KK</label>
-        <input type="text" id="bulk-va-kk" name="bulk-va-kk" class="mt-1 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 text-sm" placeholder="Nt: 5/6">
+        <label for="bulk-va-kk" class="block text-sm/6 font-medium text-gray-900">VA KK</label>
+        <div class="mt-2">
+          <input type="text" name="bulk-va-kk" id="bulk-va-kk" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" placeholder="Nt: 5/6">
+        </div>
       </div>
     </div>
     <div class="flex justify-end space-x-4">
-      <button id="close-modal" type="button" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400">Sulge</button>
-      <button id="save-modal" type="button" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-500">Salvesta</button>
+      <button id="close-modal" type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">Sulge</button>
+      <button id="save-modal" type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Salvesta</button>
     </div>
   </div>
 </div>
@@ -807,27 +815,41 @@
       });
     });
 
-    // Modal toggle
-    const editButton = document.getElementById("edit-button");
-    const editModal = document.getElementById("edit-modal");
-    const closeModal = document.getElementById("close-modal");
+    // --- EDIT MODAL LOGIC START ---
+    const editModal = document.getElementById('edit-modal');
+    const editButton = document.getElementById('edit-button');
+    const closeModalButton = document.getElementById('close-modal');
+    const saveModalButton = document.getElementById('save-modal');
+
     if (editButton && editModal) {
-      editButton.addEventListener("click", function(event) {
-        event.stopPropagation();
-        editModal.classList.remove("hidden");
+      editButton.addEventListener('click', () => {
+        editModal.classList.remove('hidden');
       });
     }
-    if (closeModal) {
-      closeModal.addEventListener("click", function(event) {
-        event.stopPropagation();
-        editModal.classList.add("hidden");
+
+    if (closeModalButton && editModal) {
+      closeModalButton.addEventListener('click', () => {
+        editModal.classList.add('hidden');
       });
     }
-    editModal.addEventListener("click", function(event) {
-      if (event.target === this) {
-        this.classList.add("hidden");
-      }
-    });
+
+    if (saveModalButton && editModal) {
+      saveModalButton.addEventListener('click', () => {
+        // Here you would handle saving the changes
+        // For now, we'll just close the modal
+        editModal.classList.add('hidden');
+      });
+    }
+
+    // Close modal when clicking outside
+    if (editModal) {
+      editModal.addEventListener('click', (event) => {
+        if (event.target === editModal) {
+          editModal.classList.add('hidden');
+        }
+      });
+    }
+    // --- EDIT MODAL LOGIC END ---
     
     // Bulk update modal "Salvesta" functionality
     const saveModal = document.getElementById("save-modal");
