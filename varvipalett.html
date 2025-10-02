@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Värvipalett – Hele ja Tume teema</title>
+<style>
+  :root {
+    --card-bg: #ffffff;
+    --card-text: #0f172a;
+    --border: #e5e7eb;
+    --code-bg: #0b1021;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    margin: 0; padding: 32px;
+    background: #f8fafc; color: #0f172a;
+  }
+  h1, h2 { margin: 0 0 16px; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 18px 0 28px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  table { width: 100%; border-collapse: collapse; }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+    font-size: 15px;
+  }
+  th { font-weight: 600; background: #f1f5f9; }
+  .swatch {
+    display: inline-block; width: 72px; height: 28px;
+    border: 1px solid #cbd5e1; border-radius: 6px;
+    vertical-align: middle;
+  }
+  code {
+    background: #0b1021; color: #e2e8f0;
+    padding: 2px 6px; border-radius: 6px;
+    font-size: 13px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Värvipalett</h1>
+    <p>Visuaalne ülevaade hele ja tumeda teema värvidest. Iga värvi kõrval on selle väärtus (HEX või OKLCH).</p>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Hele teema</h2>
+        <table>
+          <thead>
+            <tr><th>Nimi</th><th>Näidis</th><th>Kood</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Background</td><td><span class="swatch" style="background:#ffffff"></span></td><td><code>#ffffff</code></td></tr>
+            <tr><td>Alt Background</td><td><span class="swatch" style="background:#f9fafb"></span></td><td><code>#f9fafb</code></td></tr>
+            <tr><td>Heading / Text</td><td><span class="swatch" style="background:#101828"></span></td><td><code>#101828</code></td></tr>
+            <tr><td>Primary</td><td><span class="swatch" style="background:#3490dc"></span></td><td><code>#3490dc</code></td></tr>
+            <tr><td>Secondary</td><td><span class="swatch" style="background:#ffed4a"></span></td><td><code>#ffed4a</code></td></tr>
+            <tr><td>Tertiary</td><td><span class="swatch" style="background:#f6993f"></span></td><td><code>#f6993f</code></td></tr>
+            <tr><td>Inverted</td><td><span class="swatch" style="background:#ffffff"></span></td><td><code>#ffffff</code></td></tr>
+            <tr><td>Error</td><td><span class="swatch" style="background:oklch(57.7% 0.245 27.325)"></span></td><td><code>oklch(57.7% 0.245 27.325)</code></td></tr>
+            <tr><td>Active</td><td><span class="swatch" style="background:oklch(51.1% 0.262 276.966)"></span></td><td><code>oklch(51.1% 0.262 276.966)</code></td></tr>
+            <tr><td>Success</td><td><span class="swatch" style="background:#16a34a"></span></td><td><code>var(--color-green-600) ≈ #16a34a</code></td></tr>
+            <tr><td>Main CTA</td><td><span class="swatch" style="background:#6366f1"></span></td><td><code>var(--color-indigo-500) ≈ #6366f1</code></td></tr>
+            <tr><td>Alt CTA</td><td><span class="swatch" style="background:#f9fafb"></span></td><td><code>var(--color-gray-50) ≈ #f9fafb</code></td></tr>
+            <tr><td>Link</td><td><span class="swatch" style="background:oklch(0.511 0.262 276.966)"></span></td><td><code>oklch(0.511 0.262 276.966)</code></td></tr>
+            <tr><td>Inactive</td><td><span class="swatch" style="background:oklch(0.446 0.03 256.802)"></span></td><td><code>oklch(0.446 0.03 256.802)</code></td></tr>
+            <tr><td>Inactive2</td><td><span class="swatch" style="background:oklch(0.872 0.01 258.338)"></span></td><td><code>oklch(0.872 0.01 258.338)</code></td></tr>
+            <tr><td>Lightgray</td><td><span class="swatch" style="background:oklch(0.985 0.002 247.839)"></span></td><td><code>oklch(0.985 0.002 247.839)</code></td></tr>
+            <tr><td>Button Text</td><td><span class="swatch" style="background:#ffffff"></span></td><td><code>#FFF</code></td></tr>
+            <tr><td>Button Text Inverted</td><td><span class="swatch" style="background:#000000"></span></td><td><code>#000</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Tume teema</h2>
+        <table>
+          <thead>
+            <tr><th>Nimi</th><th>Näidis</th><th>Kood</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Background</td><td><span class="swatch" style="background:#333333"></span></td><td><code>#333333</code></td></tr>
+            <tr><td>Alt Background</td><td><span class="swatch" style="background:#000000"></span></td><td><code>#000000</code></td></tr>
+            <tr><td>Heading</td><td><span class="swatch" style="background:#ffffff"></span></td><td><code>#ffffff</code></td></tr>
+            <tr><td>Primary</td><td><span class="swatch" style="background:#1e293b"></span></td><td><code>#1e293b</code></td></tr>
+            <tr><td>Secondary</td><td><span class="swatch" style="background:#facc15"></span></td><td><code>#facc15</code></td></tr>
+            <tr><td>Tertiary</td><td><span class="swatch" style="background:#fb7185"></span></td><td><code>#fb7185</code></td></tr>
+            <tr><td>Inverted</td><td><span class="swatch" style="background:#101828"></span></td><td><code>#101828</code></td></tr>
+            <tr><td>Text</td><td><span class="swatch" style="background:#f1f5f9"></span></td><td><code>#f1f5f9</code></td></tr>
+            <tr><td>Active</td><td><span class="swatch" style="background:oklch(100% 0.00011 271.152)"></span></td><td><code>oklch(100% 0.00011 271.152)</code></td></tr>
+            <tr><td>Success</td><td><span class="swatch" style="background:#16a34a"></span></td><td><code>var(--color-green-600) ≈ #16a34a</code></td></tr>
+            <tr><td>Link</td><td><span class="swatch" style="background:oklch(0.85 0.2 276.966)"></span></td><td><code>oklch(0.85 0.2 276.966)</code></td></tr>
+            <tr><td>Inactive</td><td><span class="swatch" style="background:oklch(0.6 0.03 256.802)"></span></td><td><code>oklch(0.6 0.03 256.802)</code></td></tr>
+            <tr><td>Inactive2</td><td><span class="swatch" style="background:oklch(0.2 0.01 258.338)"></span></td><td><code>oklch(0.2 0.01 258.338)</code></td></tr>
+            <tr><td>Lightgray</td><td><span class="swatch" style="background:oklch(0.15 0.002 247.839)"></span></td><td><code>oklch(0.15 0.002 247.839)</code></td></tr>
+            <tr><td>Button Text Inverted</td><td><span class="swatch" style="background:#ffffff"></span></td><td><code>#FFF</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <div class="card">
+      <h2>Märkused</h2>
+      <ul>
+        <li><strong>OKLCH</strong> värvid sõltuvad brauseri toetusest (uus värvimudel). Kaasaegsed brauserid kuvavad need õigesti.</li>
+        <li>Tailwindi viited (<code>var(--color-...)</code>) on siin asendatud ligikaudsete HEX väärtustega visuaalseks näidiskastiks.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
