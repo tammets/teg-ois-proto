@@ -19,6 +19,8 @@
     background: #f8fafc; color: #0f172a;
   }
   h1, h2 { margin: 0 0 16px; }
+  h3 { margin: 0 0 14px; font-size: 20px; font-weight: 600; }
+  .section-heading { margin: 48px 0 16px; font-size: 24px; font-weight: 600; }
   .wrap { max-width: 1100px; margin: 0 auto; }
   .card {
     background: var(--card-bg);
@@ -118,12 +120,63 @@
       </section>
     </div>
 
-    <div class="card">
-      <h2>Märkused</h2>
-      <ul>
-        <li><strong>OKLCH</strong> värvid sõltuvad brauseri toetusest (uus värvimudel). Kaasaegsed brauserid kuvavad need õigesti.</li>
-        <li>Tailwindi viited (<code>var(--color-...)</code>) on siin asendatud ligikaudsete HEX väärtustega visuaalseks näidiskastiks.</li>
-      </ul>
+    <h2 class="section-heading">Soovitatud TailwindUI stiilis paletid</h2>
+
+    <div class="grid">
+      <section class="card">
+        <h3>Hele teema</h3>
+        <table>
+          <thead>
+            <tr><th>Nimi</th><th>Näidis</th><th>Kood</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Background</td><td><span class="swatch" style="background:#f8fafc"></span></td><td><code>#f8fafc</code></td></tr>
+            <tr><td>Alt Background</td><td><span class="swatch" style="background:#ffffff"></span></td><td><code>#ffffff</code></td></tr>
+            <tr><td>Heading / Text</td><td><span class="swatch" style="background:#0f172a"></span></td><td><code>#0f172a</code></td></tr>
+            <tr><td>Primary</td><td><span class="swatch" style="background:#26417c"></span></td><td><code>#26417c</code></td></tr>
+            <tr><td>Secondary</td><td><span class="swatch" style="background:#3d5ac6"></span></td><td><code>#3d5ac6</code></td></tr>
+            <tr><td>Tertiary</td><td><span class="swatch" style="background:#6f85ff"></span></td><td><code>#6f85ff</code></td></tr>
+            <tr><td>Inverted</td><td><span class="swatch" style="background:#ffffff"></span></td><td><code>#ffffff</code></td></tr>
+            <tr><td>Error</td><td><span class="swatch" style="background:#f87171"></span></td><td><code>#f87171</code></td></tr>
+            <tr><td>Active</td><td><span class="swatch" style="background:#dfe6ff"></span></td><td><code>#dfe6ff</code></td></tr>
+            <tr><td>Success</td><td><span class="swatch" style="background:#22c55e"></span></td><td><code>#22c55e</code></td></tr>
+            <tr><td>Main CTA</td><td><span class="swatch" style="background:#3351a6"></span></td><td><code>#3351a6</code></td></tr>
+            <tr><td>Alt CTA</td><td><span class="swatch" style="background:#efe8ff"></span></td><td><code>#efe8ff</code></td></tr>
+            <tr><td>Link</td><td><span class="swatch" style="background:#3f5fb8"></span></td><td><code>#3f5fb8</code></td></tr>
+            <tr><td>Inactive</td><td><span class="swatch" style="background:#94a3b8"></span></td><td><code>#94a3b8</code></td></tr>
+            <tr><td>Inactive2</td><td><span class="swatch" style="background:#e2e8f0"></span></td><td><code>#e2e8f0</code></td></tr>
+            <tr><td>Lightgray</td><td><span class="swatch" style="background:#f1f5f9"></span></td><td><code>#f1f5f9</code></td></tr>
+            <tr><td>Button Text</td><td><span class="swatch" style="background:#ffffff"></span></td><td><code>#ffffff</code></td></tr>
+            <tr><td>Button Text Inverted</td><td><span class="swatch" style="background:#111827"></span></td><td><code>#111827</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h3>Tume teema</h3>
+        <table>
+          <thead>
+            <tr><th>Nimi</th><th>Näidis</th><th>Kood</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Background</td><td><span class="swatch" style="background:#0f172a"></span></td><td><code>#0f172a</code></td></tr>
+            <tr><td>Alt Background</td><td><span class="swatch" style="background:#111c32"></span></td><td><code>#111c32</code></td></tr>
+            <tr><td>Heading</td><td><span class="swatch" style="background:#f8fafc"></span></td><td><code>#f8fafc</code></td></tr>
+            <tr><td>Primary</td><td><span class="swatch" style="background:#26417c"></span></td><td><code>#26417c</code></td></tr>
+            <tr><td>Secondary</td><td><span class="swatch" style="background:#6f85ff"></span></td><td><code>#6f85ff</code></td></tr>
+            <tr><td>Tertiary</td><td><span class="swatch" style="background:#efe8ff"></span></td><td><code>#efe8ff</code></td></tr>
+            <tr><td>Inverted</td><td><span class="swatch" style="background:#f8fafc"></span></td><td><code>#f8fafc</code></td></tr>
+            <tr><td>Text</td><td><span class="swatch" style="background:#cbd5f5"></span></td><td><code>#cbd5f5</code></td></tr>
+            <tr><td>Active</td><td><span class="swatch" style="background:#3351a6"></span></td><td><code>#3351a6</code></td></tr>
+            <tr><td>Success</td><td><span class="swatch" style="background:#34d399"></span></td><td><code>#34d399</code></td></tr>
+            <tr><td>Link</td><td><span class="swatch" style="background:#8ea5ff"></span></td><td><code>#8ea5ff</code></td></tr>
+            <tr><td>Inactive</td><td><span class="swatch" style="background:#1f2a44"></span></td><td><code>#1f2a44</code></td></tr>
+            <tr><td>Inactive2</td><td><span class="swatch" style="background:#16223b"></span></td><td><code>#16223b</code></td></tr>
+            <tr><td>Lightgray</td><td><span class="swatch" style="background:#2d3856"></span></td><td><code>#2d3856</code></td></tr>
+            <tr><td>Button Text Inverted</td><td><span class="swatch" style="background:#0f172a"></span></td><td><code>#0f172a</code></td></tr>
+          </tbody>
+        </table>
+      </section>
     </div>
   </div>
 </body>
